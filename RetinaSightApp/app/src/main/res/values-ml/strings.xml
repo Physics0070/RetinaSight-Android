@@ -98,6 +98,7 @@
     <string name="benchmark_title">ഫീൽഡ് അളവ്</string>
     <string name="benchmark_subtitle">ഒരു പരിശോധനാ ക്യാമ്പിൽ ഈ ഫോൺ യഥാർത്ഥത്തിൽ എന്ത് ചെയ്യുന്നു എന്ന് അളക്കുന്നു: വേഗത, വൈദ്യുതി, ഒരു ചാർജിന് എത്ര രോഗികൾ, എപ്പോൾ വേഗത കുറയാൻ തുടങ്ങുന്നു.</string>
     <string name="benchmark_count">പരിശോധനകൾ</string>
+    <string name="benchmark_pace">ഒരു രോഗിക്ക് സെക്കൻഡ്</string>
     <string name="benchmark_run">ക്യാമ്പ് സിമുലേഷൻ പ്രവർത്തിപ്പിക്കുക</string>
     <string name="benchmark_cancel">നിർത്തുക</string>
     <string name="benchmark_baseline">നിഷ്ക്രിയ നില അളക്കുന്നു… %1$d സെ</string>

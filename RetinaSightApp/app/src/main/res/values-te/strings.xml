@@ -98,6 +98,7 @@
     <string name="benchmark_title">క్షేత్ర కొలత</string>
     <string name="benchmark_subtitle">ఒక పరీక్షా శిబిరంలో ఈ ఫోన్ నిజంగా ఏమి చేస్తుందో కొలుస్తుంది: వేగం, విద్యుత్, ఒక ఛార్జ్‌కు ఎంతమంది రోగులు, ఎప్పుడు వేగం తగ్గడం మొదలవుతుంది.</string>
     <string name="benchmark_count">పరీక్షలు</string>
+    <string name="benchmark_pace">ఒక రోగికి సెకన్లు</string>
     <string name="benchmark_run">శిబిర అనుకరణను అమలు చేయండి</string>
     <string name="benchmark_cancel">ఆపు</string>
     <string name="benchmark_baseline">నిష్క్రియ స్థితిని కొలుస్తోంది… %1$d సె</string>

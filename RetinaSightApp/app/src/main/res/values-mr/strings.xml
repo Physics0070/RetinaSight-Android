@@ -98,6 +98,7 @@
     <string name="benchmark_title">फील्ड बेंचमार्क</string>
     <string name="benchmark_subtitle">शिबिरात हा फोन प्रत्यक्षात काय करतो हे मोजते: वेग, वीज, एका चार्जमध्ये किती रुग्ण, आणि कधी तापून मंदावतो.</string>
     <string name="benchmark_count">तपासण्यांची संख्या</string>
+    <string name="benchmark_pace">प्रति रुग्ण सेकंद</string>
     <string name="benchmark_run">शिबिर सिम्युलेशन चालवा</string>
     <string name="benchmark_cancel">थांबवा</string>
     <string name="benchmark_baseline">रिकामी स्थिती मोजत आहे… %1$d से</string>

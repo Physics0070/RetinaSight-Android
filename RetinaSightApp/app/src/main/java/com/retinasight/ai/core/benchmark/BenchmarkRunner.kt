@@ -47,7 +47,8 @@ class BenchmarkRunner(
     fun run(
         image: Bitmap,
         languageTag: String,
-        screenings: Int = DEFAULT_SCREENINGS
+        screenings: Int = DEFAULT_SCREENINGS,
+        secondsPerPatient: Int = DEFAULT_SECONDS_PER_PATIENT
     ): Flow<BenchmarkProgress> = flow {
 
         val warnings = mutableListOf<String>()
@@ -99,6 +100,23 @@ class BenchmarkRunner(
                     batteryTemperatureC = sample.batteryTemperatureC
                 )
             )
+
+            // Wait out the rest of this patient's slot.
+            //
+            // Without this the run is 100 inferences in eleven seconds, and
+            // the battery, temperature and thermal-headroom readings describe
+            // an eleven-second burst rather than a camp. Nothing gets warm in
+            // eleven seconds, and the charge counter barely moves, so
+            // patients-per-charge came out of an extrapolation rather than a
+            // measurement - two runs of the same test disagreed by 40%.
+            //
+            // A real camp is roughly one patient every 30 seconds, most of it
+            // spent talking to the patient rather than inferring. Idling
+            // through that gap is what makes the energy delta real.
+            if (secondsPerPatient > 0 && i < screenings - 1) {
+                val remainingMs = secondsPerPatient * 1000L - latencyMs.toLong()
+                if (remainingMs > 0) delay(remainingMs)
+            }
         }
 
         val runEndMs = SystemClock.elapsedRealtime()
@@ -113,6 +131,7 @@ class BenchmarkRunner(
                     chargeAtStart = chargeAtStart,
                     chargeAtEnd = chargeAtEnd,
                     runWallMs = (runEndMs - runStartMs).toDouble(),
+                    secondsPerPatient = secondsPerPatient,
                     startSample = startSample,
                     endSample = endSample,
                     warnings = warnings
@@ -127,6 +146,7 @@ class BenchmarkRunner(
         chargeAtStart: Long,
         chargeAtEnd: Long,
         runWallMs: Double,
+        secondsPerPatient: Int,
         startSample: TelemetrySample,
         endSample: TelemetrySample,
         warnings: MutableList<String>
@@ -244,6 +264,7 @@ class BenchmarkRunner(
 
         return BenchmarkReport(
             screeningCount = count,
+            secondsPerPatient = secondsPerPatient,
             batteryDesignCapacityMah = batteryDesignCapacityMah,
             latencyMeanMs = latencies.average(),
             latencyP50Ms = latencies.percentile(0.50),
@@ -270,6 +291,12 @@ class BenchmarkRunner(
     }
 
     companion object {
+        /**
+         * Seconds per patient. 30 matches a screening camp; 0 runs flat out,
+         * which measures latency correctly and energy not at all.
+         */
+        const val DEFAULT_SECONDS_PER_PATIENT = 30
+
         const val DEFAULT_SCREENINGS = 100
         const val DEFAULT_BATTERY_MAH = 7000
 

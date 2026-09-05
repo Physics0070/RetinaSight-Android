@@ -98,6 +98,7 @@
     <string name="benchmark_title">ક્ષેત્ર માપન</string>
     <string name="benchmark_subtitle">તપાસ શિબિરમાં આ ફોન ખરેખર શું કરે છે તે માપે છે: ઝડપ, વીજળી, એક ચાર્જમાં કેટલા દર્દી, અને ક્યારે ઝડપ ઘટવા લાગે છે.</string>
     <string name="benchmark_count">તપાસ</string>
+    <string name="benchmark_pace">દર્દી દીઠ સેકન્ડ</string>
     <string name="benchmark_run">શિબિર સિમ્યુલેશન ચલાવો</string>
     <string name="benchmark_cancel">બંધ કરો</string>
     <string name="benchmark_baseline">નિષ્ક્રિય સ્થિતિ માપાઈ રહી છે… %1$d સે</string>

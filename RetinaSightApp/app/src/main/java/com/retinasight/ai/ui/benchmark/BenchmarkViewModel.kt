@@ -39,7 +39,7 @@ class BenchmarkViewModel(private val container: AppContainer) : ViewModel() {
      *        used when the user has not captured one yet, so the benchmark is
      *        always runnable during a demo.
      */
-    fun start(image: Bitmap?, languageTag: String, screenings: Int) {
+    fun start(image: Bitmap?, languageTag: String, screenings: Int, secondsPerPatient: Int) {
         if (_isRunning.value) return
 
         val subject = image ?: syntheticFundus()
@@ -51,7 +51,7 @@ class BenchmarkViewModel(private val container: AppContainer) : ViewModel() {
                 engine = container.inferenceEngine,
                 telemetry = container.deviceTelemetry
             )
-                .run(subject, languageTag, screenings)
+                .run(subject, languageTag, screenings, secondsPerPatient)
                 .flowOn(Dispatchers.Default)
                 .collect { update ->
                     _progress.value = update

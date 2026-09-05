@@ -43,6 +43,15 @@ data class ScreeningSample(
  */
 data class BenchmarkReport(
     val screeningCount: Int,
+
+    /**
+     * Seconds allotted per patient during the run. 0 means back to back.
+     *
+     * Recorded because it decides which figures in this report mean anything:
+     * latency is valid either way, energy and thermal only when the run
+     * occupied realistic time.
+     */
+    val secondsPerPatient: Int,
     val batteryDesignCapacityMah: Int,
 
     // Latency

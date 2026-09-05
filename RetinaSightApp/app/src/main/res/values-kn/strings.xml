@@ -98,6 +98,7 @@
     <string name="benchmark_title">ಕ್ಷೇತ್ರ ಮಾಪನ</string>
     <string name="benchmark_subtitle">ತಪಾಸಣಾ ಶಿಬಿರದಲ್ಲಿ ಈ ಫೋನ್ ನಿಜವಾಗಿ ಏನು ಮಾಡುತ್ತದೆ ಎಂಬುದನ್ನು ಅಳೆಯುತ್ತದೆ: ವೇಗ, ವಿದ್ಯುತ್, ಒಂದು ಚಾರ್ಜ್‌ಗೆ ಎಷ್ಟು ರೋಗಿಗಳು, ಮತ್ತು ಯಾವಾಗ ವೇಗ ಕಡಿಮೆಯಾಗಲು ಆರಂಭಿಸುತ್ತದೆ.</string>
     <string name="benchmark_count">ತಪಾಸಣೆಗಳು</string>
+    <string name="benchmark_pace">ಪ್ರತಿ ರೋಗಿಗೆ ಸೆಕೆಂಡುಗಳು</string>
     <string name="benchmark_run">ಶಿಬಿರದ ಅನುಕರಣೆಯನ್ನು ಚಲಾಯಿಸಿ</string>
     <string name="benchmark_cancel">ನಿಲ್ಲಿಸಿ</string>
     <string name="benchmark_baseline">ನಿಷ್ಕ್ರಿಯ ಸ್ಥಿತಿಯನ್ನು ಅಳೆಯಲಾಗುತ್ತಿದೆ… %1$d ಸೆ</string>

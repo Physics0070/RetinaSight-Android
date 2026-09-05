@@ -68,6 +68,9 @@ fun BenchmarkScreen(
     val exportedPath by viewModel.exportedPath.collectAsState()
 
     var screenings by remember { mutableIntStateOf(100) }
+    // 30 s per patient is a real camp pace. 0 runs flat out, which still
+    // measures latency but leaves the energy figures meaningless.
+    var secondsPerPatient by remember { mutableIntStateOf(30) }
 
     Surface(
         modifier = modifier.fillMaxSize(),
@@ -114,12 +117,36 @@ fun BenchmarkScreen(
 
             Spacer(Modifier.height(20.dp))
 
+            // ---- Pace ----
+            Text(
+                text = stringResource(R.string.benchmark_pace),
+                style = MaterialTheme.typography.titleLarge
+            )
+            Spacer(Modifier.height(8.dp))
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                listOf(0, 15, 30).forEach { option ->
+                    val selected = secondsPerPatient == option
+                    if (selected) {
+                        Button(onClick = { secondsPerPatient = option }) {
+                            Text(option.toString())
+                        }
+                    } else {
+                        OutlinedButton(
+                            onClick = { secondsPerPatient = option },
+                            enabled = !isRunning
+                        ) { Text(option.toString()) }
+                    }
+                }
+            }
+
+            Spacer(Modifier.height(20.dp))
+
             Button(
                 onClick = {
                     if (isRunning) {
                         viewModel.cancel()
                     } else {
-                        viewModel.start(lastCapturedImage, languageTag, screenings)
+                        viewModel.start(lastCapturedImage, languageTag, screenings, secondsPerPatient)
                     }
                 },
                 shape = RoundedCornerShape(16.dp),

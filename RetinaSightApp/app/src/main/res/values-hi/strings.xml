@@ -98,6 +98,7 @@
     <string name="benchmark_title">फ़ील्ड बेंचमार्क</string>
     <string name="benchmark_subtitle">यह मापता है कि एक शिविर में यह फ़ोन असल में क्या करता है: गति, बिजली, एक चार्ज में कितने मरीज़, और कब गर्म होकर धीमा होता है।</string>
     <string name="benchmark_count">जाँचों की संख्या</string>
+    <string name="benchmark_pace">प्रति रोगी सेकंड</string>
     <string name="benchmark_run">शिविर सिमुलेशन चलाएँ</string>
     <string name="benchmark_cancel">रोकें</string>
     <string name="benchmark_baseline">खाली स्थिति मापी जा रही है… %1$d से</string>

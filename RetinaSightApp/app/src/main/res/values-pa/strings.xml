@@ -98,6 +98,7 @@
     <string name="benchmark_title">ਖੇਤਰੀ ਮਾਪ</string>
     <string name="benchmark_subtitle">ਜਾਂਚ ਕੈਂਪ ਵਿੱਚ ਇਹ ਫ਼ੋਨ ਅਸਲ ਵਿੱਚ ਕੀ ਕਰਦਾ ਹੈ, ਇਹ ਮਾਪਦਾ ਹੈ: ਰਫ਼ਤਾਰ, ਬਿਜਲੀ, ਇੱਕ ਚਾਰਜ ਵਿੱਚ ਕਿੰਨੇ ਮਰੀਜ਼, ਅਤੇ ਕਦੋਂ ਰਫ਼ਤਾਰ ਘਟਣ ਲੱਗਦੀ ਹੈ।</string>
     <string name="benchmark_count">ਜਾਂਚਾਂ</string>
+    <string name="benchmark_pace">ਪ੍ਰਤੀ ਮਰੀਜ਼ ਸਕਿੰਟ</string>
     <string name="benchmark_run">ਕੈਂਪ ਸਿਮੂਲੇਸ਼ਨ ਚਲਾਓ</string>
     <string name="benchmark_cancel">ਰੋਕੋ</string>
     <string name="benchmark_baseline">ਵਿਹਲੀ ਹਾਲਤ ਮਾਪੀ ਜਾ ਰਹੀ ਹੈ… %1$d ਸ</string>

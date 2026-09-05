@@ -36,6 +36,9 @@ class BenchmarkExporter(private val context: Context) {
 
         appendLine("metric,value,unit")
         appendLine("screenings,${report.screeningCount},count")
+            // Reading the CSV without this cannot tell a paced camp
+            // from a burst, and the energy rows mean different things.
+            appendLine("seconds_per_patient,${report.secondsPerPatient},s")
         appendLine("battery_capacity_spec,${report.batteryDesignCapacityMah},mAh")
         appendLine("battery_capacity_measured,${report.measuredCapacityMah},mAh")
         appendLine("latency_mean,${report.latencyMeanMs.fmt()},ms")

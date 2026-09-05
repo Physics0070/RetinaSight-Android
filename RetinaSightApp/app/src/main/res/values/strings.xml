@@ -99,6 +99,7 @@
     <string name="benchmark_title">Field benchmark</string>
     <string name="benchmark_subtitle">Measures what this phone actually does over a screening camp: speed, power, patients per charge, and when it starts to throttle.</string>
     <string name="benchmark_count">Screenings</string>
+    <string name="benchmark_pace">Seconds per patient</string>
     <string name="benchmark_run">Run camp simulation</string>
     <string name="benchmark_cancel">Stop</string>
     <string name="benchmark_baseline">Measuring idle baseline… %1$d s</string>

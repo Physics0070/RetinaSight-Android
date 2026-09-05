@@ -98,6 +98,7 @@
     <string name="benchmark_title">கள அளவீடு</string>
     <string name="benchmark_subtitle">ஒரு பரிசோதனை முகாமில் இந்தத் தொலைபேசி உண்மையில் என்ன செய்கிறது என்பதை அளக்கிறது: வேகம், மின்சாரம், ஒரு சார்ஜுக்கு எத்தனை நோயாளிகள், எப்போது வேகம் குறையத் தொடங்குகிறது.</string>
     <string name="benchmark_count">பரிசோதனைகள்</string>
+    <string name="benchmark_pace">ஒரு நோயாளிக்கு வினாடிகள்</string>
     <string name="benchmark_run">முகாம் உருவகப்படுத்தலை இயக்கு</string>
     <string name="benchmark_cancel">நிறுத்து</string>
     <string name="benchmark_baseline">செயலற்ற நிலை அளக்கப்படுகிறது… %1$d வி</string>

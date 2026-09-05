@@ -98,6 +98,7 @@
     <string name="benchmark_title">মাঠ পরিমাপ</string>
     <string name="benchmark_subtitle">একটি পরীক্ষা শিবিরে এই ফোন আসলে কী করে তা মাপে: গতি, বিদ্যুৎ, এক চার্জে কতজন রোগী, এবং কখন গতি কমতে শুরু করে।</string>
     <string name="benchmark_count">পরীক্ষা</string>
+    <string name="benchmark_pace">প্রতি রোগীতে সেকেন্ড</string>
     <string name="benchmark_run">শিবির সিমুলেশন চালান</string>
     <string name="benchmark_cancel">থামান</string>
     <string name="benchmark_baseline">নিষ্ক্রিয় অবস্থা মাপা হচ্ছে… %1$d সে</string>

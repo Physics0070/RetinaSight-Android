@@ -98,6 +98,7 @@
     <string name="benchmark_title">କ୍ଷେତ୍ର ମାପ</string>
     <string name="benchmark_subtitle">ଏକ ପରୀକ୍ଷା ଶିବିରରେ ଏହି ଫୋନ୍ ପ୍ରକୃତରେ କଣ କରେ ତାହା ମାପେ: ଗତି, ବିଦ୍ୟୁତ୍, ଗୋଟିଏ ଚାର୍ଜରେ କେତେ ରୋଗୀ, ଏବଂ କେବେ ଗତି କମିବାକୁ ଲାଗେ।</string>
     <string name="benchmark_count">ପରୀକ୍ଷାଗୁଡ଼ିକ</string>
+    <string name="benchmark_pace">ପ୍ରତି ରୋଗୀ ସେକେଣ୍ଡ</string>
     <string name="benchmark_run">ଶିବିର ସିମୁଲେସନ ଚଲାନ୍ତୁ</string>
     <string name="benchmark_cancel">ବନ୍ଦ କରନ୍ତୁ</string>
     <string name="benchmark_baseline">ନିଷ୍କ୍ରିୟ ସ୍ଥିତି ମାପ କରାଯାଉଛି… %1$d ସେ</string>
