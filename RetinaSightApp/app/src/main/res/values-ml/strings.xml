@@ -18,7 +18,7 @@
     <string name="capture_title">റെറ്റിന ചിത്രം എടുക്കുക</string>
     <string name="capture_instruction">ഫണ്ടസ് അഡാപ്റ്റർ ഘടിപ്പിച്ച ശേഷം റെറ്റിന വൃത്തത്തിന്റെ നടുവിൽ വയ്ക്കുക</string>
     <string name="capture_shutter">ചിത്രം എടുക്കുക</string>
-    <string name="capture_gallery">ഫണ്ടസ് ക്യാമറയിൽ നിന്ന് ഇറക്കുമതി ചെയ്യുക</string>
+    <string name="capture_gallery">ഫണ്ടസ് ചിത്രം ഇറക്കുമതി</string>
     <string name="capture_permission_rationale">റെറ്റിന ചിത്രീകരിക്കാൻ ക്യാമറ ഫണ്ടസ് അഡാപ്റ്ററിനൊപ്പം ഉപയോഗിക്കുന്നു. ചിത്രം ഒരിക്കലും നിങ്ങളുടെ ഫോൺ വിട്ടുപോകില്ല.</string>
     <string name="capture_grant_permission">ക്യാമറ അനുവദിക്കുക</string>
     <string name="capture_permission_denied">ക്യാമറ അനുവദിച്ചിട്ടില്ല. നിങ്ങളുടെ ഫണ്ടസ് ക്യാമറയിൽ നിന്ന് ചിത്രം ഇറക്കുമതി ചെയ്യാം.</string>
@@ -70,6 +70,9 @@
     <string name="history_title">മുൻ പരിശോധനകൾ</string>
     <string name="history_empty">ഇതുവരെ പരിശോധനകളൊന്നുമില്ല</string>
     <string name="history_progression">കാലക്രമേണയുള്ള മാറ്റം</string>
+    <string name="history_delete">ഈ പരിശോധന ഇല്ലാതാക്കുക</string>
+    <string name="history_delete_confirm">ഈ പരിശോധനയും അതിന്റെ ചിത്രവും ഈ ഫോണിൽ നിന്ന് ഇല്ലാതാക്കണോ? ഇത് തിരികെ ലഭിക്കില്ല.</string>
+    <string name="history_delete_cancel">വേണ്ട</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">ക്രമീകരണങ്ങൾ</string>
@@ -197,6 +200,7 @@
     <string name="patient_years">സ്ഥിരീകരിച്ചിട്ട് എത്ര വർഷം</string>
     <string name="patient_continue">ചിത്രം എടുക്കാൻ തുടരുക</string>
     <string name="patient_skip">രോഗിയുടെ വിവരങ്ങളില്ലാതെ പരിശോധിക്കുക</string>
+    <string name="patient_details_required">പേരും വയസ്സും നൽകുക, അല്ലെങ്കിൽ വിവരങ്ങളില്ലാതെ പരിശോധിക്കാൻ താഴെയുള്ള ബട്ടൺ അമർത്തുക.</string>
     <string name="patient_elevated_risk">ദീർഘകാല പ്രമേഹം — റെറ്റിനോപ്പതിക്ക് കൂടുതൽ സാധ്യത</string>
 
     <string name="eye_step">ഘട്ടം 3 · ഏത് കണ്ണ്</string>

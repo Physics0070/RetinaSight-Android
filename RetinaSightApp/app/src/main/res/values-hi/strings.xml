@@ -70,6 +70,9 @@
     <string name="history_title">पिछली जाँचें</string>
     <string name="history_empty">अभी कोई जाँच नहीं</string>
     <string name="history_progression">समय के साथ बदलाव</string>
+    <string name="history_delete">यह जाँच हटाएँ</string>
+    <string name="history_delete_confirm">इस फ़ोन से यह जाँच और इसका फोटो हटाएँ? यह वापस नहीं आएगा।</string>
+    <string name="history_delete_cancel">रहने दें</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">सेटिंग्स</string>
@@ -193,6 +196,7 @@
     <string name="patient_years">निदान को कितने साल हुए</string>
     <string name="patient_continue">फ़ोटो लेने चलें</string>
     <string name="patient_skip">मरीज़ की जानकारी के बिना जाँच करें</string>
+    <string name="patient_details_required">नाम और उम्र भरें, या बिना विवरण जाँच करने के लिए नीचे वाला बटन दबाएँ।</string>
     <string name="patient_elevated_risk">लंबे समय से मधुमेह — रेटिनोपैथी का ख़तरा ज़्यादा</string>
 
     <string name="eye_step">चरण 3 · कौन सी आँख</string>

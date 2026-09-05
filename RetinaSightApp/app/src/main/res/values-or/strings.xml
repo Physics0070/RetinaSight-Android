@@ -70,6 +70,9 @@
     <string name="history_title">ପୂର୍ବ ପରୀକ୍ଷାଗୁଡ଼ିକ</string>
     <string name="history_empty">ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ପରୀକ୍ଷା ନାହିଁ</string>
     <string name="history_progression">ସମୟ ସହିତ ପରିବର୍ତ୍ତନ</string>
+    <string name="history_delete">ଏହି ପରୀକ୍ଷା ଡିଲିଟ୍ କରନ୍ତୁ</string>
+    <string name="history_delete_confirm">ଏହି ଫୋନରୁ ଏହି ପରୀକ୍ଷା ଓ ଏହାର ଫଟୋ ଡିଲିଟ୍ କରିବେ? ଏହା ଫେରି ଆସିବ ନାହିଁ।</string>
+    <string name="history_delete_cancel">ରହିବାକୁ ଦିଅନ୍ତୁ</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">ସେଟିଂସ୍</string>
@@ -197,6 +200,7 @@
     <string name="patient_years">ଚିହ୍ନଟ ହେବାର କେତେ ବର୍ଷ</string>
     <string name="patient_continue">ଫଟୋ ନେବାକୁ ଆଗକୁ ଯାଆନ୍ତୁ</string>
     <string name="patient_skip">ରୋଗୀଙ୍କ ବିବରଣୀ ବିନା ପରୀକ୍ଷା କରନ୍ତୁ</string>
+    <string name="patient_details_required">ନାମ ଓ ବୟସ ଲେଖନ୍ତୁ, କିମ୍ବା ବିବରଣୀ ବିନା ପରୀକ୍ଷା କରିବାକୁ ତଳର ବଟନ ଦବାନ୍ତୁ।</string>
     <string name="patient_elevated_risk">ଦୀର୍ଘ ଦିନର ମଧୁମେହ — ରେଟିନୋପାଥିର ଅଧିକ ଆଶଙ୍କା</string>
 
     <string name="eye_step">ପଦକ୍ଷେପ 3 · କେଉଁ ଆଖି</string>

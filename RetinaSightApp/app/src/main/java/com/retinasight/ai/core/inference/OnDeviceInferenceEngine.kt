@@ -279,7 +279,12 @@ class OnDeviceInferenceEngine(private val context: Context) : InferenceEngine {
         const val INPUT_NAME = "input"
         const val SIZE = RetinaPreprocessor.INPUT_SIZE
 
-        /** Below this, advise retaking the photo rather than trusting the grade. */
-        const val LOW_CONFIDENCE = 0.55f
+        /**
+         * Below this, advise retaking the photo rather than trusting the grade.
+         *
+         * Deliberately the same value that makes the band LOW, so a result the
+         * app calls "Low" always carries the retake advice with it.
+         */
+        const val LOW_CONFIDENCE = RetinaResult.MEDIUM_CONFIDENCE
     }
 }

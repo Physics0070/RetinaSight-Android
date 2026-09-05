@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -80,12 +81,19 @@ class SyncManager(
 
     init {
         scope.launch {
-            _status.value = _status.value.copy(clinic = loadClinic())
+            // Resolve the clinic BEFORE touching _status. Written as
+            // `_status.value.copy(clinic = loadClinic())` the receiver is read
+            // first and the DataStore read then suspends, so this coroutine
+            // would write back a status captured before the connectivity
+            // collector below had run - silently reverting isOnline to false
+            // and leaving the app claiming to be offline on a live network.
+            val clinic = loadClinic()
+            _status.update { it.copy(clinic = clinic) }
             refreshCounts()
         }
         scope.launch {
             connectivity.isOnline.collect { online ->
-                _status.value = _status.value.copy(isOnline = online)
+                _status.update { it.copy(isOnline = online) }
                 // Coming back online is the natural moment to drain the queue -
                 // that is the whole point of an offline-first field tool.
                 if (online) syncNow()
@@ -111,7 +119,8 @@ class SyncManager(
                 prefs[deviceIdKey] = UUID.randomUUID().toString()
             }
         }
-        _status.value = _status.value.copy(clinic = loadClinic(), lastError = null)
+        val connected = loadClinic()
+        _status.update { it.copy(clinic = connected, lastError = null) }
         syncNow()
     }
 
@@ -120,17 +129,19 @@ class SyncManager(
             prefs.remove(baseUrlKey)
             prefs.remove(tokenKey)
         }
-        _status.value = _status.value.copy(clinic = null)
+        _status.update { it.copy(clinic = null) }
     }
 
     // -------------------------------------------------------------- sync
 
     suspend fun refreshCounts() {
         val counts = history.countByState()
-        _status.value = _status.value.copy(
-            pendingCount = counts[SyncState.PENDING] ?: 0,
-            failedCount = counts[SyncState.FAILED] ?: 0
-        )
+        _status.update {
+            it.copy(
+                pendingCount = counts[SyncState.PENDING] ?: 0,
+                failedCount = counts[SyncState.FAILED] ?: 0
+            )
+        }
     }
 
     /** Drains the queue. Safe to call at any time; does nothing when it cannot run. */
@@ -148,7 +159,7 @@ class SyncManager(
         val queued = history.pending()
         if (queued.isEmpty()) return@withLock
 
-        _status.value = _status.value.copy(isSyncing = true, lastError = null)
+        _status.update { it.copy(isSyncing = true, lastError = null) }
 
         val result = transport.push(clinic, queued.map(::toSyncItem))
 
@@ -163,15 +174,17 @@ class SyncManager(
         }
 
         refreshCounts()
-        _status.value = _status.value.copy(
-            isSyncing = false,
-            lastError = result.error,
-            lastSyncedAtMillis = if (result.error == null) {
-                System.currentTimeMillis()
-            } else {
-                _status.value.lastSyncedAtMillis
-            }
-        )
+        _status.update {
+            it.copy(
+                isSyncing = false,
+                lastError = result.error,
+                lastSyncedAtMillis = if (result.error == null) {
+                    System.currentTimeMillis()
+                } else {
+                    it.lastSyncedAtMillis
+                }
+            )
+        }
 
         Log.i(
             TAG,

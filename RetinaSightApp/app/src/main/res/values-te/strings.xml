@@ -70,6 +70,9 @@
     <string name="history_title">గత పరీక్షలు</string>
     <string name="history_empty">ఇంకా పరీక్షలు లేవు</string>
     <string name="history_progression">కాలక్రమేణా మార్పు</string>
+    <string name="history_delete">ఈ పరీక్షను తొలగించు</string>
+    <string name="history_delete_confirm">ఈ పరీక్షను మరియు దాని ఫోటోను ఈ ఫోన్ నుండి తొలగించాలా? ఇది తిరిగి రాదు.</string>
+    <string name="history_delete_cancel">వద్దు</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">సెట్టింగ్‌లు</string>
@@ -197,6 +200,7 @@
     <string name="patient_years">నిర్ధారణ అయి ఎన్ని సంవత్సరాలు</string>
     <string name="patient_continue">ఫోటో తీయడానికి కొనసాగండి</string>
     <string name="patient_skip">రోగి వివరాలు లేకుండా పరీక్షించండి</string>
+    <string name="patient_details_required">పేరు మరియు వయస్సు నమోదు చేయండి, లేదా వివరాలు లేకుండా పరీక్షించడానికి కింది బటన్ నొక్కండి.</string>
     <string name="patient_elevated_risk">దీర్ఘకాలిక మధుమేహం — రెటినోపతికి ఎక్కువ ప్రమాదం</string>
 
     <string name="eye_step">అడుగు 3 · ఏ కన్ను</string>

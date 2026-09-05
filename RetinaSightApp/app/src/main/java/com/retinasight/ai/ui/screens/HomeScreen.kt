@@ -10,8 +10,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CloudDone
-import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.RemoveRedEye
 import androidx.compose.material.icons.filled.Settings
@@ -43,7 +41,6 @@ fun HomeScreen(
     onScan: () -> Unit,
     onHistory: () -> Unit,
     onSettings: () -> Unit,
-    onClinic: () -> Unit,
     syncStatus: SyncStatus,
     modifier: Modifier = Modifier
 ) {
@@ -74,7 +71,7 @@ fun HomeScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                OfflineBadge()
+                OfflineBadge(isOnline = syncStatus.isOnline)
 
                 Spacer(Modifier.height(28.dp))
 
@@ -111,28 +108,6 @@ fun HomeScreen(
                     onClick = onHistory
                 )
 
-                Spacer(Modifier.height(16.dp))
-
-                // Clinic upload lives on the home page but BELOW screening, and
-                // never blocks it. A worker who ignores this can still work all
-                // day; connecting only adds sharing.
-                SecondaryActionButton(
-                    text = stringResource(
-                        if (syncStatus.isConnected) R.string.clinic_connected_title
-                        else R.string.clinic_connect_title
-                    ),
-                    icon = if (syncStatus.isConnected) {
-                        Icons.Filled.CloudDone
-                    } else {
-                        Icons.Filled.CloudUpload
-                    },
-                    onClick = onClinic
-                )
-
-                if (syncStatus.isConnected || syncStatus.pendingCount > 0) {
-                    Spacer(Modifier.height(14.dp))
-                    SyncStatusCard(syncStatus)
-                }
             }
         }
     }

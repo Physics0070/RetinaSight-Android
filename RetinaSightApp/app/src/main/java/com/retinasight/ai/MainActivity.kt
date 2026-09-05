@@ -2,6 +2,7 @@ package com.retinasight.ai
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -69,23 +70,38 @@ class MainActivity : ComponentActivity() {
                     }
 
                     is LanguageState.Chosen -> LocalizedContent(state.language) {
-                        if (showLanguagePicker) {
-                            LanguageScreen(
-                                selected = state.language,
-                                onSelect = { language ->
-                                    container.speechManager.speak(language.endonym, language)
-                                    scope.launch {
-                                        container.languagePreferences.setLanguage(language)
-                                        showLanguagePicker = false
-                                    }
-                                }
-                            )
-                        } else {
+                        // The picker is drawn OVER the nav host, not instead of
+                        // it. Swapping them out destroyed the back stack, so
+                        // dismissing the picker rebuilt the graph at Home and
+                        // the user lost the screen they opened it from.
+                        Box(Modifier.fillMaxSize()) {
                             RetinaNavHost(
                                 container = container,
                                 language = state.language,
                                 onChangeLanguage = { showLanguagePicker = true }
                             )
+
+                            if (showLanguagePicker) {
+                                // Without this the system back finds nothing to
+                                // pop and finishes the activity, closing the app
+                                // on someone who opened the list, changed their
+                                // mind, and pressed back. Dismissing keeps the
+                                // language they already had.
+                                BackHandler { showLanguagePicker = false }
+                                LanguageScreen(
+                                    selected = state.language,
+                                    onSelect = { language ->
+                                        container.speechManager.speak(
+                                            language.endonym,
+                                            language
+                                        )
+                                        scope.launch {
+                                            container.languagePreferences.setLanguage(language)
+                                            showLanguagePicker = false
+                                        }
+                                    }
+                                )
+                            }
                         }
                     }
                 }

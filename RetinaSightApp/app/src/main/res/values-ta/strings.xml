@@ -18,7 +18,7 @@
     <string name="capture_title">விழித்திரைப் படத்தை எடுக்கவும்</string>
     <string name="capture_instruction">ஃபண்டஸ் அடாப்டரைப் பொருத்தி, விழித்திரையை வட்டத்தின் நடுவில் வைக்கவும்</string>
     <string name="capture_shutter">படம் எடுக்கவும்</string>
-    <string name="capture_gallery">ஃபண்டஸ் கேமராவிலிருந்து இறக்குமதி செய்யவும்</string>
+    <string name="capture_gallery">ஃபண்டஸ் படம் இறக்குமதி</string>
     <string name="capture_permission_rationale">விழித்திரையைப் படமெடுக்க கேமரா ஃபண்டஸ் அடாப்டருடன் சேர்ந்து பயன்படுத்தப்படுகிறது. படம் உங்கள் தொலைபேசியை விட்டு வெளியே செல்லாது.</string>
     <string name="capture_grant_permission">கேமராவை அனுமதிக்கவும்</string>
     <string name="capture_permission_denied">கேமரா அனுமதிக்கப்படவில்லை. உங்கள் ஃபண்டஸ் கேமராவிலிருந்து படத்தை இறக்குமதி செய்யலாம்.</string>
@@ -70,6 +70,9 @@
     <string name="history_title">முந்தைய பரிசோதனைகள்</string>
     <string name="history_empty">இதுவரை பரிசோதனைகள் இல்லை</string>
     <string name="history_progression">காலப்போக்கில் ஏற்பட்ட மாற்றம்</string>
+    <string name="history_delete">இந்தப் பரிசோதனையை நீக்கு</string>
+    <string name="history_delete_confirm">இந்தப் பரிசோதனையையும் அதன் படத்தையும் இந்தத் தொலைபேசியிலிருந்து நீக்கவா? இதை மீட்க முடியாது.</string>
+    <string name="history_delete_cancel">வேண்டாம்</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">அமைப்புகள்</string>
@@ -197,6 +200,7 @@
     <string name="patient_years">கண்டறியப்பட்டு எத்தனை ஆண்டுகள்</string>
     <string name="patient_continue">படம் எடுக்கத் தொடரவும்</string>
     <string name="patient_skip">நோயாளி விவரங்கள் இல்லாமல் பரிசோதிக்கவும்</string>
+    <string name="patient_details_required">பெயர் மற்றும் வயதை உள்ளிடவும், அல்லது விவரங்கள் இல்லாமல் பரிசோதிக்க கீழே உள்ள பொத்தானை அழுத்தவும்.</string>
     <string name="patient_elevated_risk">நீண்டகால நீரிழிவு — விழித்திரை பாதிப்புக்கு அதிக ஆபத்து</string>
 
     <string name="eye_step">படி 3 · எந்தக் கண்</string>

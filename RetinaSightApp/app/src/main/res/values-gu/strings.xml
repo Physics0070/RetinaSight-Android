@@ -70,6 +70,9 @@
     <string name="history_title">અગાઉની તપાસ</string>
     <string name="history_empty">હજી કોઈ તપાસ નથી</string>
     <string name="history_progression">સમય સાથે ફેરફાર</string>
+    <string name="history_delete">આ તપાસ કાઢી નાખો</string>
+    <string name="history_delete_confirm">આ ફોનમાંથી આ તપાસ અને તેનો ફોટો કાઢી નાખવો? આ પાછું નહીં મળે.</string>
+    <string name="history_delete_cancel">રહેવા દો</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">સેટિંગ્સ</string>
@@ -197,6 +200,7 @@
     <string name="patient_years">નિદાનને કેટલાં વર્ષ થયાં</string>
     <string name="patient_continue">ફોટો લેવા આગળ વધો</string>
     <string name="patient_skip">દર્દીની વિગતો વગર તપાસો</string>
+    <string name="patient_details_required">નામ અને ઉંમર ભરો, અથવા વિગતો વગર તપાસ કરવા નીચેનું બટન દબાવો.</string>
     <string name="patient_elevated_risk">લાંબા સમયનો ડાયાબિટીસ — રેટિનોપથીનું જોખમ વધારે</string>
 
     <string name="eye_step">પગલું 3 · કઈ આંખ</string>

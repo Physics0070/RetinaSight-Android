@@ -70,6 +70,9 @@
     <string name="history_title">ਪਿਛਲੀਆਂ ਜਾਂਚਾਂ</string>
     <string name="history_empty">ਹਾਲੇ ਕੋਈ ਜਾਂਚ ਨਹੀਂ</string>
     <string name="history_progression">ਸਮੇਂ ਨਾਲ ਤਬਦੀਲੀ</string>
+    <string name="history_delete">ਇਹ ਜਾਂਚ ਮਿਟਾਓ</string>
+    <string name="history_delete_confirm">ਇਸ ਫ਼ੋਨ ਤੋਂ ਇਹ ਜਾਂਚ ਅਤੇ ਇਸਦੀ ਤਸਵੀਰ ਮਿਟਾਉਣੀ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਆਵੇਗੀ।</string>
+    <string name="history_delete_cancel">ਰਹਿਣ ਦਿਓ</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">ਸੈਟਿੰਗਾਂ</string>
@@ -197,6 +200,7 @@
     <string name="patient_years">ਪਛਾਣ ਹੋਏ ਨੂੰ ਕਿੰਨੇ ਸਾਲ</string>
     <string name="patient_continue">ਤਸਵੀਰ ਲੈਣ ਲਈ ਅੱਗੇ ਵਧੋ</string>
     <string name="patient_skip">ਮਰੀਜ਼ ਦੇ ਵੇਰਵੇ ਤੋਂ ਬਿਨਾਂ ਜਾਂਚ ਕਰੋ</string>
+    <string name="patient_details_required">ਨਾਂ ਅਤੇ ਉਮਰ ਭਰੋ, ਜਾਂ ਵੇਰਵੇ ਤੋਂ ਬਿਨਾਂ ਜਾਂਚ ਕਰਨ ਲਈ ਹੇਠਲਾ ਬਟਨ ਦਬਾਓ।</string>
     <string name="patient_elevated_risk">ਲੰਬੇ ਸਮੇਂ ਦੀ ਸ਼ੂਗਰ — ਰੈਟੀਨੋਪੈਥੀ ਦਾ ਵੱਧ ਖ਼ਤਰਾ</string>
 
     <string name="eye_step">ਕਦਮ 3 · ਕਿਹੜੀ ਅੱਖ</string>

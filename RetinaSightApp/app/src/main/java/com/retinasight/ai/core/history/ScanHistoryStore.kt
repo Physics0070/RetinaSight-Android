@@ -48,6 +48,7 @@ class ScanHistoryStore(private val context: Context) {
             confidence = result.confidence,
             explanation = result.explanation,
             imageFileName = imageName,
+            expectedGrade = result.expectedGrade,
             patientId = patientId,
             patientName = patientName,
             eye = eye
@@ -87,6 +88,31 @@ class ScanHistoryStore(private val context: Context) {
         writeAll(updated)
     }
 
+    /**
+     * Removes one screening, and the photograph with it.
+     *
+     * The image file goes too, deliberately. A record the worker has deleted
+     * must not leave a fundus photograph of that patient sitting in storage -
+     * deleting the index entry alone would keep the picture and lose the only
+     * reference to it.
+     *
+     * Sync state is not consulted. A record already sent to the clinic still
+     * disappears from this phone; the clinic's copy is the clinic's to manage.
+     */
+    suspend fun delete(id: String) = withContext(Dispatchers.IO) {
+        val remaining = readAll().filterNot { record ->
+            if (record.id == id) {
+                record.imageFileName?.let { name ->
+                    runCatching { File(imageDir, name).delete() }
+                }
+                true
+            } else {
+                false
+            }
+        }
+        writeAll(remaining)
+    }
+
     suspend fun loadImage(record: ScanRecord): Bitmap? = withContext(Dispatchers.IO) {
         val name = record.imageFileName ?: return@withContext null
         val file = File(imageDir, name)
@@ -109,6 +135,12 @@ class ScanHistoryStore(private val context: Context) {
                             confidence = o.getDouble("confidence").toFloat(),
                             explanation = o.optString("explanation", ""),
                             imageFileName = o.optString("image").takeIf { it.isNotEmpty() },
+                            // Absent on records written before this was kept.
+                            expectedGrade = if (o.has("expected_grade")) {
+                                o.getDouble("expected_grade").toFloat()
+                            } else {
+                                null
+                            },
                             patientId = o.optString("patient_id").takeIf { it.isNotEmpty() },
                             patientName = o.optString("patient_name").takeIf { it.isNotEmpty() },
                             eye = o.optString("eye").takeIf { it.isNotEmpty() }
@@ -137,6 +169,7 @@ class ScanHistoryStore(private val context: Context) {
                     put("confidence", r.confidence.toDouble())
                     put("explanation", r.explanation)
                     put("image", r.imageFileName ?: "")
+                    r.expectedGrade?.let { put("expected_grade", it.toDouble()) }
                     put("sync", r.syncState.name)
                     put("patient_id", r.patientId ?: "")
                     put("patient_name", r.patientName ?: "")

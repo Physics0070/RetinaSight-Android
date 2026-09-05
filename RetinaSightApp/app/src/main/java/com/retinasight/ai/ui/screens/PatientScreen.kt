@@ -95,6 +95,19 @@ fun PatientScreen(
 
     val elevatedRisk = diabetes == DiabetesStatus.YES && (years.toIntOrNull() ?: 0) >= 10
 
+    /**
+     * "Continue to photo" promises a record with the patient in it, so it only
+     * unlocks once there is one. Name and age are the two fields with no
+     * sensible default; sex, diabetes and phone all have valid "not known" or
+     * empty answers and are not held against the worker.
+     *
+     * Anyone who does not want to type takes the second button instead, which
+     * is always available. This is a fork, not a gate - what it prevents is the
+     * silent middle case, a record labelled as having details that has none.
+     */
+    val enteredAge = age.toIntOrNull()
+    val detailsComplete = name.isNotBlank() && enteredAge != null && enteredAge in 1..120
+
     Surface(
         modifier = modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
@@ -243,9 +256,21 @@ fun PatientScreen(
             BigActionButton(
                 text = stringResource(R.string.patient_continue),
                 icon = Icons.Filled.ArrowForward,
-                enabled = consented,
+                enabled = consented && detailsComplete,
                 onClick = { onContinue(entry(withDetails = true)) }
             )
+
+            // A disabled button with no reason given is the usual way this
+            // screen gets abandoned. Say what is missing, but only once the
+            // worker has consented and is actually looking at it.
+            if (consented && !detailsComplete) {
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    text = stringResource(R.string.patient_details_required),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.outline
+                )
+            }
 
             Spacer(Modifier.height(12.dp))
 

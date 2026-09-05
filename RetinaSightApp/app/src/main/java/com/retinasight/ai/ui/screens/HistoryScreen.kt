@@ -1,6 +1,7 @@
 package com.retinasight.ai.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,21 +17,33 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.DeleteForever
+import androidx.compose.material.icons.filled.DeleteOutline
 import androidx.compose.material3.Card
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.retinasight.ai.R
 import com.retinasight.ai.core.history.ScanRecord
+import com.retinasight.ai.core.patient.Eye
 import com.retinasight.ai.ui.theme.SeverityPalette
 import java.text.DateFormat
 import java.util.Date
@@ -45,6 +58,8 @@ import java.util.Date
 @Composable
 fun HistoryScreen(
     records: List<ScanRecord>,
+    onOpenRecord: (ScanRecord) -> Unit,
+    onDeleteRecord: (ScanRecord) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Surface(
@@ -83,7 +98,13 @@ fun HistoryScreen(
             Spacer(Modifier.height(20.dp))
 
             LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                items(records) { record -> HistoryRow(record) }
+                items(records, key = { it.id }) { record ->
+                    HistoryRow(
+                        record = record,
+                        onClick = { onOpenRecord(record) },
+                        onDelete = { onDeleteRecord(record) }
+                    )
+                }
             }
         }
     }
@@ -119,14 +140,25 @@ private fun ProgressionStrip(records: List<ScanRecord>, modifier: Modifier = Mod
 }
 
 @Composable
-private fun HistoryRow(record: ScanRecord, modifier: Modifier = Modifier) {
+private fun HistoryRow(
+    record: ScanRecord,
+    onClick: () -> Unit,
+    onDelete: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    // Two taps to delete, in place. A single bin icon next to a clinical
+    // record is too easy to hit with a thumb while scrolling.
+    var confirming by remember { mutableStateOf(false) }
+
     Card(
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
-        modifier = modifier.fillMaxWidth()
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
     ) {
         Row(
             modifier = Modifier.padding(16.dp),
@@ -146,12 +178,56 @@ private fun HistoryRow(record: ScanRecord, modifier: Modifier = Modifier) {
                     fontWeight = FontWeight.SemiBold
                 )
                 Text(
-                    text = DateFormat
-                        .getDateInstance(DateFormat.MEDIUM)
-                        .format(Date(record.timestampMillis)),
+                    text = listOfNotNull(
+                        DateFormat
+                            .getDateInstance(DateFormat.MEDIUM)
+                            .format(Date(record.timestampMillis)),
+                        record.patientName?.takeIf { it.isNotBlank() },
+                        record.eye?.let { eye ->
+                            stringResource(
+                                if (eye == Eye.RIGHT) R.string.eye_right else R.string.eye_left
+                            )
+                        }
+                    ).joinToString("  ·  "),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.outline
                 )
+                // A first line of what this patient was actually told, so the
+                // list is readable without opening every entry.
+                if (record.explanation.isNotBlank()) {
+                    Spacer(Modifier.height(6.dp))
+                    Text(
+                        text = record.explanation,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+
+            if (confirming) {
+                IconButton(onClick = onDelete) {
+                    Icon(
+                        imageVector = Icons.Filled.DeleteForever,
+                        contentDescription = stringResource(R.string.history_delete),
+                        tint = MaterialTheme.colorScheme.error
+                    )
+                }
+                IconButton(onClick = { confirming = false }) {
+                    Icon(
+                        imageVector = Icons.Filled.Close,
+                        contentDescription = stringResource(R.string.history_delete_cancel)
+                    )
+                }
+            } else {
+                IconButton(onClick = { confirming = true }) {
+                    Icon(
+                        imageVector = Icons.Filled.DeleteOutline,
+                        contentDescription = stringResource(R.string.history_delete),
+                        tint = MaterialTheme.colorScheme.outline
+                    )
+                }
             }
         }
     }

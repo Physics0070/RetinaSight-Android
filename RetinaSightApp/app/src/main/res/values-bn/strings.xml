@@ -70,6 +70,9 @@
     <string name="history_title">আগের পরীক্ষাগুলি</string>
     <string name="history_empty">এখনও কোনও পরীক্ষা হয়নি</string>
     <string name="history_progression">সময়ের সঙ্গে পরিবর্তন</string>
+    <string name="history_delete">এই পরীক্ষাটি মুছুন</string>
+    <string name="history_delete_confirm">এই ফোন থেকে এই পরীক্ষা ও তার ছবি মুছে ফেলবেন? এটি আর ফেরানো যাবে না।</string>
+    <string name="history_delete_cancel">থাক</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">সেটিংস</string>
@@ -197,6 +200,7 @@
     <string name="patient_years">ধরা পড়ার পর কত বছর</string>
     <string name="patient_continue">ছবি তুলতে এগিয়ে যান</string>
     <string name="patient_skip">রোগীর তথ্য ছাড়াই পরীক্ষা করুন</string>
+    <string name="patient_details_required">নাম ও বয়স লিখুন, অথবা বিবরণ ছাড়াই পরীক্ষা করতে নিচের বোতামটি চাপুন।</string>
     <string name="patient_elevated_risk">দীর্ঘদিনের ডায়াবেটিস — রেটিনোপ্যাথির ঝুঁকি বেশি</string>
 
     <string name="eye_step">ধাপ ৩ · কোন চোখ</string>

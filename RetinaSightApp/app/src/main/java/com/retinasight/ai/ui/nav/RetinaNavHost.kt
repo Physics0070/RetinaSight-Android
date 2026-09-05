@@ -15,6 +15,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.launch
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.produceState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -39,6 +42,7 @@ import com.retinasight.ai.ui.scan.ScanViewModel
 import com.retinasight.ai.ui.screens.AnalyzingScreen
 import com.retinasight.ai.ui.screens.CaptureScreen
 import com.retinasight.ai.ui.screens.ClinicScreen
+import com.retinasight.ai.ui.screens.HistoryDetailScreen
 import com.retinasight.ai.ui.screens.HistoryScreen
 import com.retinasight.ai.ui.screens.HomeScreen
 import com.retinasight.ai.ui.screens.PatientScreen
@@ -98,7 +102,6 @@ fun RetinaNavHost(
                 },
                 onHistory = { navController.navigate(Routes.HISTORY) },
                 onSettings = { navController.navigate(Routes.SETTINGS) },
-                onClinic = { navController.navigate(Routes.CLINIC) },
                 syncStatus = syncStatus
             )
         }
@@ -126,7 +129,7 @@ fun RetinaNavHost(
         }
 
         composable(Routes.ANALYZING) {
-            AnalyzingScreen()
+            AnalyzingScreen(isOnline = syncStatus.isOnline)
 
             // Move on as soon as inference finishes - the user never has to tap.
             LaunchedEffect(scanState) {
@@ -187,11 +190,49 @@ fun RetinaNavHost(
         }
 
         composable(Routes.HISTORY) {
-            // Loaded fresh each time the screen opens; the list is small.
-            val records by produceState(initialValue = emptyList<ScanRecord>()) {
-                value = container.historyStore.all()
+            // Held in state rather than produceState so a delete can refresh
+            // the list in place; it is reloaded each time the screen opens and
+            // the list is small.
+            var records by remember { mutableStateOf(emptyList<ScanRecord>()) }
+            LaunchedEffect(Unit) { records = container.historyStore.all() }
+            val historyScope = rememberCoroutineScope()
+
+            HistoryScreen(
+                records = records,
+                onOpenRecord = { record ->
+                    navController.navigate(Routes.historyDetail(record.id))
+                },
+                onDeleteRecord = { record ->
+                    historyScope.launch {
+                        container.historyStore.delete(record.id)
+                        records = container.historyStore.all()
+                    }
+                }
+            )
+        }
+
+        composable(Routes.HISTORY_DETAIL) { entry ->
+            val recordId = entry.arguments?.getString("recordId")
+            val record by produceState<ScanRecord?>(initialValue = null, recordId) {
+                value = container.historyStore.all().firstOrNull { it.id == recordId }
             }
-            HistoryScreen(records = records)
+            // Null only while loading, or if the record was removed under us -
+            // either way there is nothing to show and nothing to crash over.
+            val deleteScope = rememberCoroutineScope()
+            record?.let { found ->
+                HistoryDetailScreen(
+                    record = found,
+                    loadImage = { container.historyStore.loadImage(it) },
+                    onDelete = {
+                        deleteScope.launch {
+                            container.historyStore.delete(found.id)
+                            // Back to the list, which reloads and no longer
+                            // holds this record.
+                            navController.popBackStack()
+                        }
+                    }
+                )
+            }
         }
 
         composable(Routes.SETTINGS) {

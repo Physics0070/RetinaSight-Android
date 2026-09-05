@@ -70,6 +70,9 @@
     <string name="history_title">ಹಿಂದಿನ ತಪಾಸಣೆಗಳು</string>
     <string name="history_empty">ಇನ್ನೂ ಯಾವುದೇ ತಪಾಸಣೆಗಳಿಲ್ಲ</string>
     <string name="history_progression">ಕಾಲಾನಂತರದ ಬದಲಾವಣೆ</string>
+    <string name="history_delete">ಈ ತಪಾಸಣೆಯನ್ನು ಅಳಿಸಿ</string>
+    <string name="history_delete_confirm">ಈ ತಪಾಸಣೆ ಮತ್ತು ಅದರ ಚಿತ್ರವನ್ನು ಈ ಫೋನ್‌ನಿಂದ ಅಳಿಸಬೇಕೇ? ಇದು ಮತ್ತೆ ಸಿಗುವುದಿಲ್ಲ.</string>
+    <string name="history_delete_cancel">ಬೇಡ</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
@@ -197,6 +200,7 @@
     <string name="patient_years">ದೃಢಪಟ್ಟು ಎಷ್ಟು ವರ್ಷಗಳು</string>
     <string name="patient_continue">ಚಿತ್ರ ತೆಗೆಯಲು ಮುಂದುವರಿಸಿ</string>
     <string name="patient_skip">ರೋಗಿಯ ವಿವರಗಳಿಲ್ಲದೆ ತಪಾಸಣೆ ಮಾಡಿ</string>
+    <string name="patient_details_required">ಹೆಸರು ಮತ್ತು ವಯಸ್ಸನ್ನು ನಮೂದಿಸಿ, ಅಥವಾ ವಿವರಗಳಿಲ್ಲದೆ ತಪಾಸಣೆ ಮಾಡಲು ಕೆಳಗಿನ ಬಟನ್ ಒತ್ತಿರಿ.</string>
     <string name="patient_elevated_risk">ದೀರ್ಘಕಾಲದ ಮಧುಮೇಹ — ರೆಟಿನೋಪತಿಯ ಅಪಾಯ ಹೆಚ್ಚು</string>
 
     <string name="eye_step">ಹಂತ 3 · ಯಾವ ಕಣ್ಣು</string>

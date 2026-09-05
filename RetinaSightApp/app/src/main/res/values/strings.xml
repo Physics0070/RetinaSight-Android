@@ -71,6 +71,9 @@
     <string name="history_title">Past checks</string>
     <string name="history_empty">No checks yet</string>
     <string name="history_progression">Change over time</string>
+    <string name="history_delete">Delete this check</string>
+    <string name="history_delete_confirm">Delete this check and its photo from this phone? This cannot be undone.</string>
+    <string name="history_delete_cancel">Keep it</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">Settings</string>
@@ -198,6 +201,7 @@
     <string name="patient_years">Years since diagnosis</string>
     <string name="patient_continue">Continue to photo</string>
     <string name="patient_skip">Screen without patient details</string>
+    <string name="patient_details_required">Enter name and age, or use the button below to screen without details.</string>
     <string name="patient_elevated_risk">Long-standing diabetes — higher risk of retinopathy</string>
 
     <string name="eye_step">Step 3 · Which eye</string>

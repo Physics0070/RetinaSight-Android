@@ -54,6 +54,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -132,7 +133,12 @@ fun CaptureScreen(
             Text(
                 text = stringResource(R.string.capture_title),
                 style = MaterialTheme.typography.headlineMedium,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                // The home button floats over every screen at the top-right,
+                // 52dp plus 12dp of padding. A centred title the width of the
+                // column runs underneath it - invisible in English, where this
+                // title is one short line, obvious in Tamil where it wraps.
+                modifier = Modifier.padding(horizontal = 60.dp)
             )
 
             Spacer(Modifier.height(16.dp))
@@ -145,7 +151,12 @@ fun CaptureScreen(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(previewHeight),
+                    .height(previewHeight)
+                    // PreviewView scales the camera surface to fill, and paints
+                    // past the bounds Compose measured for it - over the title
+                    // above and the instruction below. The Column is laid out
+                    // correctly; it is the preview that spills.
+                    .clipToBounds(),
                 contentAlignment = Alignment.Center
             ) {
                 if (hasCameraPermission) {

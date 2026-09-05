@@ -26,6 +26,7 @@ exports/*.csv
 # ...except the run quoted in the docs, kept as evidence for the numbers.
 # Contains device model, timings, power and thermal only - no patient data.
 !exports/retinasight_benchmark_20260905_230250.csv
+!exports/retinasight_benchmark_20260905_230918.csv
 
 # ---- Scratch ------------------------------------------------------------
 *.zip

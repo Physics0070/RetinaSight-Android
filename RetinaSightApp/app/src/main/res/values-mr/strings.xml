@@ -70,6 +70,9 @@
     <string name="history_title">मागील तपासण्या</string>
     <string name="history_empty">अजून कोणतीही तपासणी नाही</string>
     <string name="history_progression">काळानुसार बदल</string>
+    <string name="history_delete">ही तपासणी काढून टाका</string>
+    <string name="history_delete_confirm">या फोनवरून ही तपासणी आणि तिचा फोटो काढून टाकायचा? हे परत मिळणार नाही.</string>
+    <string name="history_delete_cancel">राहू द्या</string>
 
     <!-- ============ Settings ============ -->
     <string name="settings_title">सेटिंग्ज</string>
@@ -193,6 +196,7 @@
     <string name="patient_years">निदानाला किती वर्षे झाली</string>
     <string name="patient_continue">फोटोकडे जा</string>
     <string name="patient_skip">रुग्णाच्या माहितीशिवाय तपासा</string>
+    <string name="patient_details_required">नाव आणि वय भरा, किंवा तपशिलाशिवाय तपासणीसाठी खालील बटण दाबा.</string>
     <string name="patient_elevated_risk">दीर्घकाळ मधुमेह — रेटिनोपॅथीचा धोका अधिक</string>
 
     <string name="eye_step">पायरी 3 · कोणता डोळा</string>

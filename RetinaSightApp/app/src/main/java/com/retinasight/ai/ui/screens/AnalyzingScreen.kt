@@ -38,7 +38,7 @@ import com.retinasight.ai.ui.components.OfflineBadge
  * phone - that reassurance is the point, not decoration.
  */
 @Composable
-fun AnalyzingScreen(modifier: Modifier = Modifier) {
+fun AnalyzingScreen(isOnline: Boolean, modifier: Modifier = Modifier) {
     val transition = rememberInfiniteTransition(label = "analyzing")
     val pulse by transition.animateFloat(
         initialValue = 0.35f,
@@ -91,7 +91,7 @@ fun AnalyzingScreen(modifier: Modifier = Modifier) {
 
             Spacer(Modifier.height(28.dp))
 
-            OfflineBadge()
+            OfflineBadge(isOnline = isOnline)
         }
     }
 }

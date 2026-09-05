@@ -1,6 +1,9 @@
 package com.retinasight.ai.core.history
 
+import com.retinasight.ai.core.model.ConfidenceBand
 import com.retinasight.ai.core.model.DrGrade
+import com.retinasight.ai.core.model.ReferralPolicy
+import com.retinasight.ai.core.model.Urgency
 import com.retinasight.ai.core.patient.Eye
 import com.retinasight.ai.core.sync.SyncState
 
@@ -32,6 +35,18 @@ data class ScanRecord(
     val eye: Eye? = null,
 
     /**
+     * The softmax-weighted mean grade at the time of the scan.
+     *
+     * Kept so history can show the urgency the patient was actually given.
+     * A scan between the referral threshold and the rounding point is shown
+     * as "see a doctor soon" even though its grade reads mild; recomputing
+     * urgency from the grade alone would quietly contradict the record.
+     *
+     * Null for records saved before this was stored.
+     */
+    val expectedGrade: Float? = null,
+
+    /**
      * Whether this record has reached the clinic.
      *
      * Every record starts PENDING regardless of connectivity - the health
@@ -39,4 +54,22 @@ data class ScanRecord(
      * problem to remember.
      */
     val syncState: SyncState = SyncState.PENDING
-)
+) {
+    /** The band shown on the day, from the thresholds the result screen uses. */
+    val confidenceBand: ConfidenceBand get() = ConfidenceBand.forConfidence(confidence)
+
+    /**
+     * The urgency this patient was actually told.
+     *
+     * Where [expectedGrade] was recorded the screening threshold applies just
+     * as it did on the day. Older records have only the grade to go on and fall
+     * back to it - which is why [explanation], stored verbatim, remains the
+     * authoritative account of what was said.
+     */
+    val urgency: Urgency
+        get() = if (expectedGrade != null && ReferralPolicy.isBorderline(expectedGrade, grade)) {
+            Urgency.SOON
+        } else {
+            grade.urgency
+        }
+}
