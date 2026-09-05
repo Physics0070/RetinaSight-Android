@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Minimal platform theme. All real styling is done in Compose
+      (see ui/theme/Theme.kt); this only controls the window before
+      Compose draws its first frame.
+    -->
+    <style name="Theme.RetinaSight" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:statusBarColor">@color/brand_teal</item>
+        <item name="android:navigationBarColor">@color/window_background</item>
+    </style>
+</resources>

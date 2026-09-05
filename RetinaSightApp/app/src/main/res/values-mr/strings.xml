@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- app_name is intentionally omitted so the brand name stays as-is. -->
+
+    <!-- ============ Language picker ============ -->
+    <string name="language_title">तुमची भाषा निवडा</string>
+    <string name="language_subtitle">ऐकण्यासाठी दाबा</string>
+    <string name="language_continue">पुढे जा</string>
+
+    <!-- ============ Home ============ -->
+    <string name="home_tagline">इंटरनेटशिवाय डोळ्यांची तपासणी</string>
+    <string name="home_scan_button">डोळा तपासा</string>
+    <string name="home_history_button">मागील तपासण्या</string>
+    <string name="home_settings">सेटिंग्ज</string>
+    <string name="offline_badge">इंटरनेटशिवाय चालते</string>
+
+    <!-- ============ Capture ============ -->
+    <string name="capture_title">फंडस फोटो घ्या</string>
+    <string name="capture_instruction">फंडस अ‍ॅडॅप्टर लावा, नंतर रेटिना वर्तुळाच्या मध्यभागी ठेवा</string>
+    <string name="capture_shutter">फोटो काढा</string>
+    <string name="capture_gallery">फंडस कॅमेऱ्यातून घ्या</string>
+    <string name="capture_permission_rationale">रेटिनाचा फोटो घेण्यासाठी कॅमेरा फंडस अ‍ॅडॅप्टरसोबत वापरला जातो. फोटो कधीही तुमच्या फोनबाहेर जात नाही.</string>
+    <string name="capture_grant_permission">कॅमेरा सुरू करा</string>
+    <string name="capture_permission_denied">कॅमेऱ्याला परवानगी नाही. तरीही तुम्ही तुमच्या फंडस कॅमेऱ्यातून फोटो घेऊ शकता.</string>
+    <string name="capture_adapter_note">एकटा फोन कॅमेरा रेटिनाचा फोटो घेऊ शकत नाही. फंडस अ‍ॅडॅप्टर वापरा, किंवा क्लिनिकच्या फंडस कॅमेऱ्यातून फोटो घ्या.</string>
+
+    <!-- ============ Analyzing ============ -->
+    <string name="analyzing_title">फोटो तपासला जात आहे</string>
+    <string name="analyzing_subtitle">तुमच्या फोनवरच काम सुरू आहे. इंटरनेटची गरज नाही.</string>
+
+    <!-- ============ Result ============ -->
+    <string name="result_title">निकाल</string>
+    <string name="result_confidence_label">किती खात्री</string>
+    <string name="confidence_high">जास्त</string>
+    <string name="confidence_medium">मध्यम</string>
+    <string name="confidence_low">कमी</string>
+    <string name="result_heatmap_show">अ‍ॅपने कुठे पाहिले ते दाखवा</string>
+    <string name="result_heatmap_hide">लपवा</string>
+    <string name="result_heatmap_unavailable">या फोटोसाठी उपलब्ध नाही</string>
+    <string name="result_explanation_title">याचा अर्थ</string>
+    <string name="result_listen">ऐका</string>
+    <string name="result_stop">थांबवा</string>
+    <string name="result_urgency_title">काय करावे</string>
+    <string name="result_save">जतन करा</string>
+    <string name="result_saved">या फोनमध्ये जतन केले</string>
+    <string name="result_new_scan">दुसरा डोळा तपासा</string>
+    <string name="result_disclaimer">ही फक्त प्राथमिक तपासणीची मदत आहे, डॉक्टरांचे निदान नाही. नेहमी डोळ्यांच्या डॉक्टरांकडून खात्री करा.</string>
+
+    <!-- ============ Severity grades ============ -->
+    <string name="grade_0_label">काही लक्षण आढळले नाही</string>
+    <string name="grade_1_label">सौम्य बदल</string>
+    <string name="grade_2_label">मध्यम बदल</string>
+    <string name="grade_3_label">तीव्र बदल</string>
+    <string name="grade_4_label">खूप वाढलेले बदल</string>
+
+    <string name="grade_0_desc">या फोटोमध्ये मधुमेहामुळे डोळ्याला झालेल्या इजेची लक्षणे आढळली नाहीत.</string>
+    <string name="grade_1_desc">डोळ्यातील रक्तवाहिन्यांमध्ये सुरुवातीचे लहान बदल आढळले आहेत.</string>
+    <string name="grade_2_desc">डोळ्यातील रक्तवाहिन्यांमध्ये स्पष्ट बदल आढळले आहेत.</string>
+    <string name="grade_3_desc">अनेक बदल आढळले आहेत. डोळ्याला डॉक्टरांची तपासणी आवश्यक आहे.</string>
+    <string name="grade_4_desc">खूप वाढलेले बदल आणि नवीन कमकुवत रक्तवाहिन्या आढळल्या आहेत. लवकर उपचार आवश्यक आहेत.</string>
+
+    <!-- ============ Referral urgency ============ -->
+    <string name="urgency_routine">12 महिन्यांनी पुन्हा तपासणी करा</string>
+    <string name="urgency_monitor">6 ते 12 महिन्यांत पुन्हा तपासणी करा</string>
+    <string name="urgency_soon">3 महिन्यांच्या आत डोळ्यांच्या डॉक्टरांना दाखवा</string>
+    <string name="urgency_urgent">1 महिन्याच्या आत डोळ्यांच्या डॉक्टरांना दाखवा</string>
+    <string name="urgency_immediate">शक्य तितक्या लवकर डोळ्यांच्या डॉक्टरांना दाखवा</string>
+
+    <!-- ============ History ============ -->
+    <string name="history_title">मागील तपासण्या</string>
+    <string name="history_empty">अजून कोणतीही तपासणी नाही</string>
+    <string name="history_progression">काळानुसार बदल</string>
+
+    <!-- ============ Settings ============ -->
+    <string name="settings_title">सेटिंग्ज</string>
+    <string name="settings_language">भाषा</string>
+    <string name="settings_voice_test">आवाज तपासा</string>
+    <string name="settings_voice_unavailable">या फोनवर या भाषेसाठी आवाज उपलब्ध नाही</string>
+    <string name="settings_model_status">मॉडेलची स्थिती</string>
+    <string name="settings_model_ready">या फोनवर तयार</string>
+    <string name="settings_model_loading">लोड होत आहे…</string>
+    <string name="settings_about">माहिती</string>
+
+    <!-- ============ Common ============ -->
+    <string name="common_back">मागे</string>
+    <string name="common_close">बंद करा</string>
+    <string name="common_retry">पुन्हा प्रयत्न करा</string>
+    <string name="common_error">काहीतरी चूक झाली. पुन्हा प्रयत्न करा.</string>
+
+    <!-- ============ Development only ============ -->
+    <string name="mock_explanation_notice">डेव्हलपमेंट मोड: खरे मॉडेल अद्याप जोडलेले नाही. हा मजकूर फक्त नमुना आहे, वैद्यकीय निकाल नाही.</string>
+
+
+    <!-- ============ Field benchmark ============ -->
+    <string name="benchmark_title">फील्ड बेंचमार्क</string>
+    <string name="benchmark_subtitle">शिबिरात हा फोन प्रत्यक्षात काय करतो हे मोजते: वेग, वीज, एका चार्जमध्ये किती रुग्ण, आणि कधी तापून मंदावतो.</string>
+    <string name="benchmark_count">तपासण्यांची संख्या</string>
+    <string name="benchmark_run">शिबिर सिम्युलेशन चालवा</string>
+    <string name="benchmark_cancel">थांबवा</string>
+    <string name="benchmark_baseline">रिकामी स्थिती मोजत आहे… %1$d से</string>
+    <string name="benchmark_progress">%2$d पैकी %1$d तपासणी</string>
+    <string name="benchmark_section_latency">प्रति तपासणी वेळ</string>
+    <string name="benchmark_section_power">वीज वापर</string>
+    <string name="benchmark_section_energy">ऊर्जा आणि क्षमता</string>
+    <string name="benchmark_section_thermal">तापमान</string>
+    <string name="benchmark_mean">सरासरी</string>
+    <string name="benchmark_p50">मध्य (p50)</string>
+    <string name="benchmark_p90">p90</string>
+    <string name="benchmark_p99">p99</string>
+    <string name="benchmark_idle">रिकामी स्थिती</string>
+    <string name="benchmark_busy">तपासणीदरम्यान</string>
+    <string name="benchmark_net">निव्वळ (फक्त तपासणी)</string>
+    <string name="benchmark_per_screening">प्रति तपासणी</string>
+    <string name="benchmark_per_charge">एका चार्जमध्ये तपासण्या</string>
+    <string name="benchmark_crosscheck">दुसऱ्या पद्धतीने पडताळणी</string>
+    <string name="benchmark_temp_rise">बॅटरीचे तापमान</string>
+    <string name="benchmark_throttle_none">संपूर्ण शिबिरात वेग कमी झाला नाही</string>
+    <string name="benchmark_throttle_at">%1$d व्या तपासणीपासून वेग कमी होऊ लागला</string>
+    <string name="benchmark_export">CSV निर्यात करा</string>
+    <string name="benchmark_exported">%1$s मध्ये जतन केले</string>
+    <string name="benchmark_warnings">मोजमापाबाबत नोंदी</string>
+
+    <string name="benchmark_patients_per_charge">एका चार्जमध्ये रुग्ण</string>
+    <string name="benchmark_duty_cycle">प्रति रुग्ण %1$d सेकंद फोन वापरावर</string>
+    <string name="benchmark_continuous_hours">सलग तपासणी</string>
+    <string name="benchmark_measured_capacity">मोजलेली बॅटरी क्षमता</string>
+    <string name="benchmark_back_to_back">फक्त तपासणीची कमाल मर्यादा</string>
+
+    <string name="explain_low_confidence">अ‍ॅपला या फोटोबद्दल पुरेशी खात्री नाही. चांगल्या उजेडात, डोळा मध्यभागी ठेवून दुसरा फोटो काढा.</string>
+    <string name="explain_refer_soon">लक्षणांची वाट पाहू नका. या टप्प्यावर डोळे ठीक दिसू शकतात, तरीही उपचार आवश्यक असतात.</string>
+    <string name="explain_no_dr">रक्तातील साखर नियंत्रणात ठेवा आणि सल्ल्यानुसार पुन्हा तपासणी करा, डोळे ठीक वाटले तरीही.</string>
+    <string name="explain_heatmap_hint">रंगीत भाग अ‍ॅपने सर्वात जास्त पाहिलेली जागा दाखवतो.</string>
+    <string name="explain_borderline_referral">हा डोळा त्या मर्यादेजवळ आहे जिथे नेत्रतज्ज्ञांनी पाहणे आवश्यक आहे. अ‍ॅप मुद्दाम लवकर पाठवते, त्यामुळे बदल कमी असले तरी तपासणी करून घ्या.</string>
+
+    <string name="capture_decode_failed">हा फोटो वाचता आला नाही. दुसरा फोटो निवडा.</string>
+    <string name="quality_title">फोटो पुन्हा काढावा लागेल</string>
+    <string name="quality_subtitle">हा फोटो विश्वासार्ह तपासणीसाठी पुरेसा स्पष्ट नाही. आत्ता दुरुस्त केल्याने चुकीचा निकाल टळतो.</string>
+    <string name="quality_issue_blur">फोन स्थिर धरा आणि कॅमेरा फोकस होऊ द्या, मग फोटो काढा.</string>
+    <string name="quality_issue_low_light">थोडा जास्त उजेड द्या, किंवा अंधाऱ्या खोलीत जा म्हणजे बाहुली रुंदावेल.</string>
+    <string name="quality_issue_overexposed">उजेड खूप जास्त आहे. उजेड कमी करा किंवा लेन्स थोडी दूर करा.</string>
+    <string name="quality_issue_framing">डोळा मध्यभागी ठेवा आणि थोडे जवळ जा.</string>
+    <string name="quality_issue_not_retina">हा डोळ्याचा फोटो वाटत नाही. लेन्स बाहुलीसमोर आणा.</string>
+    <string name="quality_issue_resolution">फोटो खूप लहान आहे. जास्त दर्जाची सेटिंग वापरा.</string>
+    <string name="quality_retake">दुसरा फोटो काढा</string>
+    <string name="quality_use_anyway">तरीही तपासा</string>
+    <string name="quality_score_overall">फोटोचा दर्जा</string>
+    <string name="quality_score_blur">स्पष्टता</string>
+    <string name="quality_score_lighting">उजेड</string>
+    <string name="quality_score_framing">फ्रेमिंग</string>
+    <string name="quality_score_visibility">डोळा दिसतो</string>
+
+    <string name="action_home">होम</string>
+    <string name="sync_state_pending">पाठवणे बाकी</string>
+    <string name="sync_state_synced">क्लिनिकला पाठवले</string>
+    <string name="sync_state_failed">पाठवता आले नाही</string>
+    <string name="clinic_connect_title">क्लिनिक जोडा</string>
+    <string name="clinic_connected_title">क्लिनिक जोडलेले आहे</string>
+    <string name="clinic_subtitle_disconnected">तपासणी याशिवायही नेहमी चालते. निकाल शेअर करायचे असतील तरच क्लिनिक जोडा.</string>
+    <string name="clinic_url">क्लिनिकचा पत्ता</string>
+    <string name="clinic_token">अ‍ॅक्सेस कोड</string>
+    <string name="clinic_connect">जोडा</string>
+    <string name="clinic_disconnect">काढून टाका</string>
+    <string name="sync_offline">इंटरनेट नाही — निकाल याच फोनमध्ये जतन झाले आहेत</string>
+    <string name="sync_online">ऑनलाइन</string>
+    <string name="sync_pending_count">%1$d पाठवणे बाकी</string>
+    <string name="sync_all_sent">सर्व पाठवले गेले</string>
+    <string name="sync_now">आता पाठवा</string>
+    <string name="sync_sending">पाठवत आहे…</string>
+    <string name="sync_failed_count">%1$d पाठवता आले नाहीत</string>
+    <string name="clinic_note_image">फक्त निकाल शेअर होतो. डोळ्याचा फोटो कधीही फोनबाहेर जात नाही.</string>
+
+    <string name="eye_right">उजवा डोळा</string>
+    <string name="eye_left">डावा डोळा</string>
+    <string name="diabetes_unknown">माहीत नाही</string>
+    <string name="diabetes_yes">होय</string>
+    <string name="diabetes_no">नाही</string>
+    <string name="sex_unspecified">सांगू इच्छित नाही</string>
+    <string name="sex_female">स्त्री</string>
+    <string name="sex_male">पुरुष</string>
+    <string name="sex_other">इतर</string>
+
+    <string name="consent_step">पायरी 1 · संमती</string>
+    <string name="consent_title">आधी रुग्णाला विचारा</string>
+    <string name="consent_body">सांगा की तुम्ही त्यांच्या डोळ्याचा फोटो काढाल, याच फोनवर संगणक तो तपासेल, आणि निकालाची खात्री डॉक्टरांकडून करावी लागेल. फोटो काढण्यापूर्वी संमती आवश्यक आहे.</string>
+    <string name="consent_checkbox">रुग्ण डोळ्याच्या तपासणीस संमती देतो</string>
+
+    <string name="patient_step">पायरी 2 · रुग्ण</string>
+    <string name="patient_name">पूर्ण नाव</string>
+    <string name="patient_age">वय</string>
+    <string name="patient_sex">लिंग</string>
+    <string name="patient_phone">फोन (फॉलो-अपसाठी)</string>
+    <string name="patient_diabetes">मधुमेहाचे निदान</string>
+    <string name="patient_years">निदानाला किती वर्षे झाली</string>
+    <string name="patient_continue">फोटोकडे जा</string>
+    <string name="patient_skip">रुग्णाच्या माहितीशिवाय तपासा</string>
+    <string name="patient_elevated_risk">दीर्घकाळ मधुमेह — रेटिनोपॅथीचा धोका अधिक</string>
+
+    <string name="eye_step">पायरी 3 · कोणता डोळा</string>
+    <string name="eye_prompt">तुम्ही कोणत्या डोळ्याचा फोटो काढत आहात?</string>
+
+    <string name="state_ready">तपासणीसाठी तयार</string>
+    <string name="state_quality">फोटोचा दर्जा तपासत आहे</string>
+    <string name="state_screening">तपासणी सुरू</string>
+    <string name="state_result">निकाल तयार</string>
+    <string name="state_referral">डॉक्टरांना दाखवणे आवश्यक</string>
+    <string name="result_patient_header">%1$s · %2$s</string>
+
+    <string name="narrate_button">सोप्या शब्दांत सांगा</string>
+    <string name="narrate_working">लिहित आहे…</string>
+    <string name="narrate_heading">सोप्या शब्दांत</string>
+    <string name="narrate_note">हे याच फोनवर वरील निकालावरून लिहिले आहे. वरील सल्लाच अधिकृत आहे.</string>
+
+    <string name="speak_summary">डोळ्याच्या तपासणीत %1$s आढळले आहे. आम्हाला %2$s आहे. %3$s</string>
+    <string name="speak_summary_eye">%1$s मध्ये तपासणीत %2$s आढळले आहे. आम्हाला %3$s आहे. %4$s</string>
+    <string name="speak_sure_high">पूर्ण खात्री</string>
+    <string name="speak_sure_medium">काही प्रमाणात खात्री</string>
+    <string name="speak_sure_low">फारशी खात्री नाही, कृपया दुसरा फोटो काढा</string>
+    <string name="voice_install">या भाषेसाठी आवाज इन्स्टॉल करा</string>
+    <string name="voice_install_hint">तुमच्या फोनमध्ये या भाषेचा आवाज नाही. इन्स्टॉल केल्यावर निकाल वाचून दाखवता येईल.</string>
+
+</resources>

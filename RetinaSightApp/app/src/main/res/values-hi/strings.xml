@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- app_name is intentionally omitted so the brand name stays as-is. -->
+
+    <!-- ============ Language picker ============ -->
+    <string name="language_title">अपनी भाषा चुनें</string>
+    <string name="language_subtitle">सुनने के लिए दबाएँ</string>
+    <string name="language_continue">आगे बढ़ें</string>
+
+    <!-- ============ Home ============ -->
+    <string name="home_tagline">बिना इंटरनेट के आँखों की जाँच</string>
+    <string name="home_scan_button">आँख की जाँच करें</string>
+    <string name="home_history_button">पिछली जाँचें</string>
+    <string name="home_settings">सेटिंग्स</string>
+    <string name="offline_badge">बिना इंटरनेट चलता है</string>
+
+    <!-- ============ Capture ============ -->
+    <string name="capture_title">फंडस फ़ोटो लें</string>
+    <string name="capture_instruction">फंडस अडैप्टर लगाएँ, फिर रेटिना को गोले के बीच में रखें</string>
+    <string name="capture_shutter">फ़ोटो लें</string>
+    <string name="capture_gallery">फंडस कैमरे से लें</string>
+    <string name="capture_permission_rationale">रेटिना की फ़ोटो के लिए कैमरा फंडस अडैप्टर के साथ इस्तेमाल होता है। फ़ोटो कभी आपके फ़ोन से बाहर नहीं जाती।</string>
+    <string name="capture_grant_permission">कैमरा चालू करें</string>
+    <string name="capture_permission_denied">कैमरा की अनुमति नहीं है। आप फिर भी अपने फंडस कैमरे से फ़ोटो ले सकते हैं।</string>
+    <string name="capture_adapter_note">अकेला फ़ोन कैमरा रेटिना की फ़ोटो नहीं ले सकता। फंडस अडैप्टर लगाएँ, या क्लिनिक के फंडस कैमरे से फ़ोटो लें।</string>
+
+    <!-- ============ Analyzing ============ -->
+    <string name="analyzing_title">फ़ोटो की जाँच हो रही है</string>
+    <string name="analyzing_subtitle">आपके फ़ोन पर ही काम हो रहा है। इंटरनेट की ज़रूरत नहीं।</string>
+
+    <!-- ============ Result ============ -->
+    <string name="result_title">नतीजा</string>
+    <string name="result_confidence_label">कितना पक्का</string>
+    <string name="confidence_high">ज़्यादा</string>
+    <string name="confidence_medium">मध्यम</string>
+    <string name="confidence_low">कम</string>
+    <string name="result_heatmap_show">ऐप ने कहाँ देखा, दिखाएँ</string>
+    <string name="result_heatmap_hide">छिपाएँ</string>
+    <string name="result_heatmap_unavailable">इस फ़ोटो के लिए उपलब्ध नहीं</string>
+    <string name="result_explanation_title">इसका मतलब</string>
+    <string name="result_listen">सुनें</string>
+    <string name="result_stop">रोकें</string>
+    <string name="result_urgency_title">क्या करें</string>
+    <string name="result_save">सहेजें</string>
+    <string name="result_saved">इस फ़ोन में सहेजा गया</string>
+    <string name="result_new_scan">दूसरी आँख की जाँच करें</string>
+    <string name="result_disclaimer">यह केवल शुरुआती जाँच में मदद है, डॉक्टर की जाँच नहीं। हमेशा आँख के डॉक्टर से पुष्टि करें।</string>
+
+    <!-- ============ Severity grades ============ -->
+    <string name="grade_0_label">कोई लक्षण नहीं मिला</string>
+    <string name="grade_1_label">हल्के बदलाव</string>
+    <string name="grade_2_label">मध्यम बदलाव</string>
+    <string name="grade_3_label">गंभीर बदलाव</string>
+    <string name="grade_4_label">बहुत बढ़े हुए बदलाव</string>
+
+    <string name="grade_0_desc">इस फ़ोटो में मधुमेह से आँख को नुकसान के कोई लक्षण नहीं मिले।</string>
+    <string name="grade_1_desc">आँख की खून की नलियों में शुरुआती छोटे बदलाव मिले हैं।</string>
+    <string name="grade_2_desc">आँख की खून की नलियों में साफ़ बदलाव मिले हैं।</string>
+    <string name="grade_3_desc">कई बदलाव मिले हैं। आँख को डॉक्टर की जाँच चाहिए।</string>
+    <string name="grade_4_desc">बहुत बढ़े हुए बदलाव और नई कमज़ोर खून की नलियाँ मिली हैं। जल्दी इलाज ज़रूरी है।</string>
+
+    <!-- ============ Referral urgency ============ -->
+    <string name="urgency_routine">12 महीने बाद फिर जाँच कराएँ</string>
+    <string name="urgency_monitor">6 से 12 महीने में फिर जाँच कराएँ</string>
+    <string name="urgency_soon">3 महीने के अंदर आँख के डॉक्टर को दिखाएँ</string>
+    <string name="urgency_urgent">1 महीने के अंदर आँख के डॉक्टर को दिखाएँ</string>
+    <string name="urgency_immediate">जितनी जल्दी हो सके आँख के डॉक्टर को दिखाएँ</string>
+
+    <!-- ============ History ============ -->
+    <string name="history_title">पिछली जाँचें</string>
+    <string name="history_empty">अभी कोई जाँच नहीं</string>
+    <string name="history_progression">समय के साथ बदलाव</string>
+
+    <!-- ============ Settings ============ -->
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="settings_language">भाषा</string>
+    <string name="settings_voice_test">आवाज़ जाँचें</string>
+    <string name="settings_voice_unavailable">इस फ़ोन पर इस भाषा के लिए आवाज़ उपलब्ध नहीं</string>
+    <string name="settings_model_status">मॉडल की स्थिति</string>
+    <string name="settings_model_ready">इस फ़ोन पर तैयार</string>
+    <string name="settings_model_loading">लोड हो रहा है…</string>
+    <string name="settings_about">जानकारी</string>
+
+    <!-- ============ Common ============ -->
+    <string name="common_back">वापस</string>
+    <string name="common_close">बंद करें</string>
+    <string name="common_retry">फिर कोशिश करें</string>
+    <string name="common_error">कुछ गड़बड़ हुई। फिर कोशिश करें।</string>
+
+    <!-- ============ Development only ============ -->
+    <string name="mock_explanation_notice">डेवलपमेंट मोड: असली मॉडल अभी जुड़ा नहीं है। यह टेक्स्ट सिर्फ़ नमूना है, चिकित्सा नतीजा नहीं।</string>
+
+
+    <!-- ============ Field benchmark ============ -->
+    <string name="benchmark_title">फ़ील्ड बेंचमार्क</string>
+    <string name="benchmark_subtitle">यह मापता है कि एक शिविर में यह फ़ोन असल में क्या करता है: गति, बिजली, एक चार्ज में कितने मरीज़, और कब गर्म होकर धीमा होता है।</string>
+    <string name="benchmark_count">जाँचों की संख्या</string>
+    <string name="benchmark_run">शिविर सिमुलेशन चलाएँ</string>
+    <string name="benchmark_cancel">रोकें</string>
+    <string name="benchmark_baseline">खाली स्थिति मापी जा रही है… %1$d से</string>
+    <string name="benchmark_progress">%2$d में से %1$d जाँच</string>
+    <string name="benchmark_section_latency">प्रति जाँच समय</string>
+    <string name="benchmark_section_power">बिजली खपत</string>
+    <string name="benchmark_section_energy">ऊर्जा और क्षमता</string>
+    <string name="benchmark_section_thermal">तापमान</string>
+    <string name="benchmark_mean">औसत</string>
+    <string name="benchmark_p50">मध्य (p50)</string>
+    <string name="benchmark_p90">p90</string>
+    <string name="benchmark_p99">p99</string>
+    <string name="benchmark_idle">खाली स्थिति</string>
+    <string name="benchmark_busy">जाँच के दौरान</string>
+    <string name="benchmark_net">शुद्ध (केवल जाँच)</string>
+    <string name="benchmark_per_screening">प्रति जाँच</string>
+    <string name="benchmark_per_charge">एक चार्ज में जाँचें</string>
+    <string name="benchmark_crosscheck">दूसरी विधि से जाँच</string>
+    <string name="benchmark_temp_rise">बैटरी का तापमान</string>
+    <string name="benchmark_throttle_none">पूरे शिविर में गति कम नहीं हुई</string>
+    <string name="benchmark_throttle_at">%1$d वीं जाँच से गति कम होने लगी</string>
+    <string name="benchmark_export">CSV निर्यात करें</string>
+    <string name="benchmark_exported">%1$s में सहेजा गया</string>
+    <string name="benchmark_warnings">माप संबंधी टिप्पणियाँ</string>
+
+    <string name="benchmark_patients_per_charge">एक चार्ज में मरीज़</string>
+    <string name="benchmark_duty_cycle">प्रति मरीज़ %1$d सेकंड फ़ोन उपयोग पर</string>
+    <string name="benchmark_continuous_hours">लगातार जाँच</string>
+    <string name="benchmark_measured_capacity">मापी गई बैटरी क्षमता</string>
+    <string name="benchmark_back_to_back">केवल जाँच की अधिकतम सीमा</string>
+
+    <string name="explain_low_confidence">ऐप इस फ़ोटो को लेकर ज़्यादा पक्का नहीं है। बेहतर रोशनी में, आँख को बीच में रखकर दूसरी फ़ोटो लें।</string>
+    <string name="explain_refer_soon">लक्षणों का इंतज़ार न करें। इस अवस्था में आँखें ठीक दिख सकती हैं, फिर भी इलाज ज़रूरी होता है।</string>
+    <string name="explain_no_dr">खून में शक्कर नियंत्रित रखें और सलाह के अनुसार दोबारा जाँच कराएँ, भले ही आँखें ठीक लगें।</string>
+    <string name="explain_heatmap_hint">रंगीन हिस्सा वह जगह दिखाता है जहाँ ऐप ने सबसे ज़्यादा देखा।</string>
+    <string name="explain_borderline_referral">यह आँख उस सीमा के करीब है जहाँ आँख के डॉक्टर को देखना चाहिए। ऐप जान-बूझकर पहले ही भेजता है, इसलिए बदलाव कम होने पर भी जाँच ज़रूर कराएँ।</string>
+
+    <string name="capture_decode_failed">यह फ़ोटो पढ़ी नहीं जा सकी। दूसरी फ़ोटो चुनें।</string>
+    <string name="quality_title">फ़ोटो दोबारा लेनी होगी</string>
+    <string name="quality_subtitle">यह फ़ोटो भरोसेमंद जाँच के लिए साफ़ नहीं है। अभी ठीक करने से ग़लत नतीजा टलता है।</string>
+    <string name="quality_issue_blur">फ़ोन को स्थिर रखें और कैमरे को फ़ोकस होने दें, फिर फ़ोटो लें।</string>
+    <string name="quality_issue_low_light">थोड़ी और रोशनी करें, या अँधेरे कमरे में जाएँ ताकि पुतली चौड़ी हो।</string>
+    <string name="quality_issue_overexposed">रोशनी बहुत ज़्यादा है। रोशनी कम करें या लेंस थोड़ा दूर करें।</string>
+    <string name="quality_issue_framing">आँख को बीच में रखें और थोड़ा पास जाएँ।</string>
+    <string name="quality_issue_not_retina">यह आँख की फ़ोटो नहीं लगती। लेंस को पुतली के सामने रखें।</string>
+    <string name="quality_issue_resolution">फ़ोटो बहुत छोटी है। बेहतर क्वालिटी सेटिंग चुनें।</string>
+    <string name="quality_retake">दूसरी फ़ोटो लें</string>
+    <string name="quality_use_anyway">फिर भी जाँच करें</string>
+    <string name="quality_score_overall">फ़ोटो की क्वालिटी</string>
+    <string name="quality_score_blur">साफ़पन</string>
+    <string name="quality_score_lighting">रोशनी</string>
+    <string name="quality_score_framing">फ़्रेमिंग</string>
+    <string name="quality_score_visibility">आँख दिख रही है</string>
+
+    <string name="action_home">होम</string>
+    <string name="sync_state_pending">भेजना बाकी</string>
+    <string name="sync_state_synced">क्लिनिक को भेजा गया</string>
+    <string name="sync_state_failed">भेजा नहीं जा सका</string>
+    <string name="clinic_connect_title">क्लिनिक जोड़ें</string>
+    <string name="clinic_connected_title">क्लिनिक जुड़ा है</string>
+    <string name="clinic_subtitle_disconnected">जाँच इसके बिना भी हमेशा चलती है। नतीजे साझा करने हों तभी क्लिनिक जोड़ें।</string>
+    <string name="clinic_url">क्लिनिक का पता</string>
+    <string name="clinic_token">एक्सेस कोड</string>
+    <string name="clinic_connect">जोड़ें</string>
+    <string name="clinic_disconnect">हटाएँ</string>
+    <string name="sync_offline">इंटरनेट नहीं है — नतीजे इसी फ़ोन में सहेजे गए हैं</string>
+    <string name="sync_online">ऑनलाइन</string>
+    <string name="sync_pending_count">%1$d भेजना बाकी</string>
+    <string name="sync_all_sent">सब भेजा जा चुका है</string>
+    <string name="sync_now">अभी भेजें</string>
+    <string name="sync_sending">भेजा जा रहा है…</string>
+    <string name="sync_failed_count">%1$d भेजे नहीं जा सके</string>
+    <string name="clinic_note_image">सिर्फ़ नतीजा साझा होता है। आँख की फ़ोटो कभी फ़ोन से बाहर नहीं जाती।</string>
+
+    <string name="eye_right">दाईं आँख</string>
+    <string name="eye_left">बाईं आँख</string>
+    <string name="diabetes_unknown">पता नहीं</string>
+    <string name="diabetes_yes">हाँ</string>
+    <string name="diabetes_no">नहीं</string>
+    <string name="sex_unspecified">बताना नहीं चाहते</string>
+    <string name="sex_female">महिला</string>
+    <string name="sex_male">पुरुष</string>
+    <string name="sex_other">अन्य</string>
+
+    <string name="consent_step">चरण 1 · सहमति</string>
+    <string name="consent_title">पहले मरीज़ से पूछें</string>
+    <string name="consent_body">बताएँ कि आप उनकी आँख की फ़ोटो लेंगे, इसी फ़ोन पर कंप्यूटर उसे जाँचेगा, और नतीजे की पुष्टि डॉक्टर से करानी होगी। फ़ोटो लेने से पहले सहमति ज़रूरी है।</string>
+    <string name="consent_checkbox">मरीज़ आँख की जाँच के लिए सहमत है</string>
+
+    <string name="patient_step">चरण 2 · मरीज़</string>
+    <string name="patient_name">पूरा नाम</string>
+    <string name="patient_age">उम्र</string>
+    <string name="patient_sex">लिंग</string>
+    <string name="patient_phone">फ़ोन (फ़ॉलो-अप के लिए)</string>
+    <string name="patient_diabetes">मधुमेह का निदान</string>
+    <string name="patient_years">निदान को कितने साल हुए</string>
+    <string name="patient_continue">फ़ोटो लेने चलें</string>
+    <string name="patient_skip">मरीज़ की जानकारी के बिना जाँच करें</string>
+    <string name="patient_elevated_risk">लंबे समय से मधुमेह — रेटिनोपैथी का ख़तरा ज़्यादा</string>
+
+    <string name="eye_step">चरण 3 · कौन सी आँख</string>
+    <string name="eye_prompt">आप किस आँख की फ़ोटो ले रहे हैं?</string>
+
+    <string name="state_ready">जाँच के लिए तैयार</string>
+    <string name="state_quality">फ़ोटो की क्वालिटी जाँची जा रही है</string>
+    <string name="state_screening">जाँच हो रही है</string>
+    <string name="state_result">नतीजा तैयार</string>
+    <string name="state_referral">डॉक्टर को दिखाना ज़रूरी</string>
+    <string name="result_patient_header">%1$s · %2$s</string>
+
+    <string name="narrate_button">आसान शब्दों में समझाएँ</string>
+    <string name="narrate_working">लिखा जा रहा है…</string>
+    <string name="narrate_heading">आसान शब्दों में</string>
+    <string name="narrate_note">यह इसी फ़ोन पर ऊपर के नतीजे से लिखा गया है। ऊपर दी गई सलाह ही आधिकारिक है।</string>
+
+    <string name="speak_summary">आँख की जाँच में %1$s मिला है। हमें %2$s है। %3$s</string>
+    <string name="speak_summary_eye">%1$s में जाँच में %2$s मिला है। हमें %3$s है। %4$s</string>
+    <string name="speak_sure_high">पूरा भरोसा</string>
+    <string name="speak_sure_medium">कुछ हद तक भरोसा</string>
+    <string name="speak_sure_low">ज़्यादा भरोसा नहीं, कृपया दूसरी फ़ोटो लें</string>
+    <string name="voice_install">इस भाषा के लिए आवाज़ इंस्टॉल करें</string>
+    <string name="voice_install_hint">आपके फ़ोन में इस भाषा की आवाज़ नहीं है। इंस्टॉल करने पर नतीजा बोलकर सुनाया जा सकेगा।</string>
+
+</resources>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- ============ Language picker ============ -->
+    <string name="language_title">உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="language_subtitle">கேட்க தட்டவும்</string>
+    <string name="language_continue">தொடரவும்</string>
+
+    <!-- ============ Home ============ -->
+    <string name="home_tagline">இணையம் இல்லாமல் வேலை செய்யும் கண் பரிசோதனை</string>
+    <string name="home_scan_button">கண்ணைப் பரிசோதிக்கவும்</string>
+    <string name="home_history_button">முந்தைய பரிசோதனைகள்</string>
+    <string name="home_settings">அமைப்புகள்</string>
+    <string name="offline_badge">இணையம் இல்லாமல் வேலை செய்யும்</string>
+
+    <!-- ============ Capture ============ -->
+    <string name="capture_title">விழித்திரைப் படத்தை எடுக்கவும்</string>
+    <string name="capture_instruction">ஃபண்டஸ் அடாப்டரைப் பொருத்தி, விழித்திரையை வட்டத்தின் நடுவில் வைக்கவும்</string>
+    <string name="capture_shutter">படம் எடுக்கவும்</string>
+    <string name="capture_gallery">ஃபண்டஸ் கேமராவிலிருந்து இறக்குமதி செய்யவும்</string>
+    <string name="capture_permission_rationale">விழித்திரையைப் படமெடுக்க கேமரா ஃபண்டஸ் அடாப்டருடன் சேர்ந்து பயன்படுத்தப்படுகிறது. படம் உங்கள் தொலைபேசியை விட்டு வெளியே செல்லாது.</string>
+    <string name="capture_grant_permission">கேமராவை அனுமதிக்கவும்</string>
+    <string name="capture_permission_denied">கேமரா அனுமதிக்கப்படவில்லை. உங்கள் ஃபண்டஸ் கேமராவிலிருந்து படத்தை இறக்குமதி செய்யலாம்.</string>
+    <string name="capture_adapter_note">தொலைபேசி கேமரா மட்டும் விழித்திரையைப் படமெடுக்க முடியாது. ஃபண்டஸ் அடாப்டரைப் பயன்படுத்தவும், அல்லது மருத்துவமனை ஃபண்டஸ் கேமராவிலிருந்து படத்தை இறக்குமதி செய்யவும்.</string>
+
+    <!-- ============ Analyzing ============ -->
+    <string name="analyzing_title">படத்தைப் பரிசோதிக்கிறது</string>
+    <string name="analyzing_subtitle">உங்கள் தொலைபேசியிலேயே செயல்படுகிறது. இணையம் தேவையில்லை.</string>
+
+    <!-- ============ Result ============ -->
+    <string name="result_title">முடிவு</string>
+    <string name="result_confidence_label">எவ்வளவு உறுதி</string>
+    <string name="confidence_high">அதிகம்</string>
+    <string name="confidence_medium">நடுத்தரம்</string>
+    <string name="confidence_low">குறைவு</string>
+    <string name="result_heatmap_show">செயலி எதைப் பார்த்தது என்று காட்டு</string>
+    <string name="result_heatmap_hide">மறை</string>
+    <string name="result_heatmap_unavailable">இந்தப் படத்திற்குக் கிடைக்கவில்லை</string>
+    <string name="result_explanation_title">இதன் பொருள் என்ன</string>
+    <string name="result_listen">கேட்கவும்</string>
+    <string name="result_stop">நிறுத்தவும்</string>
+    <string name="result_urgency_title">என்ன செய்ய வேண்டும்</string>
+    <string name="result_save">சேமிக்கவும்</string>
+    <string name="result_saved">இந்தத் தொலைபேசியில் சேமிக்கப்பட்டது</string>
+    <string name="result_new_scan">மற்றொரு கண்ணைப் பரிசோதிக்கவும்</string>
+    <string name="result_disclaimer">இது ஒரு முன்கூட்டிய பரிசோதனை உதவி, மருத்துவரின் நோயறிதல் அல்ல. எப்போதும் கண் மருத்துவரிடம் உறுதிப்படுத்திக் கொள்ளுங்கள்.</string>
+
+    <!-- ============ Severity grades ============ -->
+    <string name="grade_0_label">அறிகுறிகள் இல்லை</string>
+    <string name="grade_1_label">லேசான மாற்றங்கள்</string>
+    <string name="grade_2_label">மிதமான மாற்றங்கள்</string>
+    <string name="grade_3_label">கடுமையான மாற்றங்கள்</string>
+    <string name="grade_4_label">முற்றிய மாற்றங்கள்</string>
+
+    <string name="grade_0_desc">இந்தப் படத்தில் நீரிழிவால் ஏற்படும் கண் பாதிப்பின் அறிகுறிகள் எதுவும் காணப்படவில்லை.</string>
+    <string name="grade_1_desc">கண்ணின் இரத்தக் குழாய்களில் சிறிய ஆரம்ப மாற்றங்கள் காணப்பட்டன.</string>
+    <string name="grade_2_desc">கண்ணின் இரத்தக் குழாய்களில் தெளிவான மாற்றங்கள் காணப்பட்டன.</string>
+    <string name="grade_3_desc">பல மாற்றங்கள் காணப்பட்டன. இந்தக் கண்ணுக்கு மருத்துவரின் கவனம் தேவை.</string>
+    <string name="grade_4_desc">முற்றிய மாற்றங்களும், புதிய பலவீனமான இரத்தக் குழாய்களும் காணப்பட்டன. இதற்கு விரைவில் சிகிச்சை தேவை.</string>
+
+    <!-- ============ Referral urgency ============ -->
+    <string name="urgency_routine">12 மாதங்களில் மீண்டும் பரிசோதிக்கவும்</string>
+    <string name="urgency_monitor">6 முதல் 12 மாதங்களில் மீண்டும் பரிசோதிக்கவும்</string>
+    <string name="urgency_soon">3 மாதங்களுக்குள் கண் மருத்துவரைப் பாருங்கள்</string>
+    <string name="urgency_urgent">1 மாதத்திற்குள் கண் மருத்துவரைப் பாருங்கள்</string>
+    <string name="urgency_immediate">கூடிய விரைவில் கண் மருத்துவரைப் பாருங்கள்</string>
+
+    <!-- ============ History ============ -->
+    <string name="history_title">முந்தைய பரிசோதனைகள்</string>
+    <string name="history_empty">இதுவரை பரிசோதனைகள் இல்லை</string>
+    <string name="history_progression">காலப்போக்கில் ஏற்பட்ட மாற்றம்</string>
+
+    <!-- ============ Settings ============ -->
+    <string name="settings_title">அமைப்புகள்</string>
+    <string name="settings_language">மொழி</string>
+    <string name="settings_voice_test">குரலைச் சோதிக்கவும்</string>
+    <string name="settings_voice_unavailable">இந்தத் தொலைபேசியில் இந்த மொழிக்கான குரல் கிடைக்கவில்லை</string>
+    <string name="settings_model_status">மாதிரியின் நிலை</string>
+    <string name="settings_model_ready">இந்தத் தொலைபேசியில் தயார்</string>
+    <string name="settings_model_loading">ஏற்றுகிறது…</string>
+    <string name="settings_about">பற்றி</string>
+
+    <!-- ============ Common ============ -->
+    <string name="common_back">பின்செல்</string>
+    <string name="common_close">மூடு</string>
+    <string name="common_retry">மீண்டும் முயற்சிக்கவும்</string>
+    <string name="common_error">ஏதோ தவறு நடந்தது. மீண்டும் முயற்சிக்கவும்.</string>
+
+    <!-- ============ Development only ============ -->
+    <string name="mock_explanation_notice">மேம்பாட்டு நிலை: உண்மையான மாதிரி இன்னும் இணைக்கப்படவில்லை, எனவே இந்த உரை ஒரு மாதிரி மட்டுமே, மருத்துவ முடிவு அல்ல.</string>
+
+
+    <!-- ============ Field benchmark ============ -->
+    <string name="benchmark_title">கள அளவீடு</string>
+    <string name="benchmark_subtitle">ஒரு பரிசோதனை முகாமில் இந்தத் தொலைபேசி உண்மையில் என்ன செய்கிறது என்பதை அளக்கிறது: வேகம், மின்சாரம், ஒரு சார்ஜுக்கு எத்தனை நோயாளிகள், எப்போது வேகம் குறையத் தொடங்குகிறது.</string>
+    <string name="benchmark_count">பரிசோதனைகள்</string>
+    <string name="benchmark_run">முகாம் உருவகப்படுத்தலை இயக்கு</string>
+    <string name="benchmark_cancel">நிறுத்து</string>
+    <string name="benchmark_baseline">செயலற்ற நிலை அளக்கப்படுகிறது… %1$d வி</string>
+    <string name="benchmark_progress">%2$d இல் %1$d பரிசோதனை</string>
+    <string name="benchmark_section_latency">ஒரு பரிசோதனைக்கான நேரம்</string>
+    <string name="benchmark_section_power">மின் பயன்பாடு</string>
+    <string name="benchmark_section_energy">ஆற்றலும் வரம்பும்</string>
+    <string name="benchmark_section_thermal">வெப்பநிலை</string>
+    <string name="benchmark_mean">சராசரி</string>
+    <string name="benchmark_p50">இடைநிலை (p50)</string>
+    <string name="benchmark_p90">p90</string>
+    <string name="benchmark_p99">p99</string>
+    <string name="benchmark_idle">செயலற்ற நிலை</string>
+    <string name="benchmark_busy">பரிசோதனையின் போது</string>
+    <string name="benchmark_net">நிகர (அனுமானம்)</string>
+    <string name="benchmark_per_screening">ஒரு பரிசோதனைக்கு</string>
+    <string name="benchmark_per_charge">ஒரு சார்ஜுக்கான பரிசோதனைகள்</string>
+    <string name="benchmark_crosscheck">குறுக்கு சரிபார்ப்பு</string>
+    <string name="benchmark_temp_rise">பேட்டரி வெப்பநிலை</string>
+    <string name="benchmark_throttle_none">முகாம் முழுவதும் வேகக் குறைப்பு இல்லை</string>
+    <string name="benchmark_throttle_at">%1$d ஆவது பரிசோதனையில் வேகக் குறைப்பு தொடங்கியது</string>
+    <string name="benchmark_export">CSV ஏற்றுமதி</string>
+    <string name="benchmark_exported">%1$s இல் சேமிக்கப்பட்டது</string>
+    <string name="benchmark_warnings">அளவீட்டுக் குறிப்புகள்</string>
+
+    <string name="benchmark_patients_per_charge">ஒரு சார்ஜுக்கான நோயாளிகள்</string>
+    <string name="benchmark_duty_cycle">ஒரு நோயாளிக்கு %1$d வினாடி தொலைபேசி நேரம் என்ற அளவில்</string>
+    <string name="benchmark_continuous_hours">தொடர்ச்சியான பரிசோதனை</string>
+    <string name="benchmark_measured_capacity">அளக்கப்பட்ட பேட்டரி கொள்ளளவு</string>
+    <string name="benchmark_back_to_back">அனுமானத்தால் வரையறுக்கப்பட்ட உச்ச வரம்பு</string>
+
+    <!-- Explanation: composed from REAL model outputs, never generated text -->
+    <string name="explain_low_confidence">இந்தப் படத்தைப் பற்றி செயலிக்கு அதிக உறுதி இல்லை. நல்ல வெளிச்சத்தில், கண்ணை நடுவில் வைத்து மற்றொரு படம் எடுத்தால் முடிவு மேலும் நம்பகமாக இருக்கும்.</string>
+    <string name="explain_refer_soon">அறிகுறிகளுக்காகக் காத்திருக்க வேண்டாம். இந்த நிலையில் கண்கள் சாதாரணமாகத் தெரியலாம், உணரலாம், இருப்பினும் சிகிச்சை தேவைப்படலாம்.</string>
+    <string name="explain_no_dr">இரத்தச் சர்க்கரையைக் கட்டுப்பாட்டில் வைத்திருங்கள், கண்கள் நன்றாக இருந்தாலும் அறிவுறுத்தப்பட்டபடி மீண்டும் பரிசோதித்துக் கொள்ளுங்கள்.</string>
+    <string name="explain_heatmap_hint">வண்ணமிட்ட பகுதி, செயலி கண்ணின் எந்தப் பகுதியை அதிகம் பார்த்தது என்பதைக் காட்டுகிறது.</string>
+    <string name="explain_borderline_referral">இந்தக் கண் கண் மருத்துவர் பார்க்க வேண்டிய எல்லைக்கு அருகில் உள்ளது. செயலி வேண்டுமென்றே முன்கூட்டியே அனுப்புகிறது, எனவே மாற்றங்கள் சிறியதாக இருந்தாலும் பரிசோதித்துக் கொள்ளுங்கள்.</string>
+
+    <string name="capture_decode_failed">அந்தப் படத்தைப் படிக்க முடியவில்லை. வேறு படத்தை முயற்சிக்கவும்.</string>
+    <!-- ============ Capture quality gate ============ -->
+    <string name="quality_title">படத்தை மீண்டும் எடுக்க வேண்டும்</string>
+    <string name="quality_subtitle">நம்பகமான பரிசோதனைக்கு இந்தப் படம் போதுமான தெளிவாக இல்லை. இதை இப்போது சரிசெய்வது தவறான முடிவைத் தவிர்க்கும்.</string>
+    <string name="quality_issue_blur">தொலைபேசியை அசையாமல் பிடித்து, கேமரா குவிந்த பிறகு படம் எடுக்கவும்.</string>
+    <string name="quality_issue_low_light">சிறிது வெளிச்சம் சேர்க்கவும், அல்லது கருவிழி விரிவடைய இருண்ட அறைக்குச் செல்லவும்.</string>
+    <string name="quality_issue_overexposed">வெளிச்சம் அதிகம். வெளிச்சத்தைக் குறைக்கவும் அல்லது லென்ஸை சற்று தூரமாக நகர்த்தவும்.</string>
+    <string name="quality_issue_framing">கண்ணை சட்டகத்தின் நடுவில் வைத்து சற்று அருகில் நகரவும்.</string>
+    <string name="quality_issue_not_retina">இது கண்ணின் படம் போல் தெரியவில்லை. லென்ஸை கருவிழியுடன் நேராக வைக்கவும்.</string>
+    <string name="quality_issue_resolution">படம் மிகவும் சிறியது. உயர்ந்த படத் தரம் அமைப்பைப் பயன்படுத்தவும்.</string>
+    <string name="quality_retake">மற்றொரு படம் எடுக்கவும்</string>
+    <string name="quality_use_anyway">இருப்பினும் பரிசோதிக்கவும்</string>
+    <string name="quality_score_overall">படத் தரம்</string>
+    <string name="quality_score_blur">கூர்மை</string>
+    <string name="quality_score_lighting">வெளிச்சம்</string>
+    <string name="quality_score_framing">சட்டகம்</string>
+    <string name="quality_score_visibility">கண் தெரிகிறது</string>
+
+    <string name="action_home">முகப்பு</string>
+    <!-- ============ Clinic sync ============ -->
+    <string name="sync_state_pending">அனுப்பக் காத்திருக்கிறது</string>
+    <string name="sync_state_synced">மருத்துவமனைக்கு அனுப்பப்பட்டது</string>
+    <string name="sync_state_failed">அனுப்ப முடியவில்லை</string>
+    <string name="clinic_connect_title">மருத்துவமனையை இணைக்கவும்</string>
+    <string name="clinic_connected_title">மருத்துவமனை இணைக்கப்பட்டது</string>
+    <string name="clinic_subtitle_disconnected">இது இல்லாமலும் பரிசோதனை எப்போதும் வேலை செய்யும். முடிவுகளைப் பகிர விரும்பினால் மட்டும் மருத்துவமனையை இணைக்கவும்.</string>
+    <string name="clinic_url">மருத்துவமனை முகவரி</string>
+    <string name="clinic_token">அணுகல் குறியீடு</string>
+    <string name="clinic_connect">இணை</string>
+    <string name="clinic_disconnect">துண்டி</string>
+    <string name="sync_offline">இணையம் இல்லை — முடிவுகள் இந்தத் தொலைபேசியில் சேமிக்கப்படுகின்றன</string>
+    <string name="sync_online">ஆன்லைனில்</string>
+    <string name="sync_pending_count">%1$d அனுப்பக் காத்திருக்கிறது</string>
+    <string name="sync_all_sent">அனைத்தும் அனுப்பப்பட்டது</string>
+    <string name="sync_now">இப்போது அனுப்பு</string>
+    <string name="sync_sending">அனுப்புகிறது…</string>
+    <string name="sync_failed_count">%1$d அனுப்ப முடியவில்லை</string>
+    <string name="clinic_note_image">முடிவு மட்டுமே பகிரப்படுகிறது. கண்ணின் படம் இந்தத் தொலைபேசியை விட்டு வெளியே செல்லாது.</string>
+
+    <!-- ============ Patient + consent (from the worker portal) ============ -->
+    <string name="eye_right">வலது கண்</string>
+    <string name="eye_left">இடது கண்</string>
+    <string name="diabetes_unknown">தெரியவில்லை</string>
+    <string name="diabetes_yes">ஆம்</string>
+    <string name="diabetes_no">இல்லை</string>
+    <string name="sex_unspecified">சொல்ல விரும்பவில்லை</string>
+    <string name="sex_female">பெண்</string>
+    <string name="sex_male">ஆண்</string>
+    <string name="sex_other">மற்றவை</string>
+
+    <string name="consent_step">படி 1 · ஒப்புதல்</string>
+    <string name="consent_title">முதலில் நோயாளியிடம் கேளுங்கள்</string>
+    <string name="consent_body">அவரது கண்ணின் படம் எடுக்கப்படும் என்றும், அதை இந்தத் தொலைபேசியில் கணினி பரிசோதிக்கும் என்றும், முடிவை மருத்துவர் உறுதிப்படுத்த வேண்டும் என்றும் விளக்குங்கள். எந்தப் படமும் எடுப்பதற்கு முன் ஒப்புதல் அவசியம்.</string>
+    <string name="consent_checkbox">கண் பரிசோதனைக்கு நோயாளி ஒப்புக்கொள்கிறார்</string>
+
+    <string name="patient_step">படி 2 · நோயாளி</string>
+    <string name="patient_name">முழுப் பெயர்</string>
+    <string name="patient_age">வயது</string>
+    <string name="patient_sex">பாலினம்</string>
+    <string name="patient_phone">தொலைபேசி (தொடர்ந்து தொடர்பு கொள்ள)</string>
+    <string name="patient_diabetes">நீரிழிவு நோய் கண்டறியப்பட்டுள்ளது</string>
+    <string name="patient_years">கண்டறியப்பட்டு எத்தனை ஆண்டுகள்</string>
+    <string name="patient_continue">படம் எடுக்கத் தொடரவும்</string>
+    <string name="patient_skip">நோயாளி விவரங்கள் இல்லாமல் பரிசோதிக்கவும்</string>
+    <string name="patient_elevated_risk">நீண்டகால நீரிழிவு — விழித்திரை பாதிப்புக்கு அதிக ஆபத்து</string>
+
+    <string name="eye_step">படி 3 · எந்தக் கண்</string>
+    <string name="eye_prompt">எந்தக் கண்ணைப் படமெடுக்கிறீர்கள்?</string>
+
+    <string name="state_ready">பரிசோதிக்கத் தயார்</string>
+    <string name="state_quality">படத் தரம் பரிசோதிக்கப்படுகிறது</string>
+    <string name="state_screening">பரிசோதிக்கிறது</string>
+    <string name="state_result">முடிவு தயார்</string>
+    <string name="state_referral">மருத்துவரிடம் அனுப்ப வேண்டும்</string>
+    <string name="result_patient_header">%1$s · %2$s</string>
+
+    <string name="narrate_button">எளிய வார்த்தைகளில் விளக்கு</string>
+    <string name="narrate_working">எழுதுகிறது…</string>
+    <string name="narrate_heading">எளிய வார்த்தைகளில்</string>
+    <string name="narrate_note">மேலே உள்ள முடிவிலிருந்து இந்தத் தொலைபேசியில் எழுதப்பட்டது. மேலே உள்ள அறிவுரையே அதிகாரப்பூர்வமானது.</string>
+
+    <!-- ============ Spoken summary ============ -->
+    <!-- Written to be HEARD, not read. Short, plain, and it never narrates the
+         screen furniture ("What to do", headings, button labels). -->
+    <string name="speak_summary">கண் பரிசோதனையில் %1$s தெரிகிறது. நாங்கள் %2$s. %3$s</string>
+    <string name="speak_summary_eye">%1$s இல், கண் பரிசோதனையில் %2$s தெரிகிறது. நாங்கள் %3$s. %4$s</string>
+    <string name="speak_sure_high">நன்றாக உறுதியாக இருக்கிறோம்</string>
+    <string name="speak_sure_medium">ஓரளவு உறுதியாக இருக்கிறோம்</string>
+    <string name="speak_sure_low">அதிக உறுதியாக இல்லை, எனவே மற்றொரு படம் எடுக்கவும்</string>
+    <string name="voice_install">இந்த மொழிக்கான குரலை நிறுவவும்</string>
+    <string name="voice_install_hint">உங்கள் தொலைபேசியில் இந்த மொழிக்கான குரல் இன்னும் இல்லை. அதை நிறுவினால் முடிவை உரக்கப் படிக்க முடியும்.</string>
+
+</resources>

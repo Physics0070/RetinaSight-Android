@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RetinaSight AI</string>
+
+    <!-- ============ Language picker ============ -->
+    <string name="language_title">Choose your language</string>
+    <string name="language_subtitle">Tap to hear it</string>
+    <string name="language_continue">Continue</string>
+
+    <!-- ============ Home ============ -->
+    <string name="home_tagline">Eye check that works without internet</string>
+    <string name="home_scan_button">Scan Eye</string>
+    <string name="home_history_button">Past checks</string>
+    <string name="home_settings">Settings</string>
+    <string name="offline_badge">Works offline</string>
+
+    <!-- ============ Capture ============ -->
+    <string name="capture_title">Capture the fundus image</string>
+    <string name="capture_instruction">Fit the fundus adapter, then centre the retina in the circle</string>
+    <string name="capture_shutter">Take photo</string>
+    <string name="capture_gallery">Import from fundus camera</string>
+    <string name="capture_permission_rationale">The camera is used together with a fundus adapter to photograph the retina. The photo never leaves your phone.</string>
+    <string name="capture_grant_permission">Allow camera</string>
+    <string name="capture_permission_denied">Camera not allowed. You can still import an image from your fundus camera.</string>
+    <string name="capture_adapter_note">A phone camera on its own cannot photograph a retina. Use a fundus adapter, or import an image from a clinic fundus camera.</string>
+
+    <!-- ============ Analyzing ============ -->
+    <string name="analyzing_title">Checking the photo</string>
+    <string name="analyzing_subtitle">Working on your phone. No internet needed.</string>
+
+    <!-- ============ Result ============ -->
+    <string name="result_title">Result</string>
+    <string name="result_confidence_label">How sure</string>
+    <string name="confidence_high">High</string>
+    <string name="confidence_medium">Medium</string>
+    <string name="confidence_low">Low</string>
+    <string name="result_heatmap_show">Show what the app looked at</string>
+    <string name="result_heatmap_hide">Hide</string>
+    <string name="result_heatmap_unavailable">Not available for this photo</string>
+    <string name="result_explanation_title">What this means</string>
+    <string name="result_listen">Listen</string>
+    <string name="result_stop">Stop</string>
+    <string name="result_urgency_title">What to do</string>
+    <string name="result_save">Save</string>
+    <string name="result_saved">Saved on this phone</string>
+    <string name="result_new_scan">Check another eye</string>
+    <string name="result_disclaimer">This is a screening help, not a doctor\'s diagnosis. Always confirm with an eye doctor.</string>
+
+    <!-- ============ Severity grades ============ -->
+    <string name="grade_0_label">No signs found</string>
+    <string name="grade_1_label">Mild changes</string>
+    <string name="grade_2_label">Moderate changes</string>
+    <string name="grade_3_label">Severe changes</string>
+    <string name="grade_4_label">Advanced changes</string>
+
+    <string name="grade_0_desc">No signs of diabetic eye damage were found in this photo.</string>
+    <string name="grade_1_desc">Small early changes were found in the blood vessels of the eye.</string>
+    <string name="grade_2_desc">Clear changes were found in the blood vessels of the eye.</string>
+    <string name="grade_3_desc">Many changes were found. The eye needs a doctor\'s attention.</string>
+    <string name="grade_4_desc">Advanced changes were found, with new fragile blood vessels. This needs care quickly.</string>
+
+    <!-- ============ Referral urgency ============ -->
+    <string name="urgency_routine">Check again in 12 months</string>
+    <string name="urgency_monitor">Check again in 6 to 12 months</string>
+    <string name="urgency_soon">See an eye doctor within 3 months</string>
+    <string name="urgency_urgent">See an eye doctor within 1 month</string>
+    <string name="urgency_immediate">See an eye doctor as soon as possible</string>
+
+    <!-- ============ History ============ -->
+    <string name="history_title">Past checks</string>
+    <string name="history_empty">No checks yet</string>
+    <string name="history_progression">Change over time</string>
+
+    <!-- ============ Settings ============ -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_voice_test">Test the voice</string>
+    <string name="settings_voice_unavailable">Voice not available for this language on this phone</string>
+    <string name="settings_model_status">Model status</string>
+    <string name="settings_model_ready">Ready on this phone</string>
+    <string name="settings_model_loading">Loading…</string>
+    <string name="settings_about">About</string>
+
+    <!-- ============ Common ============ -->
+    <string name="common_back">Back</string>
+    <string name="common_close">Close</string>
+    <string name="common_retry">Try again</string>
+    <string name="common_error">Something went wrong. Please try again.</string>
+
+    <!-- ============ Development only ============ -->
+    <string name="mock_explanation_notice">DEVELOPMENT MODE: the real on-device model is not connected yet, so this text is a placeholder and is not a medical result.</string>
+
+
+    <!-- ============ Field benchmark ============ -->
+    <string name="benchmark_title">Field benchmark</string>
+    <string name="benchmark_subtitle">Measures what this phone actually does over a screening camp: speed, power, patients per charge, and when it starts to throttle.</string>
+    <string name="benchmark_count">Screenings</string>
+    <string name="benchmark_run">Run camp simulation</string>
+    <string name="benchmark_cancel">Stop</string>
+    <string name="benchmark_baseline">Measuring idle baseline… %1$d s</string>
+    <string name="benchmark_progress">Screening %1$d of %2$d</string>
+    <string name="benchmark_section_latency">Time per screening</string>
+    <string name="benchmark_section_power">Power draw</string>
+    <string name="benchmark_section_energy">Energy and range</string>
+    <string name="benchmark_section_thermal">Thermal</string>
+    <string name="benchmark_mean">Mean</string>
+    <string name="benchmark_p50">Median (p50)</string>
+    <string name="benchmark_p90">p90</string>
+    <string name="benchmark_p99">p99</string>
+    <string name="benchmark_idle">Idle baseline</string>
+    <string name="benchmark_busy">During screening</string>
+    <string name="benchmark_net">Net (inference)</string>
+    <string name="benchmark_per_screening">Per screening</string>
+    <string name="benchmark_per_charge">Screenings per charge</string>
+    <string name="benchmark_crosscheck">Cross-check</string>
+    <string name="benchmark_temp_rise">Battery temperature</string>
+    <string name="benchmark_throttle_none">No throttling across the whole camp</string>
+    <string name="benchmark_throttle_at">Throttling began at screening %1$d</string>
+    <string name="benchmark_export">Export CSV</string>
+    <string name="benchmark_exported">Saved to %1$s</string>
+    <string name="benchmark_warnings">Measurement notes</string>
+
+    <string name="benchmark_patients_per_charge">Patients per charge</string>
+    <string name="benchmark_duty_cycle">at %1$d s of phone time per patient</string>
+    <string name="benchmark_continuous_hours">Continuous screening</string>
+    <string name="benchmark_measured_capacity">Measured battery capacity</string>
+    <string name="benchmark_back_to_back">Inference-bound upper limit</string>
+
+    <!-- Explanation: composed from REAL model outputs, never generated text -->
+    <string name="explain_low_confidence">The app is not very sure about this photo. Take another photo in better light, with the eye centred, for a more reliable check.</string>
+    <string name="explain_refer_soon">Do not wait for symptoms. Eyes can look and feel normal at this stage and still need treatment.</string>
+    <string name="explain_no_dr">Keep controlling blood sugar and check again as advised, even if your eyes feel fine.</string>
+    <string name="explain_heatmap_hint">The coloured area shows the part of the eye the app looked at most.</string>
+    <string name="explain_borderline_referral">This eye is close to the line where an eye doctor should look. The app refers early on purpose, so please get it checked even though the changes are small.</string>
+
+    <string name="capture_decode_failed">Could not read that image. Try another photo.</string>
+    <!-- ============ Capture quality gate ============ -->
+    <string name="quality_title">Photo needs to be retaken</string>
+    <string name="quality_subtitle">The photo is not clear enough for a reliable check. Fixing this now avoids a wrong result.</string>
+    <string name="quality_issue_blur">Hold the phone steady and let the camera focus before taking the photo.</string>
+    <string name="quality_issue_low_light">Add a little more light, or move to a darker room so the pupil opens wider.</string>
+    <string name="quality_issue_overexposed">Too much light. Reduce the light or move the lens slightly further away.</string>
+    <string name="quality_issue_framing">Centre the eye in the frame and move slightly closer.</string>
+    <string name="quality_issue_not_retina">This does not look like an eye photo. Line the lens up with the pupil.</string>
+    <string name="quality_issue_resolution">The photo is too small. Use a higher photo quality setting.</string>
+    <string name="quality_retake">Take another photo</string>
+    <string name="quality_use_anyway">Check it anyway</string>
+    <string name="quality_score_overall">Photo quality</string>
+    <string name="quality_score_blur">Sharpness</string>
+    <string name="quality_score_lighting">Lighting</string>
+    <string name="quality_score_framing">Framing</string>
+    <string name="quality_score_visibility">Eye visible</string>
+
+    <string name="action_home">Home</string>
+    <!-- ============ Clinic sync ============ -->
+    <string name="sync_state_pending">Waiting to send</string>
+    <string name="sync_state_synced">Sent to clinic</string>
+    <string name="sync_state_failed">Could not send</string>
+    <string name="clinic_connect_title">Connect a clinic</string>
+    <string name="clinic_connected_title">Clinic connected</string>
+    <string name="clinic_subtitle_disconnected">Screening always works without this. Connect a clinic only if you want results shared.</string>
+    <string name="clinic_url">Clinic address</string>
+    <string name="clinic_token">Access code</string>
+    <string name="clinic_connect">Connect</string>
+    <string name="clinic_disconnect">Disconnect</string>
+    <string name="sync_offline">No internet — results are saved on this phone</string>
+    <string name="sync_online">Online</string>
+    <string name="sync_pending_count">%1$d waiting to send</string>
+    <string name="sync_all_sent">Everything sent</string>
+    <string name="sync_now">Send now</string>
+    <string name="sync_sending">Sending…</string>
+    <string name="sync_failed_count">%1$d could not be sent</string>
+    <string name="clinic_note_image">Only the result is shared. The eye photo never leaves this phone.</string>
+
+    <!-- ============ Patient + consent (from the worker portal) ============ -->
+    <string name="eye_right">Right eye</string>
+    <string name="eye_left">Left eye</string>
+    <string name="diabetes_unknown">Not known</string>
+    <string name="diabetes_yes">Yes</string>
+    <string name="diabetes_no">No</string>
+    <string name="sex_unspecified">Prefer not to say</string>
+    <string name="sex_female">Female</string>
+    <string name="sex_male">Male</string>
+    <string name="sex_other">Other</string>
+
+    <string name="consent_step">Step 1 · Consent</string>
+    <string name="consent_title">Ask the patient first</string>
+    <string name="consent_body">Explain that you will take a photo of their eye, that a computer will check it on this phone, and that a doctor should confirm the result. Consent is required before any photo is taken.</string>
+    <string name="consent_checkbox">The patient agrees to the eye check</string>
+
+    <string name="patient_step">Step 2 · Patient</string>
+    <string name="patient_name">Full name</string>
+    <string name="patient_age">Age</string>
+    <string name="patient_sex">Sex</string>
+    <string name="patient_phone">Phone (for follow-up)</string>
+    <string name="patient_diabetes">Diagnosed with diabetes</string>
+    <string name="patient_years">Years since diagnosis</string>
+    <string name="patient_continue">Continue to photo</string>
+    <string name="patient_skip">Screen without patient details</string>
+    <string name="patient_elevated_risk">Long-standing diabetes — higher risk of retinopathy</string>
+
+    <string name="eye_step">Step 3 · Which eye</string>
+    <string name="eye_prompt">Which eye are you photographing?</string>
+
+    <string name="state_ready">Ready to screen</string>
+    <string name="state_quality">Checking photo quality</string>
+    <string name="state_screening">Screening</string>
+    <string name="state_result">Result ready</string>
+    <string name="state_referral">Referral needed</string>
+    <string name="result_patient_header">%1$s · %2$s</string>
+
+    <string name="narrate_button">Explain in simple words</string>
+    <string name="narrate_working">Writing…</string>
+    <string name="narrate_heading">In simple words</string>
+    <string name="narrate_note">Written on this phone from the result above. The advice above is the official one.</string>
+
+    <!-- ============ Spoken summary ============ -->
+    <!-- Written to be HEARD, not read. Short, plain, and it never narrates the
+         screen furniture ("What to do", headings, button labels). -->
+    <string name="speak_summary">The eye check shows %1$s. We are %2$s. %3$s</string>
+    <string name="speak_summary_eye">In the %1$s, the eye check shows %2$s. We are %3$s. %4$s</string>
+    <string name="speak_sure_high">quite sure</string>
+    <string name="speak_sure_medium">fairly sure</string>
+    <string name="speak_sure_low">not very sure, so please take another photo</string>
+    <string name="voice_install">Install voice for this language</string>
+    <string name="voice_install_hint">Your phone has no voice for this language yet. Installing it lets the result be read aloud.</string>
+
+</resources>

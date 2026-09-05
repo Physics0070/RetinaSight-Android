@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- ============ Language picker ============ -->
+    <string name="language_title">మీ భాషను ఎంచుకోండి</string>
+    <string name="language_subtitle">వినడానికి నొక్కండి</string>
+    <string name="language_continue">కొనసాగించండి</string>
+
+    <!-- ============ Home ============ -->
+    <string name="home_tagline">ఇంటర్నెట్ లేకుండా పనిచేసే కంటి పరీక్ష</string>
+    <string name="home_scan_button">కన్ను పరీక్షించండి</string>
+    <string name="home_history_button">గత పరీక్షలు</string>
+    <string name="home_settings">సెట్టింగ్‌లు</string>
+    <string name="offline_badge">ఇంటర్నెట్ లేకుండా పనిచేస్తుంది</string>
+
+    <!-- ============ Capture ============ -->
+    <string name="capture_title">రెటినా ఫోటో తీయండి</string>
+    <string name="capture_instruction">ఫండస్ అడాప్టర్‌ను అమర్చి, రెటినాను వృత్తం మధ్యలో ఉంచండి</string>
+    <string name="capture_shutter">ఫోటో తీయండి</string>
+    <string name="capture_gallery">ఫండస్ కెమెరా నుండి దిగుమతి చేయండి</string>
+    <string name="capture_permission_rationale">రెటినాను ఫోటో తీయడానికి కెమెరా ఫండస్ అడాప్టర్‌తో కలిపి ఉపయోగించబడుతుంది. ఫోటో మీ ఫోన్‌ను ఎప్పుడూ వదిలి వెళ్ళదు.</string>
+    <string name="capture_grant_permission">కెమెరాను అనుమతించండి</string>
+    <string name="capture_permission_denied">కెమెరా అనుమతించబడలేదు. మీ ఫండస్ కెమెరా నుండి ఫోటోను దిగుమతి చేసుకోవచ్చు.</string>
+    <string name="capture_adapter_note">ఫోన్ కెమెరా ఒక్కటే రెటినాను ఫోటో తీయలేదు. ఫండస్ అడాప్టర్ వాడండి, లేదా క్లినిక్ ఫండస్ కెమెరా నుండి ఫోటోను దిగుమతి చేయండి.</string>
+
+    <!-- ============ Analyzing ============ -->
+    <string name="analyzing_title">ఫోటోను పరిశీలిస్తోంది</string>
+    <string name="analyzing_subtitle">మీ ఫోన్‌లోనే పనిచేస్తోంది. ఇంటర్నెట్ అవసరం లేదు.</string>
+
+    <!-- ============ Result ============ -->
+    <string name="result_title">ఫలితం</string>
+    <string name="result_confidence_label">ఎంత ఖచ్చితం</string>
+    <string name="confidence_high">ఎక్కువ</string>
+    <string name="confidence_medium">మధ్యస్థం</string>
+    <string name="confidence_low">తక్కువ</string>
+    <string name="result_heatmap_show">యాప్ దేనిని చూసిందో చూపించు</string>
+    <string name="result_heatmap_hide">దాచు</string>
+    <string name="result_heatmap_unavailable">ఈ ఫోటోకు అందుబాటులో లేదు</string>
+    <string name="result_explanation_title">దీని అర్థం ఏమిటి</string>
+    <string name="result_listen">వినండి</string>
+    <string name="result_stop">ఆపు</string>
+    <string name="result_urgency_title">ఏం చేయాలి</string>
+    <string name="result_save">సేవ్ చేయండి</string>
+    <string name="result_saved">ఈ ఫోన్‌లో సేవ్ చేయబడింది</string>
+    <string name="result_new_scan">మరో కన్ను పరీక్షించండి</string>
+    <string name="result_disclaimer">ఇది ఒక ముందస్తు పరీక్ష సహాయం, వైద్యుని నిర్ధారణ కాదు. ఎల్లప్పుడూ కంటి వైద్యునితో నిర్ధారించుకోండి.</string>
+
+    <!-- ============ Severity grades ============ -->
+    <string name="grade_0_label">ఎలాంటి సంకేతాలు కనిపించలేదు</string>
+    <string name="grade_1_label">స్వల్ప మార్పులు</string>
+    <string name="grade_2_label">మధ్యస్థ మార్పులు</string>
+    <string name="grade_3_label">తీవ్రమైన మార్పులు</string>
+    <string name="grade_4_label">ముదిరిన మార్పులు</string>
+
+    <string name="grade_0_desc">ఈ ఫోటోలో మధుమేహం వల్ల కంటికి జరిగిన నష్టం సంకేతాలు ఏవీ కనిపించలేదు.</string>
+    <string name="grade_1_desc">కంటి రక్తనాళాలలో చిన్న ప్రారంభ మార్పులు కనిపించాయి.</string>
+    <string name="grade_2_desc">కంటి రక్తనాళాలలో స్పష్టమైన మార్పులు కనిపించాయి.</string>
+    <string name="grade_3_desc">అనేక మార్పులు కనిపించాయి. ఈ కంటికి వైద్యుని శ్రద్ధ అవసరం.</string>
+    <string name="grade_4_desc">ముదిరిన మార్పులతో పాటు కొత్త బలహీన రక్తనాళాలు కనిపించాయి. దీనికి త్వరగా చికిత్స అవసరం.</string>
+
+    <!-- ============ Referral urgency ============ -->
+    <string name="urgency_routine">12 నెలల్లో మళ్ళీ పరీక్షించుకోండి</string>
+    <string name="urgency_monitor">6 నుండి 12 నెలల్లో మళ్ళీ పరీక్షించుకోండి</string>
+    <string name="urgency_soon">3 నెలల్లోపు కంటి వైద్యుడిని కలవండి</string>
+    <string name="urgency_urgent">1 నెలలోపు కంటి వైద్యుడిని కలవండి</string>
+    <string name="urgency_immediate">వీలైనంత త్వరగా కంటి వైద్యుడిని కలవండి</string>
+
+    <!-- ============ History ============ -->
+    <string name="history_title">గత పరీక్షలు</string>
+    <string name="history_empty">ఇంకా పరీక్షలు లేవు</string>
+    <string name="history_progression">కాలక్రమేణా మార్పు</string>
+
+    <!-- ============ Settings ============ -->
+    <string name="settings_title">సెట్టింగ్‌లు</string>
+    <string name="settings_language">భాష</string>
+    <string name="settings_voice_test">వాయిస్‌ను పరీక్షించండి</string>
+    <string name="settings_voice_unavailable">ఈ ఫోన్‌లో ఈ భాషకు వాయిస్ అందుబాటులో లేదు</string>
+    <string name="settings_model_status">మోడల్ స్థితి</string>
+    <string name="settings_model_ready">ఈ ఫోన్‌లో సిద్ధంగా ఉంది</string>
+    <string name="settings_model_loading">లోడ్ అవుతోంది…</string>
+    <string name="settings_about">గురించి</string>
+
+    <!-- ============ Common ============ -->
+    <string name="common_back">వెనుకకు</string>
+    <string name="common_close">మూసివేయి</string>
+    <string name="common_retry">మళ్ళీ ప్రయత్నించండి</string>
+    <string name="common_error">ఏదో తప్పు జరిగింది. దయచేసి మళ్ళీ ప్రయత్నించండి.</string>
+
+    <!-- ============ Development only ============ -->
+    <string name="mock_explanation_notice">డెవలప్‌మెంట్ మోడ్: అసలు మోడల్ ఇంకా అనుసంధానించబడలేదు, కాబట్టి ఈ వచనం ఒక నమూనా మాత్రమే, వైద్య ఫలితం కాదు.</string>
+
+
+    <!-- ============ Field benchmark ============ -->
+    <string name="benchmark_title">క్షేత్ర కొలత</string>
+    <string name="benchmark_subtitle">ఒక పరీక్షా శిబిరంలో ఈ ఫోన్ నిజంగా ఏమి చేస్తుందో కొలుస్తుంది: వేగం, విద్యుత్, ఒక ఛార్జ్‌కు ఎంతమంది రోగులు, ఎప్పుడు వేగం తగ్గడం మొదలవుతుంది.</string>
+    <string name="benchmark_count">పరీక్షలు</string>
+    <string name="benchmark_run">శిబిర అనుకరణను అమలు చేయండి</string>
+    <string name="benchmark_cancel">ఆపు</string>
+    <string name="benchmark_baseline">నిష్క్రియ స్థితిని కొలుస్తోంది… %1$d సె</string>
+    <string name="benchmark_progress">%2$dలో %1$dవ పరీక్ష</string>
+    <string name="benchmark_section_latency">ఒక పరీక్షకు పట్టే సమయం</string>
+    <string name="benchmark_section_power">విద్యుత్ వినియోగం</string>
+    <string name="benchmark_section_energy">శక్తి మరియు పరిధి</string>
+    <string name="benchmark_section_thermal">ఉష్ణస్థితి</string>
+    <string name="benchmark_mean">సగటు</string>
+    <string name="benchmark_p50">మధ్యగతం (p50)</string>
+    <string name="benchmark_p90">p90</string>
+    <string name="benchmark_p99">p99</string>
+    <string name="benchmark_idle">నిష్క్రియ స్థితి</string>
+    <string name="benchmark_busy">పరీక్ష సమయంలో</string>
+    <string name="benchmark_net">నికర (అనుమితి)</string>
+    <string name="benchmark_per_screening">ఒక పరీక్షకు</string>
+    <string name="benchmark_per_charge">ఒక ఛార్జ్‌కు పరీక్షలు</string>
+    <string name="benchmark_crosscheck">క్రాస్-చెక్</string>
+    <string name="benchmark_temp_rise">బ్యాటరీ ఉష్ణోగ్రత</string>
+    <string name="benchmark_throttle_none">శిబిరం మొత్తంలో వేగ తగ్గింపు లేదు</string>
+    <string name="benchmark_throttle_at">%1$dవ పరీక్ష వద్ద వేగ తగ్గింపు మొదలైంది</string>
+    <string name="benchmark_export">CSV ఎగుమతి</string>
+    <string name="benchmark_exported">%1$sలో సేవ్ చేయబడింది</string>
+    <string name="benchmark_warnings">కొలత గమనికలు</string>
+
+    <string name="benchmark_patients_per_charge">ఒక ఛార్జ్‌కు రోగులు</string>
+    <string name="benchmark_duty_cycle">ఒక రోగికి %1$d సెకన్ల ఫోన్ సమయం చొప్పున</string>
+    <string name="benchmark_continuous_hours">నిరంతర పరీక్ష</string>
+    <string name="benchmark_measured_capacity">కొలిచిన బ్యాటరీ సామర్థ్యం</string>
+    <string name="benchmark_back_to_back">అనుమితి ఆధారిత గరిష్ట పరిమితి</string>
+
+    <!-- Explanation: composed from REAL model outputs, never generated text -->
+    <string name="explain_low_confidence">ఈ ఫోటో గురించి యాప్‌కు పెద్దగా ఖచ్చితత్వం లేదు. మంచి వెలుతురులో, కన్ను మధ్యలో ఉంచి మరో ఫోటో తీస్తే ఫలితం మరింత నమ్మదగినదిగా ఉంటుంది.</string>
+    <string name="explain_refer_soon">లక్షణాల కోసం ఎదురుచూడకండి. ఈ దశలో కళ్ళు సాధారణంగా కనిపించవచ్చు, అనిపించవచ్చు, అయినా చికిత్స అవసరం కావచ్చు.</string>
+    <string name="explain_no_dr">రక్తంలో చక్కెరను అదుపులో ఉంచుకోండి, కళ్ళు బాగానే అనిపించినా సూచించిన ప్రకారం మళ్ళీ పరీక్షించుకోండి.</string>
+    <string name="explain_heatmap_hint">రంగు ఉన్న ప్రాంతం, యాప్ కంటిలోని ఏ భాగాన్ని ఎక్కువగా చూసిందో చూపిస్తుంది.</string>
+    <string name="explain_borderline_referral">ఈ కన్ను కంటి వైద్యుడు చూడవలసిన హద్దుకు దగ్గరగా ఉంది. యాప్ ఉద్దేశపూర్వకంగానే ముందుగా పంపుతుంది, కాబట్టి మార్పులు చిన్నవే అయినా తప్పకుండా పరీక్షించుకోండి.</string>
+
+    <string name="capture_decode_failed">ఆ ఫోటోను చదవలేకపోయాము. మరో ఫోటోను ప్రయత్నించండి.</string>
+    <!-- ============ Capture quality gate ============ -->
+    <string name="quality_title">ఫోటోను మళ్ళీ తీయాలి</string>
+    <string name="quality_subtitle">నమ్మదగిన పరీక్షకు ఈ ఫోటో తగినంత స్పష్టంగా లేదు. దీన్ని ఇప్పుడే సరిచేయడం తప్పుడు ఫలితాన్ని నివారిస్తుంది.</string>
+    <string name="quality_issue_blur">ఫోన్‌ను కదలకుండా పట్టుకుని, కెమెరా ఫోకస్ అయ్యాక ఫోటో తీయండి.</string>
+    <string name="quality_issue_low_light">కొంచెం వెలుతురు జోడించండి, లేదా కనుపాప విప్పారడానికి చీకటి గదికి వెళ్ళండి.</string>
+    <string name="quality_issue_overexposed">వెలుతురు ఎక్కువ. వెలుతురును తగ్గించండి లేదా లెన్స్‌ను కొంచెం దూరంగా జరపండి.</string>
+    <string name="quality_issue_framing">కంటిని ఫ్రేమ్ మధ్యలో ఉంచి కొంచెం దగ్గరగా జరగండి.</string>
+    <string name="quality_issue_not_retina">ఇది కంటి ఫోటోలా అనిపించడం లేదు. లెన్స్‌ను కనుపాపతో సరిగ్గా అమర్చండి.</string>
+    <string name="quality_issue_resolution">ఫోటో చాలా చిన్నది. అధిక ఫోటో నాణ్యత సెట్టింగ్‌ను ఉపయోగించండి.</string>
+    <string name="quality_retake">మరో ఫోటో తీయండి</string>
+    <string name="quality_use_anyway">అయినా పరీక్షించండి</string>
+    <string name="quality_score_overall">ఫోటో నాణ్యత</string>
+    <string name="quality_score_blur">స్పష్టత</string>
+    <string name="quality_score_lighting">వెలుతురు</string>
+    <string name="quality_score_framing">ఫ్రేమింగ్</string>
+    <string name="quality_score_visibility">కన్ను కనిపిస్తోంది</string>
+
+    <string name="action_home">హోమ్</string>
+    <!-- ============ Clinic sync ============ -->
+    <string name="sync_state_pending">పంపడానికి వేచి ఉంది</string>
+    <string name="sync_state_synced">క్లినిక్‌కు పంపబడింది</string>
+    <string name="sync_state_failed">పంపలేకపోయాము</string>
+    <string name="clinic_connect_title">క్లినిక్‌ను అనుసంధానించండి</string>
+    <string name="clinic_connected_title">క్లినిక్ అనుసంధానించబడింది</string>
+    <string name="clinic_subtitle_disconnected">ఇది లేకుండానే పరీక్ష ఎప్పుడూ పనిచేస్తుంది. ఫలితాలను పంచుకోవాలనుకుంటేనే క్లినిక్‌ను అనుసంధానించండి.</string>
+    <string name="clinic_url">క్లినిక్ చిరునామా</string>
+    <string name="clinic_token">యాక్సెస్ కోడ్</string>
+    <string name="clinic_connect">అనుసంధానించు</string>
+    <string name="clinic_disconnect">అనుసంధానం తొలగించు</string>
+    <string name="sync_offline">ఇంటర్నెట్ లేదు — ఫలితాలు ఈ ఫోన్‌లో సేవ్ చేయబడతాయి</string>
+    <string name="sync_online">ఆన్‌లైన్</string>
+    <string name="sync_pending_count">%1$d పంపడానికి వేచి ఉన్నాయి</string>
+    <string name="sync_all_sent">అన్నీ పంపబడ్డాయి</string>
+    <string name="sync_now">ఇప్పుడే పంపు</string>
+    <string name="sync_sending">పంపుతోంది…</string>
+    <string name="sync_failed_count">%1$d పంపలేకపోయాము</string>
+    <string name="clinic_note_image">ఫలితం మాత్రమే పంచుకోబడుతుంది. కంటి ఫోటో ఈ ఫోన్‌ను ఎప్పుడూ వదిలి వెళ్ళదు.</string>
+
+    <!-- ============ Patient + consent (from the worker portal) ============ -->
+    <string name="eye_right">కుడి కన్ను</string>
+    <string name="eye_left">ఎడమ కన్ను</string>
+    <string name="diabetes_unknown">తెలియదు</string>
+    <string name="diabetes_yes">అవును</string>
+    <string name="diabetes_no">కాదు</string>
+    <string name="sex_unspecified">చెప్పడం ఇష్టం లేదు</string>
+    <string name="sex_female">స్త్రీ</string>
+    <string name="sex_male">పురుషుడు</string>
+    <string name="sex_other">ఇతర</string>
+
+    <string name="consent_step">అడుగు 1 · అనుమతి</string>
+    <string name="consent_title">ముందుగా రోగిని అడగండి</string>
+    <string name="consent_body">వారి కంటి ఫోటో తీస్తారని, దాన్ని ఈ ఫోన్‌లో కంప్యూటర్ పరిశీలిస్తుందని, ఫలితాన్ని వైద్యుడు నిర్ధారించాలని వివరించండి. ఏ ఫోటో తీయడానికి ముందైనా అనుమతి తప్పనిసరి.</string>
+    <string name="consent_checkbox">కంటి పరీక్షకు రోగి అంగీకరిస్తున్నారు</string>
+
+    <string name="patient_step">అడుగు 2 · రోగి</string>
+    <string name="patient_name">పూర్తి పేరు</string>
+    <string name="patient_age">వయస్సు</string>
+    <string name="patient_sex">లింగం</string>
+    <string name="patient_phone">ఫోన్ (తదుపరి సంప్రదింపు కోసం)</string>
+    <string name="patient_diabetes">మధుమేహం ఉన్నట్లు నిర్ధారణ అయింది</string>
+    <string name="patient_years">నిర్ధారణ అయి ఎన్ని సంవత్సరాలు</string>
+    <string name="patient_continue">ఫోటో తీయడానికి కొనసాగండి</string>
+    <string name="patient_skip">రోగి వివరాలు లేకుండా పరీక్షించండి</string>
+    <string name="patient_elevated_risk">దీర్ఘకాలిక మధుమేహం — రెటినోపతికి ఎక్కువ ప్రమాదం</string>
+
+    <string name="eye_step">అడుగు 3 · ఏ కన్ను</string>
+    <string name="eye_prompt">మీరు ఏ కంటిని ఫోటో తీస్తున్నారు?</string>
+
+    <string name="state_ready">పరీక్షకు సిద్ధం</string>
+    <string name="state_quality">ఫోటో నాణ్యతను పరిశీలిస్తోంది</string>
+    <string name="state_screening">పరీక్షిస్తోంది</string>
+    <string name="state_result">ఫలితం సిద్ధం</string>
+    <string name="state_referral">వైద్యుని వద్దకు పంపాలి</string>
+    <string name="result_patient_header">%1$s · %2$s</string>
+
+    <string name="narrate_button">సులభమైన మాటల్లో వివరించు</string>
+    <string name="narrate_working">రాస్తోంది…</string>
+    <string name="narrate_heading">సులభమైన మాటల్లో</string>
+    <string name="narrate_note">పైన ఉన్న ఫలితం నుండి ఈ ఫోన్‌లో రాయబడింది. పైన ఉన్న సలహాయే అధికారికమైనది.</string>
+
+    <!-- ============ Spoken summary ============ -->
+    <!-- Written to be HEARD, not read. Short, plain, and it never narrates the
+         screen furniture ("What to do", headings, button labels). -->
+    <string name="speak_summary">కంటి పరీక్షలో %1$s కనిపిస్తోంది. మేము %2$s. %3$s</string>
+    <string name="speak_summary_eye">%1$sలో, కంటి పరీక్షలో %2$s కనిపిస్తోంది. మేము %3$s. %4$s</string>
+    <string name="speak_sure_high">బాగా ఖచ్చితంగా ఉన్నాము</string>
+    <string name="speak_sure_medium">కొంతవరకు ఖచ్చితంగా ఉన్నాము</string>
+    <string name="speak_sure_low">పెద్దగా ఖచ్చితంగా లేము, కాబట్టి దయచేసి మరో ఫోటో తీయండి</string>
+    <string name="voice_install">ఈ భాషకు వాయిస్‌ను ఇన్‌స్టాల్ చేయండి</string>
+    <string name="voice_install_hint">మీ ఫోన్‌లో ఈ భాషకు ఇంకా వాయిస్ లేదు. దాన్ని ఇన్‌స్టాల్ చేస్తే ఫలితాన్ని బిగ్గరగా చదవగలుగుతుంది.</string>
+
+</resources>

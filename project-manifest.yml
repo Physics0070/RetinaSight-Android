@@ -1,0 +1,106 @@
+# project-manifest.yml
+# Declares what this project needs to run. The bootstrap scripts read this file
+# and check every entry, installing what is missing.
+#
+# ---------------------------------------------------------------------------
+# IMPORTANT — THIS MACHINE USES A PORTABLE TOOLCHAIN, NOT PATH INSTALLS
+#
+# The Android toolchain lives at D:\android-toolchain and is NOT on PATH, so
+# a plain presence check will report java / adb / gradle as missing even
+# though they are present and working. Before running bootstrap --check on
+# this machine, put them on PATH for the session:
+#
+#   PowerShell:
+#     $env:JAVA_HOME    = "D:\android-toolchain\jdk"
+#     $env:ANDROID_HOME = "D:\android-toolchain\sdk"
+#     $env:PATH = "$env:JAVA_HOME\bin;$env:ANDROID_HOME\platform-tools;" +
+#                 "D:\android-toolchain\gradle\bin;$env:PATH"
+#
+# On a NEW machine with nothing installed, the entries below are what to get.
+# ---------------------------------------------------------------------------
+
+project_name: retinasight-ai
+
+# ---------------------------------------------------------------------------
+# System-scoped tools: must exist on PATH.
+# ---------------------------------------------------------------------------
+system:
+  - name: Git
+    command: git
+    version: --version
+    winget: Git.Git
+    brew: git
+    apt: git
+    required: false          # not a blocker; this repo is not yet under git
+
+  # --- Android build chain (the app) ---------------------------------------
+  - name: JDK 17
+    command: java
+    version: -version
+    min: "17.0"
+    winget: EclipseAdoptium.Temurin.17.JDK
+    brew: openjdk@17
+    apt: openjdk-17-jdk
+    required: true
+
+  - name: Gradle
+    command: gradle
+    version: --version
+    min: "8.5"
+    winget: Gradle.Gradle
+    brew: gradle
+    apt: gradle
+    required: true
+
+  # adb ships inside the Android SDK platform-tools. There is no winget package
+  # for the SDK itself: install Android Studio, or unzip Google's
+  # commandlinetools and run sdkmanager (see HANDOFF.md for the exact steps
+  # used to build the portable toolchain on this machine).
+  - name: adb (Android platform-tools)
+    command: adb
+    version: version
+    winget: Google.AndroidStudio
+    brew: android-platform-tools
+    apt: adb
+    required: true
+
+  # --- Python (model verification + preprocessing parity checks) -----------
+  - name: Python
+    command: python3
+    version: --version
+    min: "3.10"
+    winget: Python.Python.3.12
+    brew: python@3.12
+    apt: python3
+    required: true
+
+  - name: pip
+    command: pip3
+    version: --version
+    winget: Python.Python.3.12
+    brew: python@3.12
+    apt: python3-pip
+    required: true
+
+# ---------------------------------------------------------------------------
+# Project-scoped dependencies.
+#
+# Gradle resolves the app's own dependencies on first build, so there is no
+# separate install step. Python packages are only needed for the offline
+# verification scripts (ONNX parity, quality-gate calibration).
+# ---------------------------------------------------------------------------
+project:
+  - detect: RetinaSightApp/settings.gradle.kts
+    install: echo "Run: cd RetinaSightApp && gradle assembleDebug"
+  - detect: requirements.txt
+    install: pip3 install -r requirements.txt
+
+# ---------------------------------------------------------------------------
+# Env vars the app needs at runtime.
+#
+# NONE. The app is offline-first and holds no secrets: there is no API key,
+# no model endpoint, no analytics token. The optional clinic sync credential
+# is entered by the user in Settings and stored on the device, never in a
+# build-time variable.
+# ---------------------------------------------------------------------------
+env: []

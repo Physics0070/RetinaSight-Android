@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      OFFLINE-FIRST BY DESIGN.
+
+      The SCREENING pipeline never touches the network: capture, quality gate,
+      inference, heat map, explanation and voice all run on-device, and the app
+      is fully usable with the radios off.
+
+      INTERNET exists solely to upload already-completed records to a clinic
+      when the health worker chooses to connect one. Nothing in the diagnostic
+      path may ever depend on it - if a change would make screening require the
+      network, that change is wrong.
+    -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Camera is preferred but not required: users can import an existing image. -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- Text-to-speech engines are discoverable on Android 11+ only via a query. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".RetinaSightApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RetinaSight">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|locale|layoutDirection"
+            android:theme="@style/Theme.RetinaSight">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

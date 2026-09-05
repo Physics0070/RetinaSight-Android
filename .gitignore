@@ -1,0 +1,28 @@
+# ---- Build output -------------------------------------------------------
+build/
+.gradle/
+local.properties
+*.apk
+*.aab
+captures/
+
+# ---- IDE ----------------------------------------------------------------
+.idea/
+*.iml
+.DS_Store
+
+# ---- Large artefacts that must not enter git ---------------------------
+# Qwen2.5-1.5B narrator, 1.5 GB. Never bundled in the APK either; it is
+# side-loaded to the device. See README for the download step.
+llm/
+*.task
+
+# Patient fundus photographs. Nothing derived from a real eye belongs in a
+# public repository, and the test set is redistributable only from APTOS.
+test_images/
+
+# Benchmark CSVs pulled off the device - regenerate, don't commit.
+exports/*.csv
+
+# ---- Scratch ------------------------------------------------------------
+*.zip

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- ============ Language picker ============ -->
+    <string name="language_title">আপনার ভাষা বেছে নিন</string>
+    <string name="language_subtitle">শুনতে ট্যাপ করুন</string>
+    <string name="language_continue">এগিয়ে যান</string>
+
+    <!-- ============ Home ============ -->
+    <string name="home_tagline">ইন্টারনেট ছাড়াই কাজ করে এমন চোখের পরীক্ষা</string>
+    <string name="home_scan_button">চোখ পরীক্ষা করুন</string>
+    <string name="home_history_button">আগের পরীক্ষাগুলি</string>
+    <string name="home_settings">সেটিংস</string>
+    <string name="offline_badge">ইন্টারনেট ছাড়াই কাজ করে</string>
+
+    <!-- ============ Capture ============ -->
+    <string name="capture_title">রেটিনার ছবি তুলুন</string>
+    <string name="capture_instruction">ফান্ডাস অ্যাডাপ্টার লাগিয়ে রেটিনাকে বৃত্তের মাঝখানে রাখুন</string>
+    <string name="capture_shutter">ছবি তুলুন</string>
+    <string name="capture_gallery">ফান্ডাস ক্যামেরা থেকে আনুন</string>
+    <string name="capture_permission_rationale">রেটিনার ছবি তুলতে ক্যামেরা ফান্ডাস অ্যাডাপ্টারের সঙ্গে ব্যবহার করা হয়। ছবিটি কখনও আপনার ফোন ছেড়ে যায় না।</string>
+    <string name="capture_grant_permission">ক্যামেরার অনুমতি দিন</string>
+    <string name="capture_permission_denied">ক্যামেরার অনুমতি নেই। আপনি আপনার ফান্ডাস ক্যামেরা থেকে ছবি আনতে পারেন।</string>
+    <string name="capture_adapter_note">শুধু ফোনের ক্যামেরা দিয়ে রেটিনার ছবি তোলা যায় না। ফান্ডাস অ্যাডাপ্টার ব্যবহার করুন, অথবা ক্লিনিকের ফান্ডাস ক্যামেরা থেকে ছবি আনুন।</string>
+
+    <!-- ============ Analyzing ============ -->
+    <string name="analyzing_title">ছবি পরীক্ষা করা হচ্ছে</string>
+    <string name="analyzing_subtitle">আপনার ফোনেই কাজ করছে। ইন্টারনেট লাগবে না।</string>
+
+    <!-- ============ Result ============ -->
+    <string name="result_title">ফলাফল</string>
+    <string name="result_confidence_label">কতটা নিশ্চিত</string>
+    <string name="confidence_high">বেশি</string>
+    <string name="confidence_medium">মাঝারি</string>
+    <string name="confidence_low">কম</string>
+    <string name="result_heatmap_show">অ্যাপ কী দেখেছে তা দেখান</string>
+    <string name="result_heatmap_hide">লুকান</string>
+    <string name="result_heatmap_unavailable">এই ছবির জন্য পাওয়া যাচ্ছে না</string>
+    <string name="result_explanation_title">এর মানে কী</string>
+    <string name="result_listen">শুনুন</string>
+    <string name="result_stop">থামান</string>
+    <string name="result_urgency_title">কী করতে হবে</string>
+    <string name="result_save">সংরক্ষণ করুন</string>
+    <string name="result_saved">এই ফোনে সংরক্ষিত হয়েছে</string>
+    <string name="result_new_scan">আরেকটি চোখ পরীক্ষা করুন</string>
+    <string name="result_disclaimer">এটি একটি প্রাথমিক পরীক্ষার সহায়তা, ডাক্তারের রোগনির্ণয় নয়। সর্বদা চোখের ডাক্তারের সঙ্গে নিশ্চিত করুন।</string>
+
+    <!-- ============ Severity grades ============ -->
+    <string name="grade_0_label">কোনও লক্ষণ পাওয়া যায়নি</string>
+    <string name="grade_1_label">সামান্য পরিবর্তন</string>
+    <string name="grade_2_label">মাঝারি পরিবর্তন</string>
+    <string name="grade_3_label">গুরুতর পরিবর্তন</string>
+    <string name="grade_4_label">অগ্রসর পরিবর্তন</string>
+
+    <string name="grade_0_desc">এই ছবিতে ডায়াবেটিসজনিত চোখের ক্ষতির কোনও লক্ষণ পাওয়া যায়নি।</string>
+    <string name="grade_1_desc">চোখের রক্তনালীতে ছোট প্রাথমিক পরিবর্তন পাওয়া গেছে।</string>
+    <string name="grade_2_desc">চোখের রক্তনালীতে স্পষ্ট পরিবর্তন পাওয়া গেছে।</string>
+    <string name="grade_3_desc">অনেক পরিবর্তন পাওয়া গেছে। এই চোখের জন্য ডাক্তারের নজর প্রয়োজন।</string>
+    <string name="grade_4_desc">অগ্রসর পরিবর্তনের সঙ্গে নতুন দুর্বল রক্তনালী পাওয়া গেছে। এর জন্য দ্রুত চিকিৎসা দরকার।</string>
+
+    <!-- ============ Referral urgency ============ -->
+    <string name="urgency_routine">১২ মাসের মধ্যে আবার পরীক্ষা করান</string>
+    <string name="urgency_monitor">৬ থেকে ১২ মাসের মধ্যে আবার পরীক্ষা করান</string>
+    <string name="urgency_soon">৩ মাসের মধ্যে চোখের ডাক্তার দেখান</string>
+    <string name="urgency_urgent">১ মাসের মধ্যে চোখের ডাক্তার দেখান</string>
+    <string name="urgency_immediate">যত তাড়াতাড়ি সম্ভব চোখের ডাক্তার দেখান</string>
+
+    <!-- ============ History ============ -->
+    <string name="history_title">আগের পরীক্ষাগুলি</string>
+    <string name="history_empty">এখনও কোনও পরীক্ষা হয়নি</string>
+    <string name="history_progression">সময়ের সঙ্গে পরিবর্তন</string>
+
+    <!-- ============ Settings ============ -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="settings_language">ভাষা</string>
+    <string name="settings_voice_test">কণ্ঠস্বর পরীক্ষা করুন</string>
+    <string name="settings_voice_unavailable">এই ফোনে এই ভাষার জন্য কণ্ঠস্বর নেই</string>
+    <string name="settings_model_status">মডেলের অবস্থা</string>
+    <string name="settings_model_ready">এই ফোনে প্রস্তুত</string>
+    <string name="settings_model_loading">লোড হচ্ছে…</string>
+    <string name="settings_about">সম্পর্কে</string>
+
+    <!-- ============ Common ============ -->
+    <string name="common_back">পিছনে</string>
+    <string name="common_close">বন্ধ করুন</string>
+    <string name="common_retry">আবার চেষ্টা করুন</string>
+    <string name="common_error">কিছু ভুল হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।</string>
+
+    <!-- ============ Development only ============ -->
+    <string name="mock_explanation_notice">ডেভেলপমেন্ট মোড: আসল মডেল এখনও যুক্ত হয়নি, তাই এই লেখাটি কেবল একটি নমুনা, চিকিৎসাগত ফলাফল নয়।</string>
+
+
+    <!-- ============ Field benchmark ============ -->
+    <string name="benchmark_title">মাঠ পরিমাপ</string>
+    <string name="benchmark_subtitle">একটি পরীক্ষা শিবিরে এই ফোন আসলে কী করে তা মাপে: গতি, বিদ্যুৎ, এক চার্জে কতজন রোগী, এবং কখন গতি কমতে শুরু করে।</string>
+    <string name="benchmark_count">পরীক্ষা</string>
+    <string name="benchmark_run">শিবির সিমুলেশন চালান</string>
+    <string name="benchmark_cancel">থামান</string>
+    <string name="benchmark_baseline">নিষ্ক্রিয় অবস্থা মাপা হচ্ছে… %1$d সে</string>
+    <string name="benchmark_progress">%2$d-এর মধ্যে %1$d নম্বর পরীক্ষা</string>
+    <string name="benchmark_section_latency">প্রতি পরীক্ষায় সময়</string>
+    <string name="benchmark_section_power">বিদ্যুৎ ব্যবহার</string>
+    <string name="benchmark_section_energy">শক্তি ও পরিসর</string>
+    <string name="benchmark_section_thermal">তাপমাত্রা</string>
+    <string name="benchmark_mean">গড়</string>
+    <string name="benchmark_p50">মধ্যমা (p50)</string>
+    <string name="benchmark_p90">p90</string>
+    <string name="benchmark_p99">p99</string>
+    <string name="benchmark_idle">নিষ্ক্রিয় অবস্থা</string>
+    <string name="benchmark_busy">পরীক্ষার সময়</string>
+    <string name="benchmark_net">নিট (অনুমান)</string>
+    <string name="benchmark_per_screening">প্রতি পরীক্ষায়</string>
+    <string name="benchmark_per_charge">প্রতি চার্জে পরীক্ষা</string>
+    <string name="benchmark_crosscheck">ক্রস-চেক</string>
+    <string name="benchmark_temp_rise">ব্যাটারির তাপমাত্রা</string>
+    <string name="benchmark_throttle_none">পুরো শিবিরে গতি কমেনি</string>
+    <string name="benchmark_throttle_at">%1$d নম্বর পরীক্ষায় গতি কমতে শুরু করেছে</string>
+    <string name="benchmark_export">CSV রপ্তানি</string>
+    <string name="benchmark_exported">%1$s-এ সংরক্ষিত হয়েছে</string>
+    <string name="benchmark_warnings">পরিমাপের নোট</string>
+
+    <string name="benchmark_patients_per_charge">প্রতি চার্জে রোগী</string>
+    <string name="benchmark_duty_cycle">প্রতি রোগীতে %1$d সেকেন্ড ফোন সময় ধরে</string>
+    <string name="benchmark_continuous_hours">একটানা পরীক্ষা</string>
+    <string name="benchmark_measured_capacity">মাপা ব্যাটারি ক্ষমতা</string>
+    <string name="benchmark_back_to_back">অনুমান-নির্ভর সর্বোচ্চ সীমা</string>
+
+    <!-- Explanation: composed from REAL model outputs, never generated text -->
+    <string name="explain_low_confidence">এই ছবিটি নিয়ে অ্যাপ খুব একটা নিশ্চিত নয়। ভাল আলোয়, চোখ মাঝখানে রেখে আরেকটি ছবি তুললে ফলাফল আরও নির্ভরযোগ্য হবে।</string>
+    <string name="explain_refer_soon">উপসর্গের জন্য অপেক্ষা করবেন না। এই পর্যায়ে চোখ স্বাভাবিক দেখাতে ও লাগতে পারে, তবুও চিকিৎসার প্রয়োজন হতে পারে।</string>
+    <string name="explain_no_dr">রক্তে শর্করা নিয়ন্ত্রণে রাখুন এবং চোখ ঠিক মনে হলেও পরামর্শ অনুযায়ী আবার পরীক্ষা করান।</string>
+    <string name="explain_heatmap_hint">রঙিন অংশটি দেখায় অ্যাপ চোখের কোন অংশে সবচেয়ে বেশি নজর দিয়েছে।</string>
+    <string name="explain_borderline_referral">এই চোখটি সেই সীমার কাছাকাছি যেখানে চোখের ডাক্তার দেখা দরকার। অ্যাপ ইচ্ছাকৃতভাবেই আগেভাগে পাঠায়, তাই পরিবর্তন সামান্য হলেও পরীক্ষা করিয়ে নিন।</string>
+
+    <string name="capture_decode_failed">ছবিটি পড়া গেল না। অন্য একটি ছবি চেষ্টা করুন।</string>
+    <!-- ============ Capture quality gate ============ -->
+    <string name="quality_title">ছবিটি আবার তুলতে হবে</string>
+    <string name="quality_subtitle">নির্ভরযোগ্য পরীক্ষার জন্য ছবিটি যথেষ্ট স্পষ্ট নয়। এখনই ঠিক করে নিলে ভুল ফলাফল এড়ানো যাবে।</string>
+    <string name="quality_issue_blur">ফোনটি স্থির রেখে, ক্যামেরা ফোকাস হওয়ার পর ছবি তুলুন।</string>
+    <string name="quality_issue_low_light">একটু আলো বাড়ান, অথবা মণি বড় হওয়ার জন্য অন্ধকার ঘরে যান।</string>
+    <string name="quality_issue_overexposed">আলো খুব বেশি। আলো কমান বা লেন্সটি সামান্য দূরে সরান।</string>
+    <string name="quality_issue_framing">চোখটি ফ্রেমের মাঝখানে রেখে একটু কাছে যান।</string>
+    <string name="quality_issue_not_retina">এটি চোখের ছবি বলে মনে হচ্ছে না। লেন্সটি মণির সঙ্গে সোজা করে ধরুন।</string>
+    <string name="quality_issue_resolution">ছবিটি খুব ছোট। উচ্চতর ছবির মান সেটিং ব্যবহার করুন।</string>
+    <string name="quality_retake">আরেকটি ছবি তুলুন</string>
+    <string name="quality_use_anyway">তবুও পরীক্ষা করুন</string>
+    <string name="quality_score_overall">ছবির মান</string>
+    <string name="quality_score_blur">স্পষ্টতা</string>
+    <string name="quality_score_lighting">আলো</string>
+    <string name="quality_score_framing">ফ্রেমিং</string>
+    <string name="quality_score_visibility">চোখ দেখা যাচ্ছে</string>
+
+    <string name="action_home">হোম</string>
+    <!-- ============ Clinic sync ============ -->
+    <string name="sync_state_pending">পাঠানোর অপেক্ষায়</string>
+    <string name="sync_state_synced">ক্লিনিকে পাঠানো হয়েছে</string>
+    <string name="sync_state_failed">পাঠানো যায়নি</string>
+    <string name="clinic_connect_title">একটি ক্লিনিক যুক্ত করুন</string>
+    <string name="clinic_connected_title">ক্লিনিক যুক্ত হয়েছে</string>
+    <string name="clinic_subtitle_disconnected">এটি ছাড়াও পরীক্ষা সবসময় কাজ করে। ফলাফল ভাগ করতে চাইলে তবেই ক্লিনিক যুক্ত করুন।</string>
+    <string name="clinic_url">ক্লিনিকের ঠিকানা</string>
+    <string name="clinic_token">অ্যাক্সেস কোড</string>
+    <string name="clinic_connect">যুক্ত করুন</string>
+    <string name="clinic_disconnect">সংযোগ বিচ্ছিন্ন করুন</string>
+    <string name="sync_offline">ইন্টারনেট নেই — ফলাফল এই ফোনে সংরক্ষিত থাকছে</string>
+    <string name="sync_online">অনলাইন</string>
+    <string name="sync_pending_count">%1$d পাঠানোর অপেক্ষায়</string>
+    <string name="sync_all_sent">সব পাঠানো হয়েছে</string>
+    <string name="sync_now">এখনই পাঠান</string>
+    <string name="sync_sending">পাঠানো হচ্ছে…</string>
+    <string name="sync_failed_count">%1$d পাঠানো যায়নি</string>
+    <string name="clinic_note_image">শুধু ফলাফল ভাগ করা হয়। চোখের ছবি কখনও এই ফোন ছেড়ে যায় না।</string>
+
+    <!-- ============ Patient + consent (from the worker portal) ============ -->
+    <string name="eye_right">ডান চোখ</string>
+    <string name="eye_left">বাঁ চোখ</string>
+    <string name="diabetes_unknown">জানা নেই</string>
+    <string name="diabetes_yes">হ্যাঁ</string>
+    <string name="diabetes_no">না</string>
+    <string name="sex_unspecified">বলতে চাই না</string>
+    <string name="sex_female">মহিলা</string>
+    <string name="sex_male">পুরুষ</string>
+    <string name="sex_other">অন্যান্য</string>
+
+    <string name="consent_step">ধাপ ১ · সম্মতি</string>
+    <string name="consent_title">প্রথমে রোগীকে জিজ্ঞাসা করুন</string>
+    <string name="consent_body">বুঝিয়ে বলুন যে তাঁর চোখের ছবি তোলা হবে, এই ফোনেই একটি কম্পিউটার তা পরীক্ষা করবে, এবং ফলাফল একজন ডাক্তারের দ্বারা নিশ্চিত করা দরকার। কোনও ছবি তোলার আগে সম্মতি বাধ্যতামূলক।</string>
+    <string name="consent_checkbox">রোগী চোখের পরীক্ষায় সম্মত</string>
+
+    <string name="patient_step">ধাপ ২ · রোগী</string>
+    <string name="patient_name">পুরো নাম</string>
+    <string name="patient_age">বয়স</string>
+    <string name="patient_sex">লিঙ্গ</string>
+    <string name="patient_phone">ফোন (পরবর্তী যোগাযোগের জন্য)</string>
+    <string name="patient_diabetes">ডায়াবেটিস ধরা পড়েছে</string>
+    <string name="patient_years">ধরা পড়ার পর কত বছর</string>
+    <string name="patient_continue">ছবি তুলতে এগিয়ে যান</string>
+    <string name="patient_skip">রোগীর তথ্য ছাড়াই পরীক্ষা করুন</string>
+    <string name="patient_elevated_risk">দীর্ঘদিনের ডায়াবেটিস — রেটিনোপ্যাথির ঝুঁকি বেশি</string>
+
+    <string name="eye_step">ধাপ ৩ · কোন চোখ</string>
+    <string name="eye_prompt">আপনি কোন চোখের ছবি তুলছেন?</string>
+
+    <string name="state_ready">পরীক্ষার জন্য প্রস্তুত</string>
+    <string name="state_quality">ছবির মান পরীক্ষা করা হচ্ছে</string>
+    <string name="state_screening">পরীক্ষা চলছে</string>
+    <string name="state_result">ফলাফল প্রস্তুত</string>
+    <string name="state_referral">ডাক্তারের কাছে পাঠানো দরকার</string>
+    <string name="result_patient_header">%1$s · %2$s</string>
+
+    <string name="narrate_button">সহজ ভাষায় বুঝিয়ে দিন</string>
+    <string name="narrate_working">লেখা হচ্ছে…</string>
+    <string name="narrate_heading">সহজ ভাষায়</string>
+    <string name="narrate_note">উপরের ফলাফল থেকে এই ফোনেই লেখা হয়েছে। উপরের পরামর্শটিই আনুষ্ঠানিক।</string>
+
+    <!-- ============ Spoken summary ============ -->
+    <!-- Written to be HEARD, not read. Short, plain, and it never narrates the
+         screen furniture ("What to do", headings, button labels). -->
+    <string name="speak_summary">চোখের পরীক্ষায় %1$s দেখা যাচ্ছে। আমরা %2$s। %3$s</string>
+    <string name="speak_summary_eye">%1$s-এ, চোখের পরীক্ষায় %2$s দেখা যাচ্ছে। আমরা %3$s। %4$s</string>
+    <string name="speak_sure_high">বেশ নিশ্চিত</string>
+    <string name="speak_sure_medium">মোটামুটি নিশ্চিত</string>
+    <string name="speak_sure_low">খুব একটা নিশ্চিত নই, তাই অনুগ্রহ করে আরেকটি ছবি তুলুন</string>
+    <string name="voice_install">এই ভাষার জন্য কণ্ঠস্বর ইনস্টল করুন</string>
+    <string name="voice_install_hint">আপনার ফোনে এই ভাষার কণ্ঠস্বর এখনও নেই। এটি ইনস্টল করলে ফলাফল জোরে পড়ে শোনানো যাবে।</string>
+
+</resources>
