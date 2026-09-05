@@ -23,6 +23,9 @@ test_images/
 
 # Benchmark CSVs pulled off the device - regenerate, don't commit.
 exports/*.csv
+# ...except the run quoted in the docs, kept as evidence for the numbers.
+# Contains device model, timings, power and thermal only - no patient data.
+!exports/retinasight_benchmark_20260905_230250.csv
 
 # ---- Scratch ------------------------------------------------------------
 *.zip

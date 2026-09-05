@@ -5,7 +5,7 @@
     <!-- ============ Language picker ============ -->
     <string name="language_title">ଆପଣଙ୍କ ଭାଷା ବାଛନ୍ତୁ</string>
     <string name="language_subtitle">ଶୁଣିବା ପାଇଁ ଟ୍ୟାପ୍ କରନ୍ତୁ</string>
-    <string name="language_continue">ଆଗକୁ ବଢ଼ନ୍ତୁ</string>
+    <string name="language_continue">ଆଗକୁ ଯାଆନ୍ତୁ</string>
 
     <!-- ============ Home ============ -->
     <string name="home_tagline">ଇଣ୍ଟରନେଟ୍ ବିନା ଚାଲୁଥିବା ଆଖି ପରୀକ୍ଷା</string>
@@ -15,18 +15,18 @@
     <string name="offline_badge">ଇଣ୍ଟରନେଟ୍ ବିନା ଚାଲେ</string>
 
     <!-- ============ Capture ============ -->
-    <string name="capture_title">ରେଟିନା ଛବି ନିଅନ୍ତୁ</string>
-    <string name="capture_instruction">ଫଣ୍ଡସ୍ ଆଡ଼ାପ୍ଟର ଲଗାଇ, ରେଟିନାକୁ ବୃତ୍ତ ମଧ୍ୟରେ ରଖନ୍ତୁ</string>
-    <string name="capture_shutter">ଛବି ନିଅନ୍ତୁ</string>
+    <string name="capture_title">ରେଟିନାର ଫଟୋ ନିଅନ୍ତୁ</string>
+    <string name="capture_instruction">ଫଣ୍ଡସ୍ ଆଡାପ୍ଟର ଲଗାନ୍ତୁ, ତାପରେ ରେଟିନାକୁ ବୃତ୍ତ ମଝିରେ ରଖନ୍ତୁ</string>
+    <string name="capture_shutter">ଫଟୋ ନିଅନ୍ତୁ</string>
     <string name="capture_gallery">ଫଣ୍ଡସ୍ କ୍ୟାମେରାରୁ ଆଣନ୍ତୁ</string>
-    <string name="capture_permission_rationale">ରେଟିନାର ଛବି ନେବା ପାଇଁ କ୍ୟାମେରା ଫଣ୍ଡସ୍ ଆଡ଼ାପ୍ଟର ସହିତ ବ୍ୟବହାର ହୁଏ। ଛବି ଆପଣଙ୍କ ଫୋନରୁ ବାହାରକୁ ଯାଏ ନାହିଁ।</string>
+    <string name="capture_permission_rationale">ରେଟିନାର ଫଟୋ ନେବା ପାଇଁ କ୍ୟାମେରା ଫଣ୍ଡସ୍ ଆଡାପ୍ଟର ସହିତ ବ୍ୟବହୃତ ହୁଏ। ଫଟୋ କେବେ ବି ଆପଣଙ୍କ ଫୋନ୍ ଛାଡ଼େ ନାହିଁ।</string>
     <string name="capture_grant_permission">କ୍ୟାମେରାକୁ ଅନୁମତି ଦିଅନ୍ତୁ</string>
-    <string name="capture_permission_denied">କ୍ୟାମେରାକୁ ଅନୁମତି ନାହିଁ। ଆପଣ ନିଜ ଫଣ୍ଡସ୍ କ୍ୟାମେରାରୁ ଛବି ଆଣିପାରିବେ।</string>
-    <string name="capture_adapter_note">କେବଳ ଫୋନ କ୍ୟାମେରାରେ ରେଟିନାର ଛବି ନିଆଯାଇପାରିବ ନାହିଁ। ଫଣ୍ଡସ୍ ଆଡ଼ାପ୍ଟର ବ୍ୟବହାର କରନ୍ତୁ, କିମ୍ବା କ୍ଲିନିକର ଫଣ୍ଡସ୍ କ୍ୟାମେରାରୁ ଛବି ଆଣନ୍ତୁ।</string>
+    <string name="capture_permission_denied">କ୍ୟାମେରାକୁ ଅନୁମତି ନାହିଁ। ଆପଣ ଆପଣଙ୍କ ଫଣ୍ଡସ୍ କ୍ୟାମେରାରୁ ଫଟୋ ଆଣିପାରିବେ।</string>
+    <string name="capture_adapter_note">କେବଳ ଫୋନ୍ କ୍ୟାମେରାରେ ରେଟିନାର ଫଟୋ ନିଆଯାଇପାରିବ ନାହିଁ। ଫଣ୍ଡସ୍ ଆଡାପ୍ଟର ବ୍ୟବହାର କରନ୍ତୁ, କିମ୍ବା କ୍ଲିନିକ୍ ଫଣ୍ଡସ୍ କ୍ୟାମେରାରୁ ଫଟୋ ଆଣନ୍ତୁ।</string>
 
     <!-- ============ Analyzing ============ -->
-    <string name="analyzing_title">ଛବି ପରୀକ୍ଷା କରାଯାଉଛି</string>
-    <string name="analyzing_subtitle">ଆପଣଙ୍କ ଫୋନରେ ହିଁ ଚାଲୁଛି। ଇଣ୍ଟରନେଟ୍ ଆବଶ୍ୟକ ନାହିଁ।</string>
+    <string name="analyzing_title">ଫଟୋ ପରୀକ୍ଷା କରାଯାଉଛି</string>
+    <string name="analyzing_subtitle">ଆପଣଙ୍କ ଫୋନ୍‌ରେ ହିଁ ଚାଲୁଛି। ଇଣ୍ଟରନେଟ୍ ଦରକାର ନାହିଁ।</string>
 
     <!-- ============ Result ============ -->
     <string name="result_title">ଫଳାଫଳ</string>
@@ -34,17 +34,17 @@
     <string name="confidence_high">ଅଧିକ</string>
     <string name="confidence_medium">ମଧ୍ୟମ</string>
     <string name="confidence_low">କମ୍</string>
-    <string name="result_heatmap_show">ଆପ୍ କ’ଣ ଦେଖିଲା ତାହା ଦେଖାନ୍ତୁ</string>
+    <string name="result_heatmap_show">ଆପ୍ କଣ ଦେଖିଲା ଦେଖାନ୍ତୁ</string>
     <string name="result_heatmap_hide">ଲୁଚାନ୍ତୁ</string>
-    <string name="result_heatmap_unavailable">ଏହି ଛବି ପାଇଁ ଉପଲବ୍ଧ ନାହିଁ</string>
-    <string name="result_explanation_title">ଏହାର ଅର୍ଥ କ’ଣ</string>
+    <string name="result_heatmap_unavailable">ଏହି ଫଟୋ ପାଇଁ ଉପଲବ୍ଧ ନାହିଁ</string>
+    <string name="result_explanation_title">ଏହାର ଅର୍ଥ କଣ</string>
     <string name="result_listen">ଶୁଣନ୍ତୁ</string>
     <string name="result_stop">ବନ୍ଦ କରନ୍ତୁ</string>
-    <string name="result_urgency_title">କ’ଣ କରିବେ</string>
-    <string name="result_save">ସାଇତନ୍ତୁ</string>
-    <string name="result_saved">ଏହି ଫୋନରେ ସାଇତା ହେଲା</string>
-    <string name="result_new_scan">ଅନ୍ୟ ଆଖି ପରୀକ୍ଷା କରନ୍ତୁ</string>
-    <string name="result_disclaimer">ଏହା ଏକ ପ୍ରାଥମିକ ପରୀକ୍ଷାର ସହାୟତା, ଡାକ୍ତରଙ୍କ ରୋଗ ନିର୍ଣ୍ଣୟ ନୁହେଁ। ସର୍ବଦା ଆଖି ଡାକ୍ତରଙ୍କଠାରୁ ନିଶ୍ଚିତ କରନ୍ତୁ।</string>
+    <string name="result_urgency_title">କଣ କରିବେ</string>
+    <string name="result_save">ସଞ୍ଚୟ କରନ୍ତୁ</string>
+    <string name="result_saved">ଏହି ଫୋନ୍‌ରେ ସଞ୍ଚିତ ହେଲା</string>
+    <string name="result_new_scan">ଆଉ ଏକ ଆଖି ପରୀକ୍ଷା କରନ୍ତୁ</string>
+    <string name="result_disclaimer">ଏହା ପ୍ରାଥମିକ ପରୀକ୍ଷାର ସହାୟତା, ଡାକ୍ତରଙ୍କ ରୋଗ ନିର୍ଣ୍ଣୟ ନୁହେଁ। ସର୍ବଦା ଆଖି ଡାକ୍ତରଙ୍କ ଠାରୁ ନିଶ୍ଚିତ କରନ୍ତୁ।</string>
 
     <!-- ============ Severity grades ============ -->
     <string name="grade_0_label">କୌଣସି ଲକ୍ଷଣ ମିଳିଲା ନାହିଁ</string>
@@ -53,7 +53,7 @@
     <string name="grade_3_label">ଗମ୍ଭୀର ପରିବର୍ତ୍ତନ</string>
     <string name="grade_4_label">ଅଗ୍ରସର ପରିବର୍ତ୍ତନ</string>
 
-    <string name="grade_0_desc">ଏହି ଛବିରେ ମଧୁମେହ କାରଣରୁ ଆଖିର କ୍ଷତିର କୌଣସି ଲକ୍ଷଣ ମିଳିଲା ନାହିଁ।</string>
+    <string name="grade_0_desc">ଏହି ଫଟୋରେ ମଧୁମେହ ଯୋଗୁଁ ଆଖିର କ୍ଷତିର କୌଣସି ଲକ୍ଷଣ ମିଳିଲା ନାହିଁ।</string>
     <string name="grade_1_desc">ଆଖିର ରକ୍ତନଳୀରେ ଛୋଟ ପ୍ରାରମ୍ଭିକ ପରିବର୍ତ୍ତନ ମିଳିଛି।</string>
     <string name="grade_2_desc">ଆଖିର ରକ୍ତନଳୀରେ ସ୍ପଷ୍ଟ ପରିବର୍ତ୍ତନ ମିଳିଛି।</string>
     <string name="grade_3_desc">ଅନେକ ପରିବର୍ତ୍ତନ ମିଳିଛି। ଏହି ଆଖି ପାଇଁ ଡାକ୍ତରଙ୍କ ଧ୍ୟାନ ଆବଶ୍ୟକ।</string>
@@ -75,9 +75,9 @@
     <string name="settings_title">ସେଟିଂସ୍</string>
     <string name="settings_language">ଭାଷା</string>
     <string name="settings_voice_test">ସ୍ୱର ପରୀକ୍ଷା କରନ୍ତୁ</string>
-    <string name="settings_voice_unavailable">ଏହି ଫୋନରେ ଏହି ଭାଷା ପାଇଁ ସ୍ୱର ଉପଲବ୍ଧ ନାହିଁ</string>
+    <string name="settings_voice_unavailable">ଏହି ଫୋନ୍‌ରେ ଏହି ଭାଷା ପାଇଁ ସ୍ୱର ଉପଲବ୍ଧ ନାହିଁ</string>
     <string name="settings_model_status">ମଡେଲର ସ୍ଥିତି</string>
-    <string name="settings_model_ready">ଏହି ଫୋନରେ ପ୍ରସ୍ତୁତ</string>
+    <string name="settings_model_ready">ଏହି ଫୋନ୍‌ରେ ପ୍ରସ୍ତୁତ</string>
     <string name="settings_model_loading">ଲୋଡ୍ ହେଉଛି…</string>
     <string name="settings_about">ବିଷୟରେ</string>
 
@@ -85,26 +85,26 @@
     <string name="common_back">ପଛକୁ</string>
     <string name="common_close">ବନ୍ଦ କରନ୍ତୁ</string>
     <string name="common_retry">ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ</string>
-    <string name="common_error">କିଛି ଭୁଲ ହେଲା। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
+    <string name="common_error">କିଛି ଭୁଲ ହୋଇଗଲା। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
 
     <!-- ============ Development only ============ -->
-    <string name="mock_explanation_notice">ବିକାଶ ମୋଡ୍: ପ୍ରକୃତ ମଡେଲ ଏପର୍ଯ୍ୟନ୍ତ ଯୋଡ଼ାଯାଇ ନାହିଁ, ତେଣୁ ଏହି ଲେଖା କେବଳ ଏକ ନମୁନା, କୌଣସି ଚିକିତ୍ସା ଫଳାଫଳ ନୁହେଁ।</string>
+    <string name="mock_explanation_notice">ଡେଭେଲପମେଣ୍ଟ ମୋଡ୍: ପ୍ରକୃତ ମଡେଲ ଏପର୍ଯ୍ୟନ୍ତ ଯୋଡ଼ାଯାଇ ନାହିଁ, ତେଣୁ ଏହି ଲେଖା କେବଳ ଏକ ନମୁନା, ଚିକିତ୍ସା ଫଳାଫଳ ନୁହେଁ।</string>
 
 
     <!-- ============ Field benchmark ============ -->
     <string name="benchmark_title">କ୍ଷେତ୍ର ମାପ</string>
-    <string name="benchmark_subtitle">ଏକ ପରୀକ୍ଷା ଶିବିରରେ ଏହି ଫୋନ ପ୍ରକୃତରେ କ’ଣ କରେ ତାହା ମାପେ: ଗତି, ବିଦ୍ୟୁତ୍, ଗୋଟିଏ ଚାର୍ଜରେ କେତେ ରୋଗୀ, ଏବଂ କେବେ ଗତି କମିବାକୁ ଲାଗେ।</string>
+    <string name="benchmark_subtitle">ଏକ ପରୀକ୍ଷା ଶିବିରରେ ଏହି ଫୋନ୍ ପ୍ରକୃତରେ କଣ କରେ ତାହା ମାପେ: ଗତି, ବିଦ୍ୟୁତ୍, ଗୋଟିଏ ଚାର୍ଜରେ କେତେ ରୋଗୀ, ଏବଂ କେବେ ଗତି କମିବାକୁ ଲାଗେ।</string>
     <string name="benchmark_count">ପରୀକ୍ଷାଗୁଡ଼ିକ</string>
-    <string name="benchmark_run">ଶିବିର ଅନୁକରଣ ଚଲାନ୍ତୁ</string>
+    <string name="benchmark_run">ଶିବିର ସିମୁଲେସନ ଚଲାନ୍ତୁ</string>
     <string name="benchmark_cancel">ବନ୍ଦ କରନ୍ତୁ</string>
-    <string name="benchmark_baseline">ନିଷ୍କ୍ରିୟ ସ୍ଥିତି ମପାଯାଉଛି… %1$d ସେ</string>
-    <string name="benchmark_progress">%2$d ମଧ୍ୟରୁ %1$d ପରୀକ୍ଷା</string>
-    <string name="benchmark_section_latency">ଗୋଟିଏ ପରୀକ୍ଷାର ସମୟ</string>
+    <string name="benchmark_baseline">ନିଷ୍କ୍ରିୟ ସ୍ଥିତି ମାପ କରାଯାଉଛି… %1$d ସେ</string>
+    <string name="benchmark_progress">%2$d ମଧ୍ୟରୁ %1$d ତମ ପରୀକ୍ଷା</string>
+    <string name="benchmark_section_latency">ପ୍ରତି ପରୀକ୍ଷାର ସମୟ</string>
     <string name="benchmark_section_power">ବିଦ୍ୟୁତ୍ ବ୍ୟବହାର</string>
     <string name="benchmark_section_energy">ଶକ୍ତି ଓ ପରିସର</string>
     <string name="benchmark_section_thermal">ତାପମାତ୍ରା</string>
     <string name="benchmark_mean">ହାରାହାରି</string>
-    <string name="benchmark_p50">ମଧ୍ୟମ (p50)</string>
+    <string name="benchmark_p50">ମଧ୍ୟମା (p50)</string>
     <string name="benchmark_p90">p90</string>
     <string name="benchmark_p99">p99</string>
     <string name="benchmark_idle">ନିଷ୍କ୍ରିୟ ସ୍ଥିତି</string>
@@ -114,63 +114,63 @@
     <string name="benchmark_per_charge">ପ୍ରତି ଚାର୍ଜରେ ପରୀକ୍ଷା</string>
     <string name="benchmark_crosscheck">କ୍ରସ୍-ଚେକ୍</string>
     <string name="benchmark_temp_rise">ବ୍ୟାଟେରୀ ତାପମାତ୍ରା</string>
-    <string name="benchmark_throttle_none">ପୁରା ଶିବିରରେ ଗତି କମି ନାହିଁ</string>
+    <string name="benchmark_throttle_none">ପୂରା ଶିବିରରେ ଗତି କମି ନାହିଁ</string>
     <string name="benchmark_throttle_at">%1$d ତମ ପରୀକ୍ଷାରେ ଗତି କମିବାକୁ ଲାଗିଲା</string>
     <string name="benchmark_export">CSV ରପ୍ତାନି</string>
-    <string name="benchmark_exported">%1$s ରେ ସାଇତା ହେଲା</string>
+    <string name="benchmark_exported">%1$s ରେ ସଞ୍ଚିତ ହେଲା</string>
     <string name="benchmark_warnings">ମାପର ଟିପ୍ପଣୀ</string>
 
     <string name="benchmark_patients_per_charge">ପ୍ରତି ଚାର୍ଜରେ ରୋଗୀ</string>
-    <string name="benchmark_duty_cycle">ପ୍ରତି ରୋଗୀ ପାଇଁ %1$d ସେକେଣ୍ଡ ଫୋନ ସମୟ ହିସାବରେ</string>
+    <string name="benchmark_duty_cycle">ପ୍ରତି ରୋଗୀ ପାଇଁ %1$d ସେକେଣ୍ଡ ଫୋନ୍ ସମୟ ହିସାବରେ</string>
     <string name="benchmark_continuous_hours">ଲଗାତାର ପରୀକ୍ଷା</string>
-    <string name="benchmark_measured_capacity">ମପାଯାଇଥିବା ବ୍ୟାଟେରୀ କ୍ଷମତା</string>
+    <string name="benchmark_measured_capacity">ମାପ କରାଯାଇଥିବା ବ୍ୟାଟେରୀ କ୍ଷମତା</string>
     <string name="benchmark_back_to_back">ଅନୁମାନ ଆଧାରିତ ସର୍ବାଧିକ ସୀମା</string>
 
     <!-- Explanation: composed from REAL model outputs, never generated text -->
-    <string name="explain_low_confidence">ଏହି ଛବି ବିଷୟରେ ଆପ୍ ବେଶୀ ନିଶ୍ଚିତ ନୁହେଁ। ଭଲ ଆଲୋକରେ, ଆଖିକୁ ମଝିରେ ରଖି ଆଉ ଏକ ଛବି ନେଲେ ଫଳାଫଳ ଅଧିକ ନିର୍ଭରଯୋଗ୍ୟ ହେବ।</string>
-    <string name="explain_refer_soon">ଲକ୍ଷଣ ପାଇଁ ଅପେକ୍ଷା କରନ୍ତୁ ନାହିଁ। ଏହି ପର୍ଯ୍ୟାୟରେ ଆଖି ସାଧାରଣ ଦେଖାଯାଇପାରେ, ତଥାପି ଚିକିତ୍ସା ଦରକାର ହୋଇପାରେ।</string>
-    <string name="explain_no_dr">ରକ୍ତରେ ଚିନି ନିୟନ୍ତ୍ରଣରେ ରଖନ୍ତୁ, ଏବଂ ଆଖି ଭଲ ଲାଗିଲେ ମଧ୍ୟ ପରାମର୍ଶ ଅନୁଯାୟୀ ପୁଣି ପରୀକ୍ଷା କରାନ୍ତୁ।</string>
-    <string name="explain_heatmap_hint">ରଙ୍ଗିନ ଅଂଶ ଦେଖାଏ ଯେ ଆପ୍ ଆଖିର କେଉଁ ଅଂଶକୁ ସବୁଠାରୁ ଅଧିକ ଦେଖିଲା।</string>
-    <string name="explain_borderline_referral">ଏହି ଆଖି ସେହି ସୀମାର ନିକଟରେ ଅଛି ଯେଉଁଠି ଆଖି ଡାକ୍ତର ଦେଖିବା ଉଚିତ। ଆପ୍ ଜାଣିଶୁଣି ଆଗରୁ ପଠାଏ, ତେଣୁ ପରିବର୍ତ୍ତନ କମ୍ ହେଲେ ମଧ୍ୟ ପରୀକ୍ଷା କରାନ୍ତୁ।</string>
+    <string name="explain_low_confidence">ଏହି ଫଟୋ ବିଷୟରେ ଆପ୍ ବେଶୀ ନିଶ୍ଚିତ ନୁହେଁ। ଭଲ ଆଲୋକରେ, ଆଖିକୁ ମଝିରେ ରଖି ଆଉ ଏକ ଫଟୋ ନେଲେ ଫଳାଫଳ ଅଧିକ ନିର୍ଭରଯୋଗ୍ୟ ହେବ।</string>
+    <string name="explain_refer_soon">ଲକ୍ଷଣ ପାଇଁ ଅପେକ୍ଷା କରନ୍ତୁ ନାହିଁ। ଏହି ପର୍ଯ୍ୟାୟରେ ଆଖି ସାଧାରଣ ଦେଖାଯାଇପାରେ ଏବଂ ଲାଗିପାରେ, ତଥାପି ଚିକିତ୍ସା ଦରକାର ହୋଇପାରେ।</string>
+    <string name="explain_no_dr">ରକ୍ତରେ ଶର୍କରା ନିୟନ୍ତ୍ରଣରେ ରଖନ୍ତୁ ଏବଂ ଆଖି ଠିକ୍ ଲାଗିଲେ ମଧ୍ୟ ପରାମର୍ଶ ଅନୁସାରେ ପୁଣି ପରୀକ୍ଷା କରାନ୍ତୁ।</string>
+    <string name="explain_heatmap_hint">ରଙ୍ଗିନ ଅଂଶ ଦେଖାଏ ଯେ ଆପ୍ ଆଖିର କେଉଁ ଭାଗକୁ ସବୁଠାରୁ ଅଧିକ ଦେଖିଲା।</string>
+    <string name="explain_borderline_referral">ଏହି ଆଖି ସେହି ସୀମା ନିକଟରେ ଅଛି ଯେଉଁଠି ଆଖି ଡାକ୍ତର ଦେଖିବା ଉଚିତ। ଆପ୍ ଜାଣିଶୁଣି ଆଗୁଆ ପଠାଏ, ତେଣୁ ପରିବର୍ତ୍ତନ ଛୋଟ ହେଲେ ମଧ୍ୟ ପରୀକ୍ଷା କରାନ୍ତୁ।</string>
 
-    <string name="capture_decode_failed">ସେହି ଛବି ପଢ଼ାଯାଇ ପାରିଲା ନାହିଁ। ଅନ୍ୟ ଏକ ଛବି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
+    <string name="capture_decode_failed">ସେହି ଫଟୋ ପଢ଼ିହେଲା ନାହିଁ। ଅନ୍ୟ ଏକ ଫଟୋ ଚେଷ୍ଟା କରନ୍ତୁ।</string>
     <!-- ============ Capture quality gate ============ -->
-    <string name="quality_title">ଛବି ପୁଣି ନେବାକୁ ପଡ଼ିବ</string>
-    <string name="quality_subtitle">ନିର୍ଭରଯୋଗ୍ୟ ପରୀକ୍ଷା ପାଇଁ ଏହି ଛବି ଯଥେଷ୍ଟ ସ୍ପଷ୍ଟ ନୁହେଁ। ଏବେ ଠିକ୍ କରିଦେଲେ ଭୁଲ ଫଳାଫଳ ଏଡ଼ାଯିବ।</string>
-    <string name="quality_issue_blur">ଫୋନକୁ ସ୍ଥିର ଧରି, କ୍ୟାମେରା ଫୋକସ୍ ହେବା ପରେ ଛବି ନିଅନ୍ତୁ।</string>
-    <string name="quality_issue_low_light">ଟିକିଏ ଅଧିକ ଆଲୋକ କରନ୍ତୁ, କିମ୍ବା ପିତୁଳା ବଡ଼ ହେବା ପାଇଁ ଅନ୍ଧାର ଘରକୁ ଯାଆନ୍ତୁ।</string>
-    <string name="quality_issue_overexposed">ଆଲୋକ ବେଶୀ ଅଛି। ଆଲୋକ କମାନ୍ତୁ କିମ୍ବା ଲେନ୍ସକୁ ଟିକିଏ ଦୂରକୁ ନିଅନ୍ତୁ।</string>
-    <string name="quality_issue_framing">ଆଖିକୁ ଫ୍ରେମ ମଝିରେ ରଖି ଟିକିଏ ପାଖକୁ ଆସନ୍ତୁ।</string>
-    <string name="quality_issue_not_retina">ଏହା ଆଖିର ଛବି ପରି ଲାଗୁନାହିଁ। ଲେନ୍ସକୁ ପିତୁଳା ସହିତ ସିଧା କରନ୍ତୁ।</string>
-    <string name="quality_issue_resolution">ଛବି ବହୁତ ଛୋଟ। ଅଧିକ ଛବି ଗୁଣବତ୍ତା ସେଟିଂ ବ୍ୟବହାର କରନ୍ତୁ।</string>
-    <string name="quality_retake">ଆଉ ଏକ ଛବି ନିଅନ୍ତୁ</string>
+    <string name="quality_title">ଫଟୋ ପୁଣି ନେବାକୁ ପଡ଼ିବ</string>
+    <string name="quality_subtitle">ନିର୍ଭରଯୋଗ୍ୟ ପରୀକ୍ଷା ପାଇଁ ଏହି ଫଟୋ ଯଥେଷ୍ଟ ସ୍ପଷ୍ଟ ନୁହେଁ। ଏବେ ଠିକ୍ କଲେ ଭୁଲ ଫଳାଫଳରୁ ବଞ୍ଚିହେବ।</string>
+    <string name="quality_issue_blur">ଫୋନ୍‌କୁ ସ୍ଥିର ଧରି, କ୍ୟାମେରା ଫୋକସ୍ ହେବା ପରେ ଫଟୋ ନିଅନ୍ତୁ।</string>
+    <string name="quality_issue_low_light">ଟିକିଏ ଆଲୋକ ବଢ଼ାନ୍ତୁ, କିମ୍ବା ପିତୁଳା ଖୋଲିବା ପାଇଁ ଅନ୍ଧାର ଘରକୁ ଯାଆନ୍ତୁ।</string>
+    <string name="quality_issue_overexposed">ଆଲୋକ ବହୁତ ଅଧିକ। ଆଲୋକ କମାନ୍ତୁ କିମ୍ବା ଲେନ୍ସକୁ ଟିକିଏ ଦୂରକୁ ନିଅନ୍ତୁ।</string>
+    <string name="quality_issue_framing">ଆଖିକୁ ଫ୍ରେମ୍ ମଝିରେ ରଖି ଟିକିଏ ପାଖକୁ ଯାଆନ୍ତୁ।</string>
+    <string name="quality_issue_not_retina">ଏହା ଆଖିର ଫଟୋ ପରି ଲାଗୁନାହିଁ। ଲେନ୍ସକୁ ପିତୁଳା ସହିତ ସିଧା କରନ୍ତୁ।</string>
+    <string name="quality_issue_resolution">ଫଟୋ ବହୁତ ଛୋଟ। ଅଧିକ ଫଟୋ ଗୁଣବତ୍ତା ସେଟିଂ ବ୍ୟବହାର କରନ୍ତୁ।</string>
+    <string name="quality_retake">ଆଉ ଏକ ଫଟୋ ନିଅନ୍ତୁ</string>
     <string name="quality_use_anyway">ତଥାପି ପରୀକ୍ଷା କରନ୍ତୁ</string>
-    <string name="quality_score_overall">ଛବିର ଗୁଣବତ୍ତା</string>
-    <string name="quality_score_blur">ତୀକ୍ଷ୍ଣତା</string>
+    <string name="quality_score_overall">ଫଟୋର ଗୁଣବତ୍ତା</string>
+    <string name="quality_score_blur">ସ୍ପଷ୍ଟତା</string>
     <string name="quality_score_lighting">ଆଲୋକ</string>
     <string name="quality_score_framing">ଫ୍ରେମିଂ</string>
     <string name="quality_score_visibility">ଆଖି ଦେଖାଯାଉଛି</string>
 
     <string name="action_home">ହୋମ୍</string>
     <!-- ============ Clinic sync ============ -->
-    <string name="sync_state_pending">ପଠାଇବାକୁ ଅପେକ୍ଷାରେ</string>
-    <string name="sync_state_synced">କ୍ଲିନିକକୁ ପଠାଗଲା</string>
+    <string name="sync_state_pending">ପଠାଇବା ପାଇଁ ଅପେକ୍ଷାରେ</string>
+    <string name="sync_state_synced">କ୍ଲିନିକ୍‌କୁ ପଠାଗଲା</string>
     <string name="sync_state_failed">ପଠାଯାଇ ପାରିଲା ନାହିଁ</string>
-    <string name="clinic_connect_title">ଏକ କ୍ଲିନିକ ଯୋଡ଼ନ୍ତୁ</string>
-    <string name="clinic_connected_title">କ୍ଲିନିକ ଯୋଡ଼ାଗଲା</string>
-    <string name="clinic_subtitle_disconnected">ଏହା ବିନା ମଧ୍ୟ ପରୀକ୍ଷା ସର୍ବଦା ଚାଲେ। ଫଳାଫଳ ସେୟାର କରିବାକୁ ଚାହିଁଲେ ହିଁ କ୍ଲିନିକ ଯୋଡ଼ନ୍ତୁ।</string>
-    <string name="clinic_url">କ୍ଲିନିକର ଠିକଣା</string>
+    <string name="clinic_connect_title">ଏକ କ୍ଲିନିକ୍ ଯୋଡ଼ନ୍ତୁ</string>
+    <string name="clinic_connected_title">କ୍ଲିନିକ୍ ଯୋଡ଼ାଗଲା</string>
+    <string name="clinic_subtitle_disconnected">ଏହା ବିନା ମଧ୍ୟ ପରୀକ୍ଷା ସର୍ବଦା ଚାଲେ। ଫଳାଫଳ ବାଣ୍ଟିବାକୁ ଚାହିଁଲେ ହିଁ କ୍ଲିନିକ୍ ଯୋଡ଼ନ୍ତୁ।</string>
+    <string name="clinic_url">କ୍ଲିନିକ୍ ଠିକଣା</string>
     <string name="clinic_token">ଆକ୍ସେସ୍ କୋଡ୍</string>
     <string name="clinic_connect">ଯୋଡ଼ନ୍ତୁ</string>
-    <string name="clinic_disconnect">ଅଲଗା କରନ୍ତୁ</string>
-    <string name="sync_offline">ଇଣ୍ଟରନେଟ୍ ନାହିଁ — ଫଳାଫଳ ଏହି ଫୋନରେ ସାଇତା ହେଉଛି</string>
+    <string name="clinic_disconnect">ସଂଯୋଗ ଛିନ୍ନ କରନ୍ତୁ</string>
+    <string name="sync_offline">ଇଣ୍ଟରନେଟ୍ ନାହିଁ — ଫଳାଫଳ ଏହି ଫୋନ୍‌ରେ ସଞ୍ଚିତ ହେଉଛି</string>
     <string name="sync_online">ଅନଲାଇନ୍</string>
-    <string name="sync_pending_count">%1$d ପଠାଇବାକୁ ଅପେକ୍ଷାରେ</string>
-    <string name="sync_all_sent">ସବୁ ପଠାଯାଇଛି</string>
+    <string name="sync_pending_count">%1$d ପଠାଇବା ପାଇଁ ଅପେକ୍ଷାରେ</string>
+    <string name="sync_all_sent">ସବୁ ପଠାଗଲା</string>
     <string name="sync_now">ଏବେ ପଠାନ୍ତୁ</string>
     <string name="sync_sending">ପଠାଯାଉଛି…</string>
     <string name="sync_failed_count">%1$d ପଠାଯାଇ ପାରିଲା ନାହିଁ</string>
-    <string name="clinic_note_image">କେବଳ ଫଳାଫଳ ସେୟାର ହୁଏ। ଆଖିର ଛବି ଏହି ଫୋନରୁ ବାହାରକୁ ଯାଏ ନାହିଁ।</string>
+    <string name="clinic_note_image">କେବଳ ଫଳାଫଳ ବାଣ୍ଟାଯାଏ। ଆଖିର ଫଟୋ କେବେ ବି ଏହି ଫୋନ୍ ଛାଡ଼େ ନାହିଁ।</string>
 
     <!-- ============ Patient + consent (from the worker portal) ============ -->
     <string name="eye_right">ଡାହାଣ ଆଖି</string>
@@ -181,30 +181,30 @@
     <string name="sex_unspecified">କହିବାକୁ ଚାହୁଁ ନାହିଁ</string>
     <string name="sex_female">ମହିଳା</string>
     <string name="sex_male">ପୁରୁଷ</string>
-    <string name="sex_other">ଅନ୍ୟ</string>
+    <string name="sex_other">ଅନ୍ୟାନ୍ୟ</string>
 
     <string name="consent_step">ପଦକ୍ଷେପ 1 · ସମ୍ମତି</string>
     <string name="consent_title">ପ୍ରଥମେ ରୋଗୀଙ୍କୁ ପଚାରନ୍ତୁ</string>
-    <string name="consent_body">ବୁଝାନ୍ତୁ ଯେ ଆପଣ ତାଙ୍କ ଆଖିର ଛବି ନେବେ, ଏହି ଫୋନରେ ଏକ କମ୍ପ୍ୟୁଟର ତାହା ପରୀକ୍ଷା କରିବ, ଏବଂ ଫଳାଫଳକୁ ଜଣେ ଡାକ୍ତର ନିଶ୍ଚିତ କରିବା ଉଚିତ। କୌଣସି ଛବି ନେବା ପୂର୍ବରୁ ସମ୍ମତି ଆବଶ୍ୟକ।</string>
+    <string name="consent_body">ବୁଝାନ୍ତୁ ଯେ ଆପଣ ତାଙ୍କ ଆଖିର ଫଟୋ ନେବେ, ଏହି ଫୋନ୍‌ରେ ହିଁ ଏକ କମ୍ପ୍ୟୁଟର ତାହା ପରୀକ୍ଷା କରିବ, ଏବଂ ଫଳାଫଳକୁ ଡାକ୍ତର ନିଶ୍ଚିତ କରିବା ଉଚିତ। କୌଣସି ଫଟୋ ନେବା ପୂର୍ବରୁ ସମ୍ମତି ବାଧ୍ୟତାମୂଳକ।</string>
     <string name="consent_checkbox">ରୋଗୀ ଆଖି ପରୀକ୍ଷା ପାଇଁ ରାଜି ଅଛନ୍ତି</string>
 
     <string name="patient_step">ପଦକ୍ଷେପ 2 · ରୋଗୀ</string>
     <string name="patient_name">ପୂରା ନାମ</string>
     <string name="patient_age">ବୟସ</string>
     <string name="patient_sex">ଲିଙ୍ଗ</string>
-    <string name="patient_phone">ଫୋନ (ପରବର୍ତ୍ତୀ ଯୋଗାଯୋଗ ପାଇଁ)</string>
-    <string name="patient_diabetes">ମଧୁମେହ ନିର୍ଣ୍ଣୟ ହୋଇଛି</string>
-    <string name="patient_years">ନିର୍ଣ୍ଣୟ ହେବାର କେତେ ବର୍ଷ</string>
-    <string name="patient_continue">ଛବି ନେବାକୁ ଆଗକୁ ବଢ଼ନ୍ତୁ</string>
+    <string name="patient_phone">ଫୋନ୍ (ପରବର୍ତ୍ତୀ ଯୋଗାଯୋଗ ପାଇଁ)</string>
+    <string name="patient_diabetes">ମଧୁମେହ ଚିହ୍ନଟ ହୋଇଛି</string>
+    <string name="patient_years">ଚିହ୍ନଟ ହେବାର କେତେ ବର୍ଷ</string>
+    <string name="patient_continue">ଫଟୋ ନେବାକୁ ଆଗକୁ ଯାଆନ୍ତୁ</string>
     <string name="patient_skip">ରୋଗୀଙ୍କ ବିବରଣୀ ବିନା ପରୀକ୍ଷା କରନ୍ତୁ</string>
-    <string name="patient_elevated_risk">ଦୀର୍ଘଦିନର ମଧୁମେହ — ରେଟିନା କ୍ଷତିର ଅଧିକ ଆଶଙ୍କା</string>
+    <string name="patient_elevated_risk">ଦୀର୍ଘ ଦିନର ମଧୁମେହ — ରେଟିନୋପାଥିର ଅଧିକ ଆଶଙ୍କା</string>
 
     <string name="eye_step">ପଦକ୍ଷେପ 3 · କେଉଁ ଆଖି</string>
-    <string name="eye_prompt">ଆପଣ କେଉଁ ଆଖିର ଛବି ନେଉଛନ୍ତି?</string>
+    <string name="eye_prompt">ଆପଣ କେଉଁ ଆଖିର ଫଟୋ ନେଉଛନ୍ତି?</string>
 
     <string name="state_ready">ପରୀକ୍ଷା ପାଇଁ ପ୍ରସ୍ତୁତ</string>
-    <string name="state_quality">ଛବିର ଗୁଣବତ୍ତା ଦେଖାଯାଉଛି</string>
-    <string name="state_screening">ପରୀକ୍ଷା ଚାଲିଛି</string>
+    <string name="state_quality">ଫଟୋର ଗୁଣବତ୍ତା ପରୀକ୍ଷା କରାଯାଉଛି</string>
+    <string name="state_screening">ପରୀକ୍ଷା ଚାଲୁଛି</string>
     <string name="state_result">ଫଳାଫଳ ପ୍ରସ୍ତୁତ</string>
     <string name="state_referral">ଡାକ୍ତରଙ୍କ ପାଖକୁ ପଠାଇବା ଦରକାର</string>
     <string name="result_patient_header">%1$s · %2$s</string>
@@ -212,7 +212,7 @@
     <string name="narrate_button">ସରଳ ଭାଷାରେ ବୁଝାନ୍ତୁ</string>
     <string name="narrate_working">ଲେଖାଯାଉଛି…</string>
     <string name="narrate_heading">ସରଳ ଭାଷାରେ</string>
-    <string name="narrate_note">ଉପରର ଫଳାଫଳରୁ ଏହି ଫୋନରେ ଲେଖାଯାଇଛି। ଉପରର ପରାମର୍ଶ ହିଁ ଆନୁଷ୍ଠାନିକ।</string>
+    <string name="narrate_note">ଉପରର ଫଳାଫଳରୁ ଏହି ଫୋନ୍‌ରେ ହିଁ ଲେଖାଯାଇଛି। ଉପରର ପରାମର୍ଶ ହିଁ ଆନୁଷ୍ଠାନିକ।</string>
 
     <!-- ============ Spoken summary ============ -->
     <!-- Written to be HEARD, not read. Short, plain, and it never narrates the
@@ -221,8 +221,8 @@
     <string name="speak_summary_eye">%1$s ରେ, ଆଖି ପରୀକ୍ଷାରେ %2$s ଦେଖାଯାଉଛି। ଆମେ %3$s। %4$s</string>
     <string name="speak_sure_high">ଭଲ ଭାବେ ନିଶ୍ଚିତ</string>
     <string name="speak_sure_medium">କିଛି ମାତ୍ରାରେ ନିଶ୍ଚିତ</string>
-    <string name="speak_sure_low">ବେଶୀ ନିଶ୍ଚିତ ନୁହେଁ, ତେଣୁ ଆଉ ଏକ ଛବି ନିଅନ୍ତୁ</string>
+    <string name="speak_sure_low">ବେଶୀ ନିଶ୍ଚିତ ନୁହେଁ, ତେଣୁ ଦୟାକରି ଆଉ ଏକ ଫଟୋ ନିଅନ୍ତୁ</string>
     <string name="voice_install">ଏହି ଭାଷା ପାଇଁ ସ୍ୱର ଇନଷ୍ଟଲ୍ କରନ୍ତୁ</string>
-    <string name="voice_install_hint">ଆପଣଙ୍କ ଫୋନରେ ଏହି ଭାଷା ପାଇଁ ଏପର୍ଯ୍ୟନ୍ତ ସ୍ୱର ନାହିଁ। ଏହା ଇନଷ୍ଟଲ୍ କଲେ ଫଳାଫଳ ଉଚ୍ଚ ସ୍ୱରରେ ପଢ଼ାଯାଇ ପାରିବ।</string>
+    <string name="voice_install_hint">ଆପଣଙ୍କ ଫୋନ୍‌ରେ ଏହି ଭାଷା ପାଇଁ ଏପର୍ଯ୍ୟନ୍ତ ସ୍ୱର ନାହିଁ। ତାହା ଇନଷ୍ଟଲ୍ କଲେ ଫଳାଫଳ ଉଚ୍ଚ ସ୍ୱରରେ ପଢ଼ାଯାଇପାରିବ।</string>
 
 </resources>
