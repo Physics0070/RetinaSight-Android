@@ -1,5 +1,6 @@
 package com.retinasight.ai.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -86,7 +87,7 @@ fun HistoryScreen(
                     Text(
                         text = stringResource(R.string.history_empty),
                         style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.outline,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         textAlign = TextAlign.Center
                     )
                 }
@@ -156,6 +157,7 @@ private fun HistoryRow(
             containerColor = MaterialTheme.colorScheme.surface
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
@@ -190,7 +192,7 @@ private fun HistoryRow(
                         }
                     ).joinToString("  ·  "),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.outline
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 // A first line of what this patient was actually told, so the
                 // list is readable without opening every entry.
@@ -225,7 +227,7 @@ private fun HistoryRow(
                     Icon(
                         imageVector = Icons.Filled.DeleteOutline,
                         contentDescription = stringResource(R.string.history_delete),
-                        tint = MaterialTheme.colorScheme.outline
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <!-- ============ Language picker ============ -->
     <string name="language_title">നിങ്ങളുടെ ഭാഷ തിരഞ്ഞെടുക്കുക</string>
     <string name="language_subtitle">കേൾക്കാൻ ടാപ്പ് ചെയ്യുക</string>
@@ -92,43 +91,6 @@
 
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">ഡെവലപ്‌മെന്റ് മോഡ്: യഥാർത്ഥ മോഡൽ ഇതുവരെ ബന്ധിപ്പിച്ചിട്ടില്ല, അതിനാൽ ഈ വാചകം ഒരു മാതൃക മാത്രമാണ്, വൈദ്യശാസ്ത്ര ഫലമല്ല.</string>
-
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">ഫീൽഡ് അളവ്</string>
-    <string name="benchmark_subtitle">ഒരു പരിശോധനാ ക്യാമ്പിൽ ഈ ഫോൺ യഥാർത്ഥത്തിൽ എന്ത് ചെയ്യുന്നു എന്ന് അളക്കുന്നു: വേഗത, വൈദ്യുതി, ഒരു ചാർജിന് എത്ര രോഗികൾ, എപ്പോൾ വേഗത കുറയാൻ തുടങ്ങുന്നു.</string>
-    <string name="benchmark_count">പരിശോധനകൾ</string>
-    <string name="benchmark_pace">ഒരു രോഗിക്ക് സെക്കൻഡ്</string>
-    <string name="benchmark_run">ക്യാമ്പ് സിമുലേഷൻ പ്രവർത്തിപ്പിക്കുക</string>
-    <string name="benchmark_cancel">നിർത്തുക</string>
-    <string name="benchmark_baseline">നിഷ്ക്രിയ നില അളക്കുന്നു… %1$d സെ</string>
-    <string name="benchmark_progress">%2$d-ൽ %1$d-ാമത്തെ പരിശോധന</string>
-    <string name="benchmark_section_latency">ഒരു പരിശോധനയ്ക്ക് വേണ്ട സമയം</string>
-    <string name="benchmark_section_power">വൈദ്യുതി ഉപയോഗം</string>
-    <string name="benchmark_section_energy">ഊർജ്ജവും പരിധിയും</string>
-    <string name="benchmark_section_thermal">താപനില</string>
-    <string name="benchmark_mean">ശരാശരി</string>
-    <string name="benchmark_p50">മധ്യമം (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">നിഷ്ക്രിയ നില</string>
-    <string name="benchmark_busy">പരിശോധനയ്ക്കിടെ</string>
-    <string name="benchmark_net">അറ്റം (അനുമാനം)</string>
-    <string name="benchmark_per_screening">ഒരു പരിശോധനയ്ക്ക്</string>
-    <string name="benchmark_per_charge">ഒരു ചാർജിന് പരിശോധനകൾ</string>
-    <string name="benchmark_crosscheck">ക്രോസ്-ചെക്ക്</string>
-    <string name="benchmark_temp_rise">ബാറ്ററി താപനില</string>
-    <string name="benchmark_throttle_none">ക്യാമ്പ് മുഴുവനും വേഗത കുറഞ്ഞില്ല</string>
-    <string name="benchmark_throttle_at">%1$d-ാമത്തെ പരിശോധനയിൽ വേഗത കുറയാൻ തുടങ്ങി</string>
-    <string name="benchmark_export">CSV കയറ്റുമതി</string>
-    <string name="benchmark_exported">%1$s-ൽ സേവ് ചെയ്തു</string>
-    <string name="benchmark_warnings">അളവ് കുറിപ്പുകൾ</string>
-
-    <string name="benchmark_patients_per_charge">ഒരു ചാർജിന് രോഗികൾ</string>
-    <string name="benchmark_duty_cycle">ഒരു രോഗിക്ക് %1$d സെക്കൻഡ് ഫോൺ സമയം എന്ന നിലയിൽ</string>
-    <string name="benchmark_continuous_hours">തുടർച്ചയായ പരിശോധന</string>
-    <string name="benchmark_measured_capacity">അളന്ന ബാറ്ററി ശേഷി</string>
-    <string name="benchmark_back_to_back">അനുമാനാധിഷ്ഠിത പരമാവധി പരിധി</string>
 
     <!-- Explanation: composed from REAL model outputs, never generated text -->
     <string name="explain_low_confidence">ഈ ചിത്രത്തെക്കുറിച്ച് ആപ്പിന് വലിയ ഉറപ്പില്ല. നല്ല വെളിച്ചത്തിൽ, കണ്ണ് നടുവിൽ വച്ച് മറ്റൊരു ചിത്രം എടുത്താൽ ഫലം കൂടുതൽ വിശ്വസനീയമാകും.</string>
@@ -230,4 +192,11 @@
     <string name="voice_install">ഈ ഭാഷയ്ക്ക് ശബ്ദം ഇൻസ്റ്റാൾ ചെയ്യുക</string>
     <string name="voice_install_hint">നിങ്ങളുടെ ഫോണിൽ ഈ ഭാഷയ്ക്ക് ഇതുവരെ ശബ്ദമില്ല. അത് ഇൻസ്റ്റാൾ ചെയ്താൽ ഫലം ഉറക്കെ വായിക്കാൻ കഴിയും.</string>
 
+    <string name="privacy_shutter_active">രോഗിയുടെ സ്വകാര്യതാ ഷട്ടർ സജീവം</string>
+    <string name="privacy_hide_retina">റെറ്റിന കാഴ്ച മറയ്ക്കുക</string>
+    <string name="privacy_show_retina">റെറ്റിന കാഴ്ച കാണിക്കുക</string>
+    <string name="capture_permission_later">ഇപ്പോൾ വേണ്ട</string>
+    <string name="referral_borderline_note">റഫറൽ മുൻഗണന — അപകട സൂചനകൾ അതിർത്തിയിൽ</string>
+    <string name="referral_action_label">നടപടി</string>
+    <string name="heatmap_slider_label">ഹീറ്റ് മാപ്പ്</string>
 </resources>

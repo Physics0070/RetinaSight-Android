@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <!-- ============ Language picker ============ -->
     <string name="language_title">మీ భాషను ఎంచుకోండి</string>
     <string name="language_subtitle">వినడానికి నొక్కండి</string>
@@ -92,43 +91,6 @@
 
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">డెవలప్‌మెంట్ మోడ్: అసలు మోడల్ ఇంకా అనుసంధానించబడలేదు, కాబట్టి ఈ వచనం ఒక నమూనా మాత్రమే, వైద్య ఫలితం కాదు.</string>
-
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">క్షేత్ర కొలత</string>
-    <string name="benchmark_subtitle">ఒక పరీక్షా శిబిరంలో ఈ ఫోన్ నిజంగా ఏమి చేస్తుందో కొలుస్తుంది: వేగం, విద్యుత్, ఒక ఛార్జ్‌కు ఎంతమంది రోగులు, ఎప్పుడు వేగం తగ్గడం మొదలవుతుంది.</string>
-    <string name="benchmark_count">పరీక్షలు</string>
-    <string name="benchmark_pace">ఒక రోగికి సెకన్లు</string>
-    <string name="benchmark_run">శిబిర అనుకరణను అమలు చేయండి</string>
-    <string name="benchmark_cancel">ఆపు</string>
-    <string name="benchmark_baseline">నిష్క్రియ స్థితిని కొలుస్తోంది… %1$d సె</string>
-    <string name="benchmark_progress">%2$dలో %1$dవ పరీక్ష</string>
-    <string name="benchmark_section_latency">ఒక పరీక్షకు పట్టే సమయం</string>
-    <string name="benchmark_section_power">విద్యుత్ వినియోగం</string>
-    <string name="benchmark_section_energy">శక్తి మరియు పరిధి</string>
-    <string name="benchmark_section_thermal">ఉష్ణస్థితి</string>
-    <string name="benchmark_mean">సగటు</string>
-    <string name="benchmark_p50">మధ్యగతం (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">నిష్క్రియ స్థితి</string>
-    <string name="benchmark_busy">పరీక్ష సమయంలో</string>
-    <string name="benchmark_net">నికర (అనుమితి)</string>
-    <string name="benchmark_per_screening">ఒక పరీక్షకు</string>
-    <string name="benchmark_per_charge">ఒక ఛార్జ్‌కు పరీక్షలు</string>
-    <string name="benchmark_crosscheck">క్రాస్-చెక్</string>
-    <string name="benchmark_temp_rise">బ్యాటరీ ఉష్ణోగ్రత</string>
-    <string name="benchmark_throttle_none">శిబిరం మొత్తంలో వేగ తగ్గింపు లేదు</string>
-    <string name="benchmark_throttle_at">%1$dవ పరీక్ష వద్ద వేగ తగ్గింపు మొదలైంది</string>
-    <string name="benchmark_export">CSV ఎగుమతి</string>
-    <string name="benchmark_exported">%1$sలో సేవ్ చేయబడింది</string>
-    <string name="benchmark_warnings">కొలత గమనికలు</string>
-
-    <string name="benchmark_patients_per_charge">ఒక ఛార్జ్‌కు రోగులు</string>
-    <string name="benchmark_duty_cycle">ఒక రోగికి %1$d సెకన్ల ఫోన్ సమయం చొప్పున</string>
-    <string name="benchmark_continuous_hours">నిరంతర పరీక్ష</string>
-    <string name="benchmark_measured_capacity">కొలిచిన బ్యాటరీ సామర్థ్యం</string>
-    <string name="benchmark_back_to_back">అనుమితి ఆధారిత గరిష్ట పరిమితి</string>
 
     <!-- Explanation: composed from REAL model outputs, never generated text -->
     <string name="explain_low_confidence">ఈ ఫోటో గురించి యాప్‌కు పెద్దగా ఖచ్చితత్వం లేదు. మంచి వెలుతురులో, కన్ను మధ్యలో ఉంచి మరో ఫోటో తీస్తే ఫలితం మరింత నమ్మదగినదిగా ఉంటుంది.</string>
@@ -230,4 +192,11 @@
     <string name="voice_install">ఈ భాషకు వాయిస్‌ను ఇన్‌స్టాల్ చేయండి</string>
     <string name="voice_install_hint">మీ ఫోన్‌లో ఈ భాషకు ఇంకా వాయిస్ లేదు. దాన్ని ఇన్‌స్టాల్ చేస్తే ఫలితాన్ని బిగ్గరగా చదవగలుగుతుంది.</string>
 
+    <string name="privacy_shutter_active">రోగి గోప్యతా షట్టర్ సక్రియం</string>
+    <string name="privacy_hide_retina">రెటీనా వీక్షణ దాచు</string>
+    <string name="privacy_show_retina">రెటీనా వీక్షణ చూపు</string>
+    <string name="capture_permission_later">ఇప్పుడు కాదు</string>
+    <string name="referral_borderline_note">రెఫరల్ ప్రాధాన్యత — ప్రమాద సూచనలు సరిహద్దులో</string>
+    <string name="referral_action_label">చర్య</string>
+    <string name="heatmap_slider_label">హీట్ మ్యాప్</string>
 </resources>

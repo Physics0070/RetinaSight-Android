@@ -1,0 +1,74 @@
+{
+  "model": "D:\\SOHAM ALL\\hackathons\\IQOO\\RetinaSightApp\\app\\src\\main\\assets\\dr-v2.onnx",
+  "data": "D:\\SOHAM ALL\\hackathons\\Omnikon\\ml\\data\\aptos_456",
+  "split": "val",
+  "seed": 143,
+  "samples": 546,
+  "accuracy": 0.8333333333333334,
+  "quadratic_kappa": 0.9324107665184517,
+  "confusion_matrix": [
+    [
+      263,
+      7,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      38,
+      17,
+      0,
+      0
+    ],
+    [
+      0,
+      19,
+      105,
+      21,
+      4
+    ],
+    [
+      0,
+      0,
+      5,
+      19,
+      4
+    ],
+    [
+      0,
+      0,
+      7,
+      7,
+      30
+    ]
+  ],
+  "class_distribution": {
+    "no_dr": 270,
+    "mild": 55,
+    "moderate": 149,
+    "severe": 28,
+    "proliferative": 44
+  },
+  "referable_at_shipped_threshold": {
+    "threshold": 1.15,
+    "sensitivity": 0.9819004524886877,
+    "specificity": 0.9292307692307692,
+    "precision": 0.9041666666666667,
+    "true_positive": 217,
+    "false_negative": 4,
+    "false_positive": 23,
+    "true_negative": 302
+  },
+  "referable_at_rounding_threshold": {
+    "threshold": 1.5,
+    "sensitivity": 0.9140271493212669,
+    "specificity": 0.9476923076923077,
+    "precision": 0.9223744292237442,
+    "true_positive": 202,
+    "false_negative": 19,
+    "false_positive": 17,
+    "true_negative": 308
+  },
+  "clinically_validated": false
+}

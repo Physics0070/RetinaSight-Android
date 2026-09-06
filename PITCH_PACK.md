@@ -52,9 +52,11 @@ will actually be asked.
 > source, any Android phone.
 >
 > **Two: nobody publishes field numbers.** We measure milliseconds per image,
-> milliwatts, patients per charge, and the thermal curve over a simulated
-> 100-patient camp — on device, from the battery fuel gauge. That's the table a
-> district health officer actually needs and nobody reports it."
+> milliwatts, patients per charge and the thermal curve on the device itself,
+> from the battery fuel gauge — 100 back-to-back screenings, and we're explicit
+> that the power figures come from that ten-second window rather than a full
+> day's camp. That's the table a district health officer actually needs and
+> nobody reports it."
 
 ## Close on the honest limit (25s)
 
@@ -196,7 +198,9 @@ against the recorded confusion matrix before either row was quoted.
 ## Known gaps — say them before they're found
 
 - Validation is internal (APTOS split), not external
-- 8 of 11 languages have no translations yet — they fall back to English
+- 8 of 11 languages are machine-drafted and not yet reviewed by a native speaker
+  (all 11 are complete and render in their own script; `ta te kn ml bn gu pa or`
+  await review, urgency and grade strings first)
 - The LLM's Indic output is unusable; the guard suppresses it
 - Marathi TTS voice isn't installed on a fresh phone (app offers to install it)
 - Not clinically validated, not regulatory-cleared

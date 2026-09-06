@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <!-- ============ Language picker ============ -->
     <string name="language_title">உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்</string>
     <string name="language_subtitle">கேட்க தட்டவும்</string>
@@ -92,43 +91,6 @@
 
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">மேம்பாட்டு நிலை: உண்மையான மாதிரி இன்னும் இணைக்கப்படவில்லை, எனவே இந்த உரை ஒரு மாதிரி மட்டுமே, மருத்துவ முடிவு அல்ல.</string>
-
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">கள அளவீடு</string>
-    <string name="benchmark_subtitle">ஒரு பரிசோதனை முகாமில் இந்தத் தொலைபேசி உண்மையில் என்ன செய்கிறது என்பதை அளக்கிறது: வேகம், மின்சாரம், ஒரு சார்ஜுக்கு எத்தனை நோயாளிகள், எப்போது வேகம் குறையத் தொடங்குகிறது.</string>
-    <string name="benchmark_count">பரிசோதனைகள்</string>
-    <string name="benchmark_pace">ஒரு நோயாளிக்கு வினாடிகள்</string>
-    <string name="benchmark_run">முகாம் உருவகப்படுத்தலை இயக்கு</string>
-    <string name="benchmark_cancel">நிறுத்து</string>
-    <string name="benchmark_baseline">செயலற்ற நிலை அளக்கப்படுகிறது… %1$d வி</string>
-    <string name="benchmark_progress">%2$d இல் %1$d பரிசோதனை</string>
-    <string name="benchmark_section_latency">ஒரு பரிசோதனைக்கான நேரம்</string>
-    <string name="benchmark_section_power">மின் பயன்பாடு</string>
-    <string name="benchmark_section_energy">ஆற்றலும் வரம்பும்</string>
-    <string name="benchmark_section_thermal">வெப்பநிலை</string>
-    <string name="benchmark_mean">சராசரி</string>
-    <string name="benchmark_p50">இடைநிலை (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">செயலற்ற நிலை</string>
-    <string name="benchmark_busy">பரிசோதனையின் போது</string>
-    <string name="benchmark_net">நிகர (அனுமானம்)</string>
-    <string name="benchmark_per_screening">ஒரு பரிசோதனைக்கு</string>
-    <string name="benchmark_per_charge">ஒரு சார்ஜுக்கான பரிசோதனைகள்</string>
-    <string name="benchmark_crosscheck">குறுக்கு சரிபார்ப்பு</string>
-    <string name="benchmark_temp_rise">பேட்டரி வெப்பநிலை</string>
-    <string name="benchmark_throttle_none">முகாம் முழுவதும் வேகக் குறைப்பு இல்லை</string>
-    <string name="benchmark_throttle_at">%1$d ஆவது பரிசோதனையில் வேகக் குறைப்பு தொடங்கியது</string>
-    <string name="benchmark_export">CSV ஏற்றுமதி</string>
-    <string name="benchmark_exported">%1$s இல் சேமிக்கப்பட்டது</string>
-    <string name="benchmark_warnings">அளவீட்டுக் குறிப்புகள்</string>
-
-    <string name="benchmark_patients_per_charge">ஒரு சார்ஜுக்கான நோயாளிகள்</string>
-    <string name="benchmark_duty_cycle">ஒரு நோயாளிக்கு %1$d வினாடி தொலைபேசி நேரம் என்ற அளவில்</string>
-    <string name="benchmark_continuous_hours">தொடர்ச்சியான பரிசோதனை</string>
-    <string name="benchmark_measured_capacity">அளக்கப்பட்ட பேட்டரி கொள்ளளவு</string>
-    <string name="benchmark_back_to_back">அனுமானத்தால் வரையறுக்கப்பட்ட உச்ச வரம்பு</string>
 
     <!-- Explanation: composed from REAL model outputs, never generated text -->
     <string name="explain_low_confidence">இந்தப் படத்தைப் பற்றி செயலிக்கு அதிக உறுதி இல்லை. நல்ல வெளிச்சத்தில், கண்ணை நடுவில் வைத்து மற்றொரு படம் எடுத்தால் முடிவு மேலும் நம்பகமாக இருக்கும்.</string>
@@ -230,4 +192,11 @@
     <string name="voice_install">இந்த மொழிக்கான குரலை நிறுவவும்</string>
     <string name="voice_install_hint">உங்கள் தொலைபேசியில் இந்த மொழிக்கான குரல் இன்னும் இல்லை. அதை நிறுவினால் முடிவை உரக்கப் படிக்க முடியும்.</string>
 
+    <string name="privacy_shutter_active">நோயாளர் தனியுரிமை மறைப்பு இயக்கத்தில்</string>
+    <string name="privacy_hide_retina">விழித்திரைக் காட்சியை மறை</string>
+    <string name="privacy_show_retina">விழித்திரைக் காட்சியைக் காட்டு</string>
+    <string name="capture_permission_later">இப்போது வேண்டாம்</string>
+    <string name="referral_borderline_note">பரிந்துரை முன்னுரிமை — ஆபத்து அறிகுறிகள் எல்லையில்</string>
+    <string name="referral_action_label">நடவடிக்கை</string>
+    <string name="heatmap_slider_label">வெப்ப வரைபடம்</string>
 </resources>

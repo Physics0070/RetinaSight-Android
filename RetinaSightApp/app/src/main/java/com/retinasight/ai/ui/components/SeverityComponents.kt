@@ -25,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
@@ -51,6 +52,16 @@ fun SeverityBanner(
     Column(
         modifier = modifier
             .fillMaxWidth()
+            // The design lifts a severity surface on a shadow tinted by its own
+            // grade colour rather than a neutral grey one. Kept here because it
+            // is the theme's depth cue; the filled block itself is not swapped
+            // for the design's tint, since white on a solid fill is what stays
+            // readable in direct sun.
+            .shadow(
+                elevation = 8.dp,
+                shape = RoundedCornerShape(24.dp),
+                spotColor = color.copy(alpha = 0.2f)
+            )
             .clip(RoundedCornerShape(24.dp))
             .background(color)
             .padding(24.dp),

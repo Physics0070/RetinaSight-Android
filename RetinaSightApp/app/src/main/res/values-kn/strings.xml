@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <!-- ============ Language picker ============ -->
     <string name="language_title">ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆರಿಸಿ</string>
     <string name="language_subtitle">ಕೇಳಲು ಒತ್ತಿ</string>
@@ -92,43 +91,6 @@
 
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">ಅಭಿವೃದ್ಧಿ ಸ್ಥಿತಿ: ನಿಜವಾದ ಮಾದರಿ ಇನ್ನೂ ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ, ಆದ್ದರಿಂದ ಈ ಪಠ್ಯ ಕೇವಲ ಮಾದರಿ, ವೈದ್ಯಕೀಯ ಫಲಿತಾಂಶವಲ್ಲ.</string>
-
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">ಕ್ಷೇತ್ರ ಮಾಪನ</string>
-    <string name="benchmark_subtitle">ತಪಾಸಣಾ ಶಿಬಿರದಲ್ಲಿ ಈ ಫೋನ್ ನಿಜವಾಗಿ ಏನು ಮಾಡುತ್ತದೆ ಎಂಬುದನ್ನು ಅಳೆಯುತ್ತದೆ: ವೇಗ, ವಿದ್ಯುತ್, ಒಂದು ಚಾರ್ಜ್‌ಗೆ ಎಷ್ಟು ರೋಗಿಗಳು, ಮತ್ತು ಯಾವಾಗ ವೇಗ ಕಡಿಮೆಯಾಗಲು ಆರಂಭಿಸುತ್ತದೆ.</string>
-    <string name="benchmark_count">ತಪಾಸಣೆಗಳು</string>
-    <string name="benchmark_pace">ಪ್ರತಿ ರೋಗಿಗೆ ಸೆಕೆಂಡುಗಳು</string>
-    <string name="benchmark_run">ಶಿಬಿರದ ಅನುಕರಣೆಯನ್ನು ಚಲಾಯಿಸಿ</string>
-    <string name="benchmark_cancel">ನಿಲ್ಲಿಸಿ</string>
-    <string name="benchmark_baseline">ನಿಷ್ಕ್ರಿಯ ಸ್ಥಿತಿಯನ್ನು ಅಳೆಯಲಾಗುತ್ತಿದೆ… %1$d ಸೆ</string>
-    <string name="benchmark_progress">%2$d ರಲ್ಲಿ %1$d ನೇ ತಪಾಸಣೆ</string>
-    <string name="benchmark_section_latency">ಒಂದು ತಪಾಸಣೆಗೆ ತಗಲುವ ಸಮಯ</string>
-    <string name="benchmark_section_power">ವಿದ್ಯುತ್ ಬಳಕೆ</string>
-    <string name="benchmark_section_energy">ಶಕ್ತಿ ಮತ್ತು ವ್ಯಾಪ್ತಿ</string>
-    <string name="benchmark_section_thermal">ಉಷ್ಣತೆ</string>
-    <string name="benchmark_mean">ಸರಾಸರಿ</string>
-    <string name="benchmark_p50">ಮಧ್ಯಮ (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">ನಿಷ್ಕ್ರಿಯ ಸ್ಥಿತಿ</string>
-    <string name="benchmark_busy">ತಪಾಸಣೆಯ ಸಮಯದಲ್ಲಿ</string>
-    <string name="benchmark_net">ನಿವ್ವಳ (ಅನುಮಾನ)</string>
-    <string name="benchmark_per_screening">ಒಂದು ತಪಾಸಣೆಗೆ</string>
-    <string name="benchmark_per_charge">ಒಂದು ಚಾರ್ಜ್‌ಗೆ ತಪಾಸಣೆಗಳು</string>
-    <string name="benchmark_crosscheck">ಅಡ್ಡ ಪರಿಶೀಲನೆ</string>
-    <string name="benchmark_temp_rise">ಬ್ಯಾಟರಿ ಉಷ್ಣತೆ</string>
-    <string name="benchmark_throttle_none">ಇಡೀ ಶಿಬಿರದಲ್ಲಿ ವೇಗ ಕಡಿತವಿಲ್ಲ</string>
-    <string name="benchmark_throttle_at">%1$d ನೇ ತಪಾಸಣೆಯಲ್ಲಿ ವೇಗ ಕಡಿತ ಆರಂಭವಾಯಿತು</string>
-    <string name="benchmark_export">CSV ರಫ್ತು</string>
-    <string name="benchmark_exported">%1$s ನಲ್ಲಿ ಉಳಿಸಲಾಗಿದೆ</string>
-    <string name="benchmark_warnings">ಮಾಪನದ ಟಿಪ್ಪಣಿಗಳು</string>
-
-    <string name="benchmark_patients_per_charge">ಒಂದು ಚಾರ್ಜ್‌ಗೆ ರೋಗಿಗಳು</string>
-    <string name="benchmark_duty_cycle">ಒಬ್ಬ ರೋಗಿಗೆ %1$d ಸೆಕೆಂಡ್ ಫೋನ್ ಸಮಯದ ಪ್ರಕಾರ</string>
-    <string name="benchmark_continuous_hours">ನಿರಂತರ ತಪಾಸಣೆ</string>
-    <string name="benchmark_measured_capacity">ಅಳೆದ ಬ್ಯಾಟರಿ ಸಾಮರ್ಥ್ಯ</string>
-    <string name="benchmark_back_to_back">ಅನುಮಾನ ಆಧಾರಿತ ಗರಿಷ್ಠ ಮಿತಿ</string>
 
     <!-- Explanation: composed from REAL model outputs, never generated text -->
     <string name="explain_low_confidence">ಈ ಚಿತ್ರದ ಬಗ್ಗೆ ಆ್ಯಪ್‌ಗೆ ಹೆಚ್ಚು ಖಚಿತತೆ ಇಲ್ಲ. ಒಳ್ಳೆಯ ಬೆಳಕಿನಲ್ಲಿ, ಕಣ್ಣನ್ನು ಮಧ್ಯದಲ್ಲಿ ಇಟ್ಟು ಇನ್ನೊಂದು ಚಿತ್ರ ತೆಗೆದರೆ ಫಲಿತಾಂಶ ಹೆಚ್ಚು ನಂಬಲರ್ಹವಾಗಿರುತ್ತದೆ.</string>
@@ -230,4 +192,11 @@
     <string name="voice_install">ಈ ಭಾಷೆಗೆ ಧ್ವನಿಯನ್ನು ಸ್ಥಾಪಿಸಿ</string>
     <string name="voice_install_hint">ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿ ಈ ಭಾಷೆಗೆ ಇನ್ನೂ ಧ್ವನಿ ಇಲ್ಲ. ಅದನ್ನು ಸ್ಥಾಪಿಸಿದರೆ ಫಲಿತಾಂಶವನ್ನು ಗಟ್ಟಿಯಾಗಿ ಓದಬಹುದು.</string>
 
+    <string name="privacy_shutter_active">ರೋಗಿಯ ಗೌಪ್ಯತಾ ಶಟರ್ ಸಕ್ರಿಯ</string>
+    <string name="privacy_hide_retina">ರೆಟಿನಾ ನೋಟ ಮರೆಮಾಡಿ</string>
+    <string name="privacy_show_retina">ರೆಟಿನಾ ನೋಟ ತೋರಿಸಿ</string>
+    <string name="capture_permission_later">ಈಗ ಬೇಡ</string>
+    <string name="referral_borderline_note">ಶಿಫಾರಸು ಆದ್ಯತೆ — ಅಪಾಯ ಸೂಚಕಗಳು ಗಡಿಯಲ್ಲಿ</string>
+    <string name="referral_action_label">ಕ್ರಮ</string>
+    <string name="heatmap_slider_label">ಹೀಟ್ ಮ್ಯಾಪ್</string>
 </resources>

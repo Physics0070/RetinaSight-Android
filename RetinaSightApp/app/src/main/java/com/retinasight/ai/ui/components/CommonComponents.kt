@@ -1,6 +1,9 @@
 package com.retinasight.ai.ui.components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,6 +17,8 @@ import androidx.compose.material.icons.filled.CloudDone
 import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -24,9 +29,78 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.retinasight.ai.R
+
+/**
+ * The design study's signature container: a white card on the slate ground,
+ * separated by a hairline outline rather than by a heavy shadow.
+ *
+ * The border is what makes the palette read as clinical instrumentation instead
+ * of as Material default - at 2dp elevation alone the card edge disappears on
+ * the #F8FAFC background, which is nearly the same value as the card itself.
+ *
+ * Colours come from the scheme, never from literals, so the one dark-theme
+ * definition in Theme.kt keeps working.
+ */
+@Composable
+fun ClinicalCard(
+    modifier: Modifier = Modifier,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surface
+        ),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
+        Column(modifier = Modifier.padding(18.dp), content = content)
+    }
+}
+
+/**
+ * A card's title row. [meta] is the small right-hand annotation the design uses
+ * for machine-ish values - a timestamp, a count, a provider name.
+ *
+ * The title takes the app's own type scale rather than the design's 15sp: this
+ * app is read outdoors and at arm's length, and nothing user-facing goes below
+ * 16sp. The design's weight and colour are kept.
+ */
+@Composable
+fun SectionHeader(
+    title: String,
+    modifier: Modifier = Modifier,
+    meta: String? = null
+) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.weight(1f, fill = false)
+        )
+        if (meta != null) {
+            Spacer(Modifier.width(12.dp))
+            Text(
+                text = meta,
+                style = MaterialTheme.typography.bodyMedium,
+                fontFamily = FontFamily.Monospace,
+                color = MaterialTheme.colorScheme.secondary
+            )
+        }
+    }
+}
 
 /**
  * Reports the real connection state, calmly.

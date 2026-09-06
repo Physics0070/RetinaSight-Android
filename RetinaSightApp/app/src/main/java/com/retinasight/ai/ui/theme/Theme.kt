@@ -12,35 +12,49 @@ import androidx.compose.ui.graphics.Color
  * a bright, high-contrast surface is the safe default. Dark theme is supported
  * for indoor and night use.
  *
+ * The role mapping follows the design study's `ClinicalLightColorScheme`: navy
+ * as primary, teal as secondary, cyan reserved for tertiary accents, and the
+ * slate ramp across background / surface / outline.
+ *
  * Dynamic colour is deliberately NOT used - the severity scale must mean the
  * same thing on every phone, and a wallpaper-derived palette would break that.
  */
 private val LightColors = lightColorScheme(
-    primary = Teal700,
+    primary = DeepNavy,
     onPrimary = Color.White,
-    primaryContainer = Teal100,
-    onPrimaryContainer = Teal900,
-    secondary = Teal500,
+    primaryContainer = CalmingTeal.copy(alpha = 0.12f),
+    onPrimaryContainer = DeepNavy,
+    secondary = CalmingTeal,
     onSecondary = Color.White,
-    background = Surface,
-    onBackground = OnSurface,
+    secondaryContainer = CalmingTeal.copy(alpha = 0.20f),
+    onSecondaryContainer = DeepNavy,
+    tertiary = LaserCyan,
+    onTertiary = DeepNavy,
+    background = MedicalBg,
+    onBackground = TextPrimary,
     surface = Color.White,
-    onSurface = OnSurface,
-    outline = Outline
+    onSurface = TextPrimary,
+    surfaceVariant = SurfaceVariantLight,
+    onSurfaceVariant = TextSecondary,
+    outline = OutlineBorder
 )
 
 private val DarkColors = darkColorScheme(
-    primary = Teal100,
-    onPrimary = Teal900,
-    primaryContainer = Teal900,
-    onPrimaryContainer = Teal100,
-    secondary = Teal500,
-    onSecondary = Color.Black,
-    background = SurfaceDark,
-    onBackground = OnSurfaceDark,
-    surface = Color(0xFF1C1B1F),
-    onSurface = OnSurfaceDark,
-    outline = Outline
+    primary = LaserCyan,
+    onPrimary = DeepNavy,
+    primaryContainer = CalmingTeal,
+    onPrimaryContainer = Color.White,
+    secondary = CalmingTeal,
+    onSecondary = Color.White,
+    tertiary = LaserCyan,
+    onTertiary = DeepNavy,
+    background = DarkroomBg,
+    onBackground = DarkOnBackground,
+    surface = DarkSurface,
+    onSurface = DarkOnSurface,
+    surfaceVariant = DarkSurfaceVariant,
+    onSurfaceVariant = Color(0xFF94A3B8),
+    outline = DarkOutline
 )
 
 @Composable

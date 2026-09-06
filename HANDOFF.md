@@ -57,7 +57,7 @@ with voice, and published field telemetry.
 
 | Area | Status |
 |---|---|
-| 11 languages, full string sets (181 keys) | ✅ all render in own script |
+| 11 languages, full string sets (184 keys) | ✅ all render in own script |
 | Consent gate (mandatory, timestamped) | ✅ |
 | Patient details + gating | ✅ Continue needs name + age; skip always available |
 | Camera capture + photo import | ✅ |
@@ -281,7 +281,19 @@ The one number the project cannot currently produce. Every metric comes from a
 single dataset and a single set of cameras. Run `dr-v2.onnx` over IDRiD (516
 images, different camera) with the *exact* serving preprocessing — import
 `ml/datasets/retinal_dataset.py` and `backend/app/ml/preprocessing.py` from
-Omnikon rather than reimplementing. Report QWK, accuracy and referable
+Omnikon rather than reimplementing.
+
+**The harness is written: `scripts/validate_onnx.py`.** It already does this, and
+it is verified — on the APTOS split it reproduces the shipped checkpoint to the
+digit (all 25 confusion cells, QWK 0.9324, accuracy 0.8333, 91.4%/94.8% at the
+rounding point and **98.2%/92.9% at the shipped 1.15**), reading the same
+`dr-v2.onnx` that ships in the APK. Result: `exports/validation_aptos_val_seed143.json`.
+
+    python scripts/validate_onnx.py --data <path>/idrid --split all         --json-out exports/validation_idrid.json
+
+Only the images are missing — IDRiD is not on this machine and needs an IEEE
+DataPort login. Keep `cv2` uninstalled: with OpenCV present the resize switches
+to `INTER_AREA` and stops matching the phone's Pillow BILINEAR (the script warns). Report QWK, accuracy and referable
 sens/spec **at the shipped threshold of 1.15**, not at argmax and not at 1.5.
 
 **Expect it to be worse** (perhaps 0.80–0.88) and say so plainly. "0.93 internal,

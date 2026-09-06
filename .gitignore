@@ -30,3 +30,6 @@ exports/*.csv
 
 # ---- Scratch ------------------------------------------------------------
 *.zip
+
+# AI Studio design study - reference only, not part of the app build
+design/

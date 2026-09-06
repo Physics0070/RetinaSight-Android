@@ -82,7 +82,7 @@ fun ClinicScreen(
             Text(
                 text = stringResource(R.string.clinic_subtitle_disconnected),
                 style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.outline
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             Spacer(Modifier.height(20.dp))
@@ -139,7 +139,7 @@ fun ClinicScreen(
             Text(
                 text = stringResource(R.string.clinic_note_image),
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.outline
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             status.lastError?.let { error ->

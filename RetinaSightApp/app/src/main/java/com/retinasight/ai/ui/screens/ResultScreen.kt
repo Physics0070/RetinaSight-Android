@@ -1,6 +1,7 @@
 package com.retinasight.ai.ui.screens
 
 import android.graphics.Bitmap
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,15 +19,18 @@ import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -36,16 +40,22 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.retinasight.ai.R
 import com.retinasight.ai.core.model.ConfidenceBand
 import com.retinasight.ai.core.model.RetinaResult
+import com.retinasight.ai.core.model.Urgency
 import com.retinasight.ai.core.patient.Eye
 import com.retinasight.ai.ui.components.ConfidenceIndicator
+import com.retinasight.ai.ui.components.ConfidenceSegments
+import com.retinasight.ai.ui.components.EyelidShutter
+import com.retinasight.ai.ui.components.ReferralBanner
 import com.retinasight.ai.ui.components.SecondaryActionButton
 import com.retinasight.ai.ui.components.SeverityBanner
+import com.retinasight.ai.ui.feedback.ChimeFeedback
 import com.retinasight.ai.ui.theme.SeverityPalette
 
 /**
@@ -76,7 +86,11 @@ fun ResultScreen(
 ) {
     // Default ON: the overlay is the app's answer to "why should I believe this",
     // and a toggle most users never find is the same as not having it.
-    var showHeatmap by remember { mutableStateOf(true) }
+    // Blend, not a boolean: 1f means fully overlaid, which stays the default.
+    var heatmapBlend by remember { mutableFloatStateOf(1f) }
+
+    // Privacy only. Never touches the result or the image data.
+    var retinaHidden by remember { mutableStateOf(false) }
 
     // The heat map is computed over the cropped, resized image the model saw,
     // so that is what must sit underneath it. Falling back to the original
@@ -116,6 +130,16 @@ fun ResultScreen(
         onSpeak(spokenText)
     }
 
+    // A heartbeat to the hand for the two urgencies that must not be missed.
+    // Purely an alert on a decision already made and already on screen.
+    val context = LocalContext.current
+    val chime = remember(context) { ChimeFeedback(context) }
+    LaunchedEffect(result) {
+        if (result.urgency == Urgency.URGENT || result.urgency == Urgency.IMMEDIATE) {
+            chime.urgentHeartbeat()
+        }
+    }
+
     Surface(
         modifier = modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
@@ -128,11 +152,33 @@ fun ResultScreen(
         ) {
             SeverityBanner(grade = result.grade)
 
+            Spacer(Modifier.height(16.dp))
+
+            // The action outranks the grade. It sits immediately under the
+            // banner and carries the borderline explanation when the referral
+            // is owed to the screening threshold rather than to the grade.
+            ReferralBanner(
+                result = result,
+                urgencyLabel = urgencyLabelText
+            )
+
             Spacer(Modifier.height(20.dp))
 
-            ConfidenceIndicator(
-                confidence = result.confidence,
-                band = result.confidenceBand
+            ConfidenceSegments(
+                band = result.confidenceBand,
+                bandLabel = stringResource(
+                    when (result.confidenceBand) {
+                        ConfidenceBand.HIGH -> R.string.confidence_high
+                        ConfidenceBand.MEDIUM -> R.string.confidence_medium
+                        ConfidenceBand.LOW -> R.string.confidence_low
+                    }
+                ),
+                confidenceLabel = stringResource(R.string.result_confidence_label),
+                retakeAdvice = if (result.confidenceBand == ConfidenceBand.LOW) {
+                    stringResource(R.string.explain_low_confidence)
+                } else {
+                    null
+                }
             )
 
             Spacer(Modifier.height(24.dp))
@@ -151,36 +197,61 @@ fun ResultScreen(
                         contentScale = ContentScale.Crop,
                         modifier = Modifier.fillMaxSize()
                     )
-                    if (showHeatmap && result.heatmap != null) {
+                    if (result.heatmap != null && heatmapBlend > 0.001f) {
                         // The activation grid is only 15x15; High filtering
                         // interpolates it into a smooth field instead of
                         // showing the raw blocks.
+                        //
+                        // Blended rather than switched, so the reader can wipe
+                        // it across the tissue and see exactly which lesions
+                        // the model responded to.
                         Image(
                             bitmap = result.heatmap.asImageBitmap(),
                             contentDescription = null,
                             contentScale = ContentScale.Crop,
                             filterQuality = FilterQuality.High,
+                            alpha = heatmapBlend,
                             modifier = Modifier.fillMaxSize()
                         )
                     }
+
+                    // Privacy lids, drawn over everything else in this Box. A
+                    // vision centre is a shared room and the phone gets handed
+                    // across a table; this covers the photograph without
+                    // leaving the result, and without looking like a crash.
+                    EyelidShutter(isOpen = !retinaHidden)
                 }
 
                 Spacer(Modifier.height(12.dp))
 
+                SecondaryActionButton(
+                    text = stringResource(
+                        if (retinaHidden) R.string.privacy_show_retina
+                        else R.string.privacy_hide_retina
+                    ),
+                    icon = if (retinaHidden) Icons.Filled.Visibility
+                    else Icons.Filled.VisibilityOff,
+                    onClick = { retinaHidden = !retinaHidden }
+                )
+
+                Spacer(Modifier.height(12.dp))
+
                 if (result.heatmap != null) {
-                    SecondaryActionButton(
-                        text = stringResource(
-                            if (showHeatmap) R.string.result_heatmap_hide
-                            else R.string.result_heatmap_show
-                        ),
-                        icon = Icons.Filled.Visibility,
-                        onClick = { showHeatmap = !showHeatmap }
+                    Text(
+                        text = stringResource(R.string.heatmap_slider_label),
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Slider(
+                        value = heatmapBlend,
+                        onValueChange = { heatmapBlend = it },
+                        modifier = Modifier.fillMaxWidth()
                     )
                 } else {
                     Text(
                         text = stringResource(R.string.result_heatmap_unavailable),
                         style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.outline
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
 
@@ -192,6 +263,13 @@ fun ResultScreen(
                 shape = RoundedCornerShape(20.dp),
                 colors = CardDefaults.cardColors(
                     containerColor = SeverityPalette.containerFor(result.grade)
+                ),
+                // The design edges a severity card in its own grade colour rather
+                // than the neutral outline, so the banner still reads as urgent at
+                // a glance now that the fill is a soft tint.
+                border = BorderStroke(
+                    1.5.dp,
+                    SeverityPalette.colorFor(result.grade).copy(alpha = 0.6f)
                 ),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -229,7 +307,7 @@ fun ResultScreen(
                 Text(
                     text = result.explanation,
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.outline
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
 
@@ -261,6 +339,7 @@ fun ResultScreen(
                         colors = CardDefaults.cardColors(
                             containerColor = MaterialTheme.colorScheme.surfaceVariant
                         ),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp)) {
@@ -277,7 +356,7 @@ fun ResultScreen(
                             Text(
                                 text = stringResource(R.string.narrate_note),
                                 style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.outline
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
                     }
@@ -317,7 +396,7 @@ fun ResultScreen(
             Text(
                 text = stringResource(R.string.result_disclaimer),
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.outline,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier
                     .fillMaxWidth()
                     .align(Alignment.CenterHorizontally)

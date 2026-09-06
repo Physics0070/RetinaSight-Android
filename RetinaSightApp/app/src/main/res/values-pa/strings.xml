@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <!-- ============ Language picker ============ -->
     <string name="language_title">ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ</string>
     <string name="language_subtitle">ਸੁਣਨ ਲਈ ਟੈਪ ਕਰੋ</string>
@@ -92,43 +91,6 @@
 
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">ਡਿਵੈਲਪਮੈਂਟ ਮੋਡ: ਅਸਲ ਮਾਡਲ ਹਾਲੇ ਜੁੜਿਆ ਨਹੀਂ, ਇਸ ਲਈ ਇਹ ਲਿਖਤ ਸਿਰਫ਼ ਨਮੂਨਾ ਹੈ, ਡਾਕਟਰੀ ਨਤੀਜਾ ਨਹੀਂ।</string>
-
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">ਖੇਤਰੀ ਮਾਪ</string>
-    <string name="benchmark_subtitle">ਜਾਂਚ ਕੈਂਪ ਵਿੱਚ ਇਹ ਫ਼ੋਨ ਅਸਲ ਵਿੱਚ ਕੀ ਕਰਦਾ ਹੈ, ਇਹ ਮਾਪਦਾ ਹੈ: ਰਫ਼ਤਾਰ, ਬਿਜਲੀ, ਇੱਕ ਚਾਰਜ ਵਿੱਚ ਕਿੰਨੇ ਮਰੀਜ਼, ਅਤੇ ਕਦੋਂ ਰਫ਼ਤਾਰ ਘਟਣ ਲੱਗਦੀ ਹੈ।</string>
-    <string name="benchmark_count">ਜਾਂਚਾਂ</string>
-    <string name="benchmark_pace">ਪ੍ਰਤੀ ਮਰੀਜ਼ ਸਕਿੰਟ</string>
-    <string name="benchmark_run">ਕੈਂਪ ਸਿਮੂਲੇਸ਼ਨ ਚਲਾਓ</string>
-    <string name="benchmark_cancel">ਰੋਕੋ</string>
-    <string name="benchmark_baseline">ਵਿਹਲੀ ਹਾਲਤ ਮਾਪੀ ਜਾ ਰਹੀ ਹੈ… %1$d ਸ</string>
-    <string name="benchmark_progress">%2$d ਵਿੱਚੋਂ %1$d ਵੀਂ ਜਾਂਚ</string>
-    <string name="benchmark_section_latency">ਇੱਕ ਜਾਂਚ ਦਾ ਸਮਾਂ</string>
-    <string name="benchmark_section_power">ਬਿਜਲੀ ਦੀ ਖਪਤ</string>
-    <string name="benchmark_section_energy">ਊਰਜਾ ਅਤੇ ਪਹੁੰਚ</string>
-    <string name="benchmark_section_thermal">ਤਾਪਮਾਨ</string>
-    <string name="benchmark_mean">ਔਸਤ</string>
-    <string name="benchmark_p50">ਵਿਚਕਾਰਲਾ (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">ਵਿਹਲੀ ਹਾਲਤ</string>
-    <string name="benchmark_busy">ਜਾਂਚ ਦੌਰਾਨ</string>
-    <string name="benchmark_net">ਸ਼ੁੱਧ (ਅਨੁਮਾਨ)</string>
-    <string name="benchmark_per_screening">ਪ੍ਰਤੀ ਜਾਂਚ</string>
-    <string name="benchmark_per_charge">ਪ੍ਰਤੀ ਚਾਰਜ ਜਾਂਚਾਂ</string>
-    <string name="benchmark_crosscheck">ਕਰਾਸ-ਚੈੱਕ</string>
-    <string name="benchmark_temp_rise">ਬੈਟਰੀ ਦਾ ਤਾਪਮਾਨ</string>
-    <string name="benchmark_throttle_none">ਪੂਰੇ ਕੈਂਪ ਦੌਰਾਨ ਰਫ਼ਤਾਰ ਨਹੀਂ ਘਟੀ</string>
-    <string name="benchmark_throttle_at">%1$d ਵੀਂ ਜਾਂਚ ਉੱਤੇ ਰਫ਼ਤਾਰ ਘਟਣੀ ਸ਼ੁਰੂ ਹੋਈ</string>
-    <string name="benchmark_export">CSV ਬਰਾਮਦ</string>
-    <string name="benchmark_exported">%1$s ਵਿੱਚ ਸੰਭਾਲਿਆ ਗਿਆ</string>
-    <string name="benchmark_warnings">ਮਾਪ ਦੇ ਨੋਟ</string>
-
-    <string name="benchmark_patients_per_charge">ਪ੍ਰਤੀ ਚਾਰਜ ਮਰੀਜ਼</string>
-    <string name="benchmark_duty_cycle">ਪ੍ਰਤੀ ਮਰੀਜ਼ %1$d ਸਕਿੰਟ ਫ਼ੋਨ ਸਮੇਂ ਦੇ ਹਿਸਾਬ ਨਾਲ</string>
-    <string name="benchmark_continuous_hours">ਲਗਾਤਾਰ ਜਾਂਚ</string>
-    <string name="benchmark_measured_capacity">ਮਾਪੀ ਗਈ ਬੈਟਰੀ ਸਮਰੱਥਾ</string>
-    <string name="benchmark_back_to_back">ਅਨੁਮਾਨ ਆਧਾਰਿਤ ਵੱਧ ਤੋਂ ਵੱਧ ਹੱਦ</string>
 
     <!-- Explanation: composed from REAL model outputs, never generated text -->
     <string name="explain_low_confidence">ਇਸ ਤਸਵੀਰ ਬਾਰੇ ਐਪ ਬਹੁਤੀ ਪੱਕੀ ਨਹੀਂ ਹੈ। ਚੰਗੀ ਰੋਸ਼ਨੀ ਵਿੱਚ, ਅੱਖ ਨੂੰ ਵਿਚਕਾਰ ਰੱਖ ਕੇ ਹੋਰ ਤਸਵੀਰ ਲਵੋ ਤਾਂ ਨਤੀਜਾ ਵੱਧ ਭਰੋਸੇਯੋਗ ਹੋਵੇਗਾ।</string>
@@ -230,4 +192,11 @@
     <string name="voice_install">ਇਸ ਭਾਸ਼ਾ ਲਈ ਆਵਾਜ਼ ਇੰਸਟਾਲ ਕਰੋ</string>
     <string name="voice_install_hint">ਤੁਹਾਡੇ ਫ਼ੋਨ ਵਿੱਚ ਇਸ ਭਾਸ਼ਾ ਲਈ ਹਾਲੇ ਆਵਾਜ਼ ਨਹੀਂ ਹੈ। ਇਸ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਨਾਲ ਨਤੀਜਾ ਉੱਚੀ ਪੜ੍ਹ ਕੇ ਸੁਣਾਇਆ ਜਾ ਸਕੇਗਾ।</string>
 
+    <string name="privacy_shutter_active">ਮਰੀਜ਼ ਗੋਪਨੀਯਤਾ ਸ਼ਟਰ ਸਰਗਰਮ</string>
+    <string name="privacy_hide_retina">ਰੈਟਿਨਾ ਦ੍ਰਿਸ਼ ਲੁਕਾਓ</string>
+    <string name="privacy_show_retina">ਰੈਟਿਨਾ ਦ੍ਰਿਸ਼ ਦਿਖਾਓ</string>
+    <string name="capture_permission_later">ਹੁਣੇ ਨਹੀਂ</string>
+    <string name="referral_borderline_note">ਰੈਫਰਲ ਤਰਜੀਹ — ਜੋਖਮ ਚਿੰਨ੍ਹ ਸੀਮਾ ਉੱਤੇ</string>
+    <string name="referral_action_label">ਕਾਰਵਾਈ</string>
+    <string name="heatmap_slider_label">ਹੀਟ ਮੈਪ</string>
 </resources>

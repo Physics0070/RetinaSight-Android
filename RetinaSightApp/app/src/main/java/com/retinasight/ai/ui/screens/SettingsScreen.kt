@@ -1,5 +1,6 @@
 package com.retinasight.ai.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -41,7 +42,6 @@ fun SettingsScreen(
     onChangeLanguage: () -> Unit,
     onTestVoice: () -> Unit,
     onInstallVoice: () -> Unit,
-    onOpenBenchmark: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Surface(
@@ -92,7 +92,7 @@ fun SettingsScreen(
                 Text(
                     text = stringResource(R.string.voice_install_hint),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.outline
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Spacer(Modifier.height(10.dp))
                 SecondaryActionButton(
@@ -104,12 +104,6 @@ fun SettingsScreen(
 
             Spacer(Modifier.height(24.dp))
 
-            // ---- Field benchmark ----
-            SecondaryActionButton(
-                text = stringResource(R.string.benchmark_title),
-                icon = Icons.Filled.Speed,
-                onClick = onOpenBenchmark
-            )
 
             Spacer(Modifier.height(24.dp))
 
@@ -119,6 +113,7 @@ fun SettingsScreen(
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer
                 ),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.padding(16.dp)) {
@@ -150,7 +145,7 @@ fun SettingsScreen(
             Text(
                 text = stringResource(R.string.result_disclaimer),
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.outline
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
     }

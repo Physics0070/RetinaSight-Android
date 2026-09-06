@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <!-- ============ Language picker ============ -->
     <string name="language_title">ଆପଣଙ୍କ ଭାଷା ବାଛନ୍ତୁ</string>
     <string name="language_subtitle">ଶୁଣିବା ପାଇଁ ଟ୍ୟାପ୍ କରନ୍ତୁ</string>
@@ -92,43 +91,6 @@
 
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">ଡେଭେଲପମେଣ୍ଟ ମୋଡ୍: ପ୍ରକୃତ ମଡେଲ ଏପର୍ଯ୍ୟନ୍ତ ଯୋଡ଼ାଯାଇ ନାହିଁ, ତେଣୁ ଏହି ଲେଖା କେବଳ ଏକ ନମୁନା, ଚିକିତ୍ସା ଫଳାଫଳ ନୁହେଁ।</string>
-
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">କ୍ଷେତ୍ର ମାପ</string>
-    <string name="benchmark_subtitle">ଏକ ପରୀକ୍ଷା ଶିବିରରେ ଏହି ଫୋନ୍ ପ୍ରକୃତରେ କଣ କରେ ତାହା ମାପେ: ଗତି, ବିଦ୍ୟୁତ୍, ଗୋଟିଏ ଚାର୍ଜରେ କେତେ ରୋଗୀ, ଏବଂ କେବେ ଗତି କମିବାକୁ ଲାଗେ।</string>
-    <string name="benchmark_count">ପରୀକ୍ଷାଗୁଡ଼ିକ</string>
-    <string name="benchmark_pace">ପ୍ରତି ରୋଗୀ ସେକେଣ୍ଡ</string>
-    <string name="benchmark_run">ଶିବିର ସିମୁଲେସନ ଚଲାନ୍ତୁ</string>
-    <string name="benchmark_cancel">ବନ୍ଦ କରନ୍ତୁ</string>
-    <string name="benchmark_baseline">ନିଷ୍କ୍ରିୟ ସ୍ଥିତି ମାପ କରାଯାଉଛି… %1$d ସେ</string>
-    <string name="benchmark_progress">%2$d ମଧ୍ୟରୁ %1$d ତମ ପରୀକ୍ଷା</string>
-    <string name="benchmark_section_latency">ପ୍ରତି ପରୀକ୍ଷାର ସମୟ</string>
-    <string name="benchmark_section_power">ବିଦ୍ୟୁତ୍ ବ୍ୟବହାର</string>
-    <string name="benchmark_section_energy">ଶକ୍ତି ଓ ପରିସର</string>
-    <string name="benchmark_section_thermal">ତାପମାତ୍ରା</string>
-    <string name="benchmark_mean">ହାରାହାରି</string>
-    <string name="benchmark_p50">ମଧ୍ୟମା (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">ନିଷ୍କ୍ରିୟ ସ୍ଥିତି</string>
-    <string name="benchmark_busy">ପରୀକ୍ଷା ସମୟରେ</string>
-    <string name="benchmark_net">ନିଟ୍ (ଅନୁମାନ)</string>
-    <string name="benchmark_per_screening">ପ୍ରତି ପରୀକ୍ଷାରେ</string>
-    <string name="benchmark_per_charge">ପ୍ରତି ଚାର୍ଜରେ ପରୀକ୍ଷା</string>
-    <string name="benchmark_crosscheck">କ୍ରସ୍-ଚେକ୍</string>
-    <string name="benchmark_temp_rise">ବ୍ୟାଟେରୀ ତାପମାତ୍ରା</string>
-    <string name="benchmark_throttle_none">ପୂରା ଶିବିରରେ ଗତି କମି ନାହିଁ</string>
-    <string name="benchmark_throttle_at">%1$d ତମ ପରୀକ୍ଷାରେ ଗତି କମିବାକୁ ଲାଗିଲା</string>
-    <string name="benchmark_export">CSV ରପ୍ତାନି</string>
-    <string name="benchmark_exported">%1$s ରେ ସଞ୍ଚିତ ହେଲା</string>
-    <string name="benchmark_warnings">ମାପର ଟିପ୍ପଣୀ</string>
-
-    <string name="benchmark_patients_per_charge">ପ୍ରତି ଚାର୍ଜରେ ରୋଗୀ</string>
-    <string name="benchmark_duty_cycle">ପ୍ରତି ରୋଗୀ ପାଇଁ %1$d ସେକେଣ୍ଡ ଫୋନ୍ ସମୟ ହିସାବରେ</string>
-    <string name="benchmark_continuous_hours">ଲଗାତାର ପରୀକ୍ଷା</string>
-    <string name="benchmark_measured_capacity">ମାପ କରାଯାଇଥିବା ବ୍ୟାଟେରୀ କ୍ଷମତା</string>
-    <string name="benchmark_back_to_back">ଅନୁମାନ ଆଧାରିତ ସର୍ବାଧିକ ସୀମା</string>
 
     <!-- Explanation: composed from REAL model outputs, never generated text -->
     <string name="explain_low_confidence">ଏହି ଫଟୋ ବିଷୟରେ ଆପ୍ ବେଶୀ ନିଶ୍ଚିତ ନୁହେଁ। ଭଲ ଆଲୋକରେ, ଆଖିକୁ ମଝିରେ ରଖି ଆଉ ଏକ ଫଟୋ ନେଲେ ଫଳାଫଳ ଅଧିକ ନିର୍ଭରଯୋଗ୍ୟ ହେବ।</string>
@@ -230,4 +192,11 @@
     <string name="voice_install">ଏହି ଭାଷା ପାଇଁ ସ୍ୱର ଇନଷ୍ଟଲ୍ କରନ୍ତୁ</string>
     <string name="voice_install_hint">ଆପଣଙ୍କ ଫୋନ୍‌ରେ ଏହି ଭାଷା ପାଇଁ ଏପର୍ଯ୍ୟନ୍ତ ସ୍ୱର ନାହିଁ। ତାହା ଇନଷ୍ଟଲ୍ କଲେ ଫଳାଫଳ ଉଚ୍ଚ ସ୍ୱରରେ ପଢ଼ାଯାଇପାରିବ।</string>
 
+    <string name="privacy_shutter_active">ରୋଗୀ ଗୋପନୀୟତା ସଟର ସକ୍ରିୟ</string>
+    <string name="privacy_hide_retina">ରେଟିନା ଦୃଶ୍ୟ ଲୁଚାନ୍ତୁ</string>
+    <string name="privacy_show_retina">ରେଟିନା ଦୃଶ୍ୟ ଦେଖାନ୍ତୁ</string>
+    <string name="capture_permission_later">ବର୍ତ୍ତମାନ ନୁହେଁ</string>
+    <string name="referral_borderline_note">ରେଫରାଲ ପ୍ରାଥମିକତା — ବିପଦ ଚିହ୍ନ ସୀମାରେଖାରେ</string>
+    <string name="referral_action_label">କାର୍ଯ୍ୟ</string>
+    <string name="heatmap_slider_label">ହିଟ ମ୍ୟାପ</string>
 </resources>

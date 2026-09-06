@@ -1,8 +1,6 @@
 package com.retinasight.ai
 
 import android.content.Context
-import com.retinasight.ai.core.benchmark.BenchmarkExporter
-import com.retinasight.ai.core.benchmark.DeviceTelemetry
 import com.retinasight.ai.core.history.ScanHistoryStore
 import com.retinasight.ai.core.inference.InferenceEngine
 import com.retinasight.ai.core.inference.OnDeviceInferenceEngine
@@ -50,8 +48,6 @@ class AppContainer(context: Context, appScope: CoroutineScope) {
     )
 
     /** Power and thermal instrumentation behind the published field metrics. */
-    val deviceTelemetry = DeviceTelemetry(appContext)
-    val benchmarkExporter = BenchmarkExporter(appContext)
 
     /**
      * The real trained model: EfficientNet-B0 (456px, ordinal objective),

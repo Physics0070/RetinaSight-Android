@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <!-- ============ Language picker ============ -->
     <string name="language_title">আপনার ভাষা বেছে নিন</string>
     <string name="language_subtitle">শুনতে ট্যাপ করুন</string>
@@ -92,43 +91,6 @@
 
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">ডেভেলপমেন্ট মোড: আসল মডেল এখনও যুক্ত হয়নি, তাই এই লেখাটি কেবল একটি নমুনা, চিকিৎসাগত ফলাফল নয়।</string>
-
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">মাঠ পরিমাপ</string>
-    <string name="benchmark_subtitle">একটি পরীক্ষা শিবিরে এই ফোন আসলে কী করে তা মাপে: গতি, বিদ্যুৎ, এক চার্জে কতজন রোগী, এবং কখন গতি কমতে শুরু করে।</string>
-    <string name="benchmark_count">পরীক্ষা</string>
-    <string name="benchmark_pace">প্রতি রোগীতে সেকেন্ড</string>
-    <string name="benchmark_run">শিবির সিমুলেশন চালান</string>
-    <string name="benchmark_cancel">থামান</string>
-    <string name="benchmark_baseline">নিষ্ক্রিয় অবস্থা মাপা হচ্ছে… %1$d সে</string>
-    <string name="benchmark_progress">%2$d-এর মধ্যে %1$d নম্বর পরীক্ষা</string>
-    <string name="benchmark_section_latency">প্রতি পরীক্ষায় সময়</string>
-    <string name="benchmark_section_power">বিদ্যুৎ ব্যবহার</string>
-    <string name="benchmark_section_energy">শক্তি ও পরিসর</string>
-    <string name="benchmark_section_thermal">তাপমাত্রা</string>
-    <string name="benchmark_mean">গড়</string>
-    <string name="benchmark_p50">মধ্যমা (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">নিষ্ক্রিয় অবস্থা</string>
-    <string name="benchmark_busy">পরীক্ষার সময়</string>
-    <string name="benchmark_net">নিট (অনুমান)</string>
-    <string name="benchmark_per_screening">প্রতি পরীক্ষায়</string>
-    <string name="benchmark_per_charge">প্রতি চার্জে পরীক্ষা</string>
-    <string name="benchmark_crosscheck">ক্রস-চেক</string>
-    <string name="benchmark_temp_rise">ব্যাটারির তাপমাত্রা</string>
-    <string name="benchmark_throttle_none">পুরো শিবিরে গতি কমেনি</string>
-    <string name="benchmark_throttle_at">%1$d নম্বর পরীক্ষায় গতি কমতে শুরু করেছে</string>
-    <string name="benchmark_export">CSV রপ্তানি</string>
-    <string name="benchmark_exported">%1$s-এ সংরক্ষিত হয়েছে</string>
-    <string name="benchmark_warnings">পরিমাপের নোট</string>
-
-    <string name="benchmark_patients_per_charge">প্রতি চার্জে রোগী</string>
-    <string name="benchmark_duty_cycle">প্রতি রোগীতে %1$d সেকেন্ড ফোন সময় ধরে</string>
-    <string name="benchmark_continuous_hours">একটানা পরীক্ষা</string>
-    <string name="benchmark_measured_capacity">মাপা ব্যাটারি ক্ষমতা</string>
-    <string name="benchmark_back_to_back">অনুমান-নির্ভর সর্বোচ্চ সীমা</string>
 
     <!-- Explanation: composed from REAL model outputs, never generated text -->
     <string name="explain_low_confidence">এই ছবিটি নিয়ে অ্যাপ খুব একটা নিশ্চিত নয়। ভাল আলোয়, চোখ মাঝখানে রেখে আরেকটি ছবি তুললে ফলাফল আরও নির্ভরযোগ্য হবে।</string>
@@ -230,4 +192,11 @@
     <string name="voice_install">এই ভাষার জন্য কণ্ঠস্বর ইনস্টল করুন</string>
     <string name="voice_install_hint">আপনার ফোনে এই ভাষার কণ্ঠস্বর এখনও নেই। এটি ইনস্টল করলে ফলাফল জোরে পড়ে শোনানো যাবে।</string>
 
+    <string name="privacy_shutter_active">রোগীর গোপনীয়তা শাটার সক্রিয়</string>
+    <string name="privacy_hide_retina">রেটিনা দৃশ্য লুকান</string>
+    <string name="privacy_show_retina">রেটিনা দৃশ্য দেখান</string>
+    <string name="capture_permission_later">এখন নয়</string>
+    <string name="referral_borderline_note">রেফারেল অগ্রাধিকার — ঝুঁকির চিহ্ন সীমারেখায়</string>
+    <string name="referral_action_label">পদক্ষেপ</string>
+    <string name="heatmap_slider_label">হিট ম্যাপ</string>
 </resources>

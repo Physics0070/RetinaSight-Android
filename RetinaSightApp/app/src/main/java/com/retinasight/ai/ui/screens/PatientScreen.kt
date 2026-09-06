@@ -1,14 +1,19 @@
 package com.retinasight.ai.ui.screens
 
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.toggleable
@@ -19,10 +24,16 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.RemoveRedEye
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExposedDropdownMenuBox
+import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -34,16 +45,21 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.retinasight.ai.R
 import com.retinasight.ai.core.patient.DiabetesStatus
 import com.retinasight.ai.core.patient.Eye
 import com.retinasight.ai.core.patient.Sex
 import com.retinasight.ai.ui.components.BigActionButton
+import com.retinasight.ai.ui.components.InteractiveEye3D
 import com.retinasight.ai.ui.components.SecondaryActionButton
+import com.retinasight.ai.ui.feedback.ChimeFeedback
 
 /** What the screen hands back when the worker continues. */
 data class PatientEntry(
@@ -74,6 +90,9 @@ fun PatientScreen(
     onContinue: (PatientEntry) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
+    val chime = remember(context) { ChimeFeedback(context) }
+
     var consented by remember { mutableStateOf(false) }
     var name by remember { mutableStateOf("") }
     var age by remember { mutableStateOf("") }
@@ -118,6 +137,18 @@ fun PatientScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(20.dp)
         ) {
+            // A thin breadcrumb rather than a heavy stepper. Consent is the
+            // only hard gate; the other two segments fill as the worker gets
+            // enough to continue, so progress is legible without another block
+            // of text competing with the consent copy.
+            IntakeProgress(
+                consentDone = consented,
+                detailsDone = detailsComplete,
+                eyeDone = true
+            )
+
+            Spacer(Modifier.height(18.dp))
+
             // ---------------- Step 1: consent ----------------
             StepLabel(stringResource(R.string.consent_step))
             Text(
@@ -128,7 +159,7 @@ fun PatientScreen(
             Text(
                 text = stringResource(R.string.consent_body),
                 style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.outline
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Spacer(Modifier.height(12.dp))
 
@@ -141,6 +172,11 @@ fun PatientScreen(
                         MaterialTheme.colorScheme.surfaceVariant
                     }
                 ),
+                border = BorderStroke(
+                    if (consented) 1.5.dp else 1.dp,
+                    if (consented) MaterialTheme.colorScheme.secondary
+                    else MaterialTheme.colorScheme.outline
+                ),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(
@@ -148,7 +184,15 @@ fun PatientScreen(
                         .fillMaxWidth()
                         // The whole row toggles: a 48dp checkbox alone is a
                         // small target for someone holding a phone and a lens.
-                        .toggleable(value = consented, onValueChange = { consented = it })
+                        .toggleable(
+                            value = consented,
+                            onValueChange = {
+                                consented = it
+                                // Confirmation only when consent is GIVEN;
+                                // chiming on withdrawal would read as approval.
+                                if (it) chime.playConfirmChime() else chime.hapticTick()
+                            }
+                        )
                         .padding(14.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -195,13 +239,7 @@ fun PatientScreen(
             }
 
             Spacer(Modifier.height(16.dp))
-            ChoiceRow(
-                label = stringResource(R.string.patient_sex),
-                options = Sex.entries,
-                selected = sex,
-                labelOf = { stringResource(it.labelRes) },
-                onSelect = { sex = it }
-            )
+            SexDropdown(selected = sex, onSelect = { sex = it })
 
             Spacer(Modifier.height(16.dp))
             ChoiceRow(
@@ -240,16 +278,35 @@ fun PatientScreen(
             Text(
                 text = stringResource(R.string.eye_prompt),
                 style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.outline
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
-            Spacer(Modifier.height(10.dp))
-            ChoiceRow(
-                label = "",
-                options = Eye.entries,
-                selected = eye,
-                labelOf = { stringResource(it.labelRes) },
-                onSelect = { eye = it }
-            )
+            Spacer(Modifier.height(14.dp))
+
+            // Left sits on the left, right on the right, with the model between
+            // them turning toward whichever is chosen. Photographing the wrong
+            // eye is the commonest error on this step, and a drawing that
+            // physically turns is harder to misread in a hurry than two words.
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                EyeSideButton(
+                    label = stringResource(Eye.LEFT.labelRes),
+                    selected = eye == Eye.LEFT,
+                    onClick = { eye = Eye.LEFT },
+                    modifier = Modifier.weight(1f)
+                )
+
+                InteractiveEye3D(eye = eye, size = 104.dp)
+
+                EyeSideButton(
+                    label = stringResource(Eye.RIGHT.labelRes),
+                    selected = eye == Eye.RIGHT,
+                    onClick = { eye = Eye.RIGHT },
+                    modifier = Modifier.weight(1f)
+                )
+            }
 
             Spacer(Modifier.height(28.dp))
 
@@ -268,7 +325,7 @@ fun PatientScreen(
                 Text(
                     text = stringResource(R.string.patient_details_required),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.outline
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
 
@@ -314,7 +371,7 @@ private fun <T> ChoiceRow(
             Text(
                 text = label,
                 style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.outline
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Spacer(Modifier.height(6.dp))
         }
@@ -334,6 +391,140 @@ private fun <T> ChoiceRow(
                     OutlinedButton(onClick = { onSelect(option) }) { Text(text) }
                 }
             }
+        }
+    }
+}
+
+/**
+ * One side of the eye selector.
+ *
+ * Height 46 and radius 12 follow the design's segmented control. Selection is
+ * shown by fill *and* border weight, not colour alone, so it survives a sunlit
+ * screen and colour blindness.
+ */
+@Composable
+private fun EyeSideButton(
+    label: String,
+    selected: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Button(
+        onClick = onClick,
+        modifier = modifier.heightIn(min = 46.dp),
+        shape = RoundedCornerShape(12.dp),
+        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp),
+        border = BorderStroke(
+            if (selected) 1.5.dp else 1.dp,
+            if (selected) MaterialTheme.colorScheme.secondary
+            else MaterialTheme.colorScheme.outline
+        ),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = if (selected) {
+                MaterialTheme.colorScheme.primary
+            } else {
+                MaterialTheme.colorScheme.surface
+            },
+            contentColor = if (selected) {
+                MaterialTheme.colorScheme.onPrimary
+            } else {
+                MaterialTheme.colorScheme.onSurface
+            }
+        )
+    ) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.titleMedium,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.weight(1f, fill = false)
+        )
+    }
+}
+
+/**
+ * Sex as a dropdown rather than a row of chips.
+ *
+ * Displayed male, female, other, then "prefer not to say". That is a display
+ * order only - [Sex] itself is untouched, because it lives in core and its
+ * ordinal is what gets written to stored records. UNSPECIFIED remains the
+ * default and the value used whenever details are skipped.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SexDropdown(
+    selected: Sex,
+    onSelect: (Sex) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    var expanded by remember { mutableStateOf(false) }
+
+    val order = listOf(Sex.MALE, Sex.FEMALE, Sex.OTHER, Sex.UNSPECIFIED)
+
+    ExposedDropdownMenuBox(
+        expanded = expanded,
+        onExpandedChange = { expanded = it },
+        modifier = modifier.fillMaxWidth()
+    ) {
+        OutlinedTextField(
+            value = stringResource(selected.labelRes),
+            onValueChange = {},
+            readOnly = true,
+            label = { Text(stringResource(R.string.patient_sex)) },
+            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+            shape = RoundedCornerShape(12.dp),
+            modifier = Modifier
+                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
+                .fillMaxWidth()
+        )
+        ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            order.forEach { option ->
+                DropdownMenuItem(
+                    text = {
+                        Text(
+                            text = stringResource(option.labelRes),
+                            style = MaterialTheme.typography.bodyLarge
+                        )
+                    },
+                    onClick = {
+                        onSelect(option)
+                        expanded = false
+                    }
+                )
+            }
+        }
+    }
+}
+
+
+/**
+ * Three segments across the top: consent, details, eye.
+ *
+ * Deliberately unlabelled - the steps below already name themselves, and a
+ * second set of words here would just be more to read on a screen that is
+ * mostly reading already.
+ */
+@Composable
+private fun IntakeProgress(
+    consentDone: Boolean,
+    detailsDone: Boolean,
+    eyeDone: Boolean,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        listOf(consentDone, detailsDone, eyeDone).forEach { done ->
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .height(4.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(
+                        if (done) MaterialTheme.colorScheme.secondary
+                        else MaterialTheme.colorScheme.outline
+                    )
+            )
         }
     }
 }

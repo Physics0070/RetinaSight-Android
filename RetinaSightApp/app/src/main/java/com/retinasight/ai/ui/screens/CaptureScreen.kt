@@ -21,6 +21,7 @@ import androidx.camera.core.ImageProxy
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -33,14 +34,17 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.material.icons.filled.PhotoLibrary
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
@@ -50,7 +54,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -109,11 +116,63 @@ fun CaptureScreen(
 
     val imageCapture = remember { ImageCapture.Builder().build() }
 
-    // Ask once on first entry rather than making the user find a button.
+    // Explain before asking. The system prompt is a bare yes/no with no room
+    // for why, and a worker who declines it once is awkward to recover - so the
+    // reason goes first, in their own language, and the real prompt follows.
+    //
+    // This dialog GRANTS NOTHING. Only the system prompt behind it can do that;
+    // this decides whether to raise it.
+    var showRationale by remember { mutableStateOf(false) }
+    var rationaleSettled by remember { mutableStateOf(false) }
+
     LaunchedEffect(Unit) {
-        if (!hasCameraPermission) {
-            permissionLauncher.launch(Manifest.permission.CAMERA)
-        }
+        if (!hasCameraPermission) showRationale = true
+    }
+
+    if (showRationale && !hasCameraPermission && !rationaleSettled) {
+        AlertDialog(
+            onDismissRequest = {
+                showRationale = false
+                rationaleSettled = true
+            },
+            shape = RoundedCornerShape(20.dp),
+            title = {
+                Text(
+                    text = stringResource(R.string.capture_title),
+                    style = MaterialTheme.typography.headlineMedium
+                )
+            },
+            text = {
+                Text(
+                    text = stringResource(R.string.capture_permission_rationale),
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    showRationale = false
+                    rationaleSettled = true
+                    permissionLauncher.launch(Manifest.permission.CAMERA)
+                }) {
+                    Text(
+                        text = stringResource(R.string.capture_grant_permission),
+                        style = MaterialTheme.typography.titleMedium
+                    )
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = {
+                    showRationale = false
+                    rationaleSettled = true
+                }) {
+                    Text(
+                        text = stringResource(R.string.capture_permission_later),
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        )
     }
 
     Surface(
@@ -166,6 +225,29 @@ fun CaptureScreen(
                             bindCamera(context, lifecycleOwner, previewView, imageCapture)
                         }
                     )
+                    // Darkroom mask: everything outside the aperture is painted
+                    // out, so the only lit thing on screen is the circle the eye
+                    // has to sit in. It stops the operator composing against the
+                    // phone's edges, and a dark screen throws less stray light
+                    // back through the lens.
+                    //
+                    // graphicsLayer() gives the Canvas its own compositing layer,
+                    // without which BlendMode.Clear would punch a hole through
+                    // the window itself rather than through the scrim.
+                    Canvas(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .graphicsLayer()
+                    ) {
+                        drawRect(color = Color.Black.copy(alpha = 0.88f))
+                        drawCircle(
+                            color = Color.Transparent,
+                            radius = ringSize.toPx() / 2f,
+                            center = Offset(size.width / 2f, size.height / 2f),
+                            blendMode = BlendMode.Clear
+                        )
+                    }
+
                     // Alignment guide: the user centres the eye inside this ring.
                     Box(
                         modifier = Modifier
@@ -201,7 +283,7 @@ fun CaptureScreen(
             Text(
                 text = stringResource(R.string.capture_instruction),
                 style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.outline,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
             )
 
@@ -213,7 +295,7 @@ fun CaptureScreen(
             Text(
                 text = stringResource(R.string.capture_adapter_note),
                 style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.outline,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center
             )
 

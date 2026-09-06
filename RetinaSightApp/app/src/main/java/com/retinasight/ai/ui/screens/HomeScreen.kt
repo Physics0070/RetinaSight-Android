@@ -28,6 +28,7 @@ import com.retinasight.ai.R
 import com.retinasight.ai.core.sync.SyncStatus
 import com.retinasight.ai.ui.components.BigActionButton
 import com.retinasight.ai.ui.components.OfflineBadge
+import com.retinasight.ai.ui.components.RetinaScannerLogo
 import com.retinasight.ai.ui.components.SecondaryActionButton
 
 /**
@@ -73,21 +74,28 @@ fun HomeScreen(
             ) {
                 OfflineBadge(isOnline = syncStatus.isOnline)
 
-                Spacer(Modifier.height(28.dp))
+                Spacer(Modifier.height(22.dp))
+
+                // The scanning mark. It is an illustration and carries no result,
+                // but it is the first thing anyone sees and it states the whole
+                // proposition before a word of copy is read.
+                RetinaScannerLogo(size = 148.dp)
+
+                Spacer(Modifier.height(18.dp))
 
                 Text(
                     text = stringResource(R.string.app_name),
-                    style = MaterialTheme.typography.displayLarge,
+                    style = MaterialTheme.typography.headlineLarge,
                     color = MaterialTheme.colorScheme.primary,
                     textAlign = TextAlign.Center
                 )
 
-                Spacer(Modifier.height(10.dp))
+                Spacer(Modifier.height(8.dp))
 
                 Text(
                     text = stringResource(R.string.home_tagline),
                     style = MaterialTheme.typography.bodyLarge,
-                    color = MaterialTheme.colorScheme.outline,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )

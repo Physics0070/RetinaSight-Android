@@ -93,43 +93,6 @@
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">डेव्हलपमेंट मोड: खरे मॉडेल अद्याप जोडलेले नाही. हा मजकूर फक्त नमुना आहे, वैद्यकीय निकाल नाही.</string>
 
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">फील्ड बेंचमार्क</string>
-    <string name="benchmark_subtitle">शिबिरात हा फोन प्रत्यक्षात काय करतो हे मोजते: वेग, वीज, एका चार्जमध्ये किती रुग्ण, आणि कधी तापून मंदावतो.</string>
-    <string name="benchmark_count">तपासण्यांची संख्या</string>
-    <string name="benchmark_pace">प्रति रुग्ण सेकंद</string>
-    <string name="benchmark_run">शिबिर सिम्युलेशन चालवा</string>
-    <string name="benchmark_cancel">थांबवा</string>
-    <string name="benchmark_baseline">रिकामी स्थिती मोजत आहे… %1$d से</string>
-    <string name="benchmark_progress">%2$d पैकी %1$d तपासणी</string>
-    <string name="benchmark_section_latency">प्रति तपासणी वेळ</string>
-    <string name="benchmark_section_power">वीज वापर</string>
-    <string name="benchmark_section_energy">ऊर्जा आणि क्षमता</string>
-    <string name="benchmark_section_thermal">तापमान</string>
-    <string name="benchmark_mean">सरासरी</string>
-    <string name="benchmark_p50">मध्य (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">रिकामी स्थिती</string>
-    <string name="benchmark_busy">तपासणीदरम्यान</string>
-    <string name="benchmark_net">निव्वळ (फक्त तपासणी)</string>
-    <string name="benchmark_per_screening">प्रति तपासणी</string>
-    <string name="benchmark_per_charge">एका चार्जमध्ये तपासण्या</string>
-    <string name="benchmark_crosscheck">दुसऱ्या पद्धतीने पडताळणी</string>
-    <string name="benchmark_temp_rise">बॅटरीचे तापमान</string>
-    <string name="benchmark_throttle_none">संपूर्ण शिबिरात वेग कमी झाला नाही</string>
-    <string name="benchmark_throttle_at">%1$d व्या तपासणीपासून वेग कमी होऊ लागला</string>
-    <string name="benchmark_export">CSV निर्यात करा</string>
-    <string name="benchmark_exported">%1$s मध्ये जतन केले</string>
-    <string name="benchmark_warnings">मोजमापाबाबत नोंदी</string>
-
-    <string name="benchmark_patients_per_charge">एका चार्जमध्ये रुग्ण</string>
-    <string name="benchmark_duty_cycle">प्रति रुग्ण %1$d सेकंद फोन वापरावर</string>
-    <string name="benchmark_continuous_hours">सलग तपासणी</string>
-    <string name="benchmark_measured_capacity">मोजलेली बॅटरी क्षमता</string>
-    <string name="benchmark_back_to_back">फक्त तपासणीची कमाल मर्यादा</string>
-
     <string name="explain_low_confidence">अ‍ॅपला या फोटोबद्दल पुरेशी खात्री नाही. चांगल्या उजेडात, डोळा मध्यभागी ठेवून दुसरा फोटो काढा.</string>
     <string name="explain_refer_soon">लक्षणांची वाट पाहू नका. या टप्प्यावर डोळे ठीक दिसू शकतात, तरीही उपचार आवश्यक असतात.</string>
     <string name="explain_no_dr">रक्तातील साखर नियंत्रणात ठेवा आणि सल्ल्यानुसार पुन्हा तपासणी करा, डोळे ठीक वाटले तरीही.</string>
@@ -223,4 +186,11 @@
     <string name="voice_install">या भाषेसाठी आवाज इन्स्टॉल करा</string>
     <string name="voice_install_hint">तुमच्या फोनमध्ये या भाषेचा आवाज नाही. इन्स्टॉल केल्यावर निकाल वाचून दाखवता येईल.</string>
 
+    <string name="privacy_shutter_active">रुग्ण गोपनीयता शटर सक्रिय</string>
+    <string name="privacy_hide_retina">रेटिना दृश्य लपवा</string>
+    <string name="privacy_show_retina">रेटिना दृश्य दाखवा</string>
+    <string name="capture_permission_later">आता नाही</string>
+    <string name="referral_borderline_note">संदर्भ प्राधान्य — जोखीम चिन्हे सीमारेषेवर</string>
+    <string name="referral_action_label">कृती</string>
+    <string name="heatmap_slider_label">हीट मॅप</string>
 </resources>

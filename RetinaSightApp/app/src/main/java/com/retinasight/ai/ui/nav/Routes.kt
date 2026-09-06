@@ -13,7 +13,6 @@ object Routes {
     fun historyDetail(recordId: String) = "history_detail/$recordId"
     const val SETTINGS = "settings"
     const val LANGUAGE = "language"
-    const val BENCHMARK = "benchmark"
     const val QUALITY = "quality"
     const val CLINIC = "clinic"
     const val PATIENT = "patient"

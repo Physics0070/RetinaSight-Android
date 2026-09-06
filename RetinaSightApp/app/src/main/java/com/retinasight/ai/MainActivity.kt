@@ -7,9 +7,12 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -24,11 +27,14 @@ import com.retinasight.ai.core.lang.AppLanguage
 import com.retinasight.ai.core.lang.LanguageState
 import com.retinasight.ai.core.lang.LocalizedContent
 import com.retinasight.ai.ui.nav.RetinaNavHost
+import com.retinasight.ai.ui.screens.LanguagePickerSheetContent
 import com.retinasight.ai.ui.screens.LanguageScreen
 import com.retinasight.ai.ui.theme.RetinaSightTheme
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
+
+    @OptIn(ExperimentalMaterial3Api::class)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +45,7 @@ class MainActivity : ComponentActivity() {
             val languageState by container.languagePreferences.languageState
                 .collectAsState(initial = LanguageState.Loading)
             var showLanguagePicker by remember { mutableStateOf(false) }
+            val languageSheetState = rememberModalBottomSheetState()
 
             RetinaSightTheme {
                 // Android 15+ forces edge-to-edge when targetSdk >= 35, so
@@ -82,25 +89,35 @@ class MainActivity : ComponentActivity() {
                             )
 
                             if (showLanguagePicker) {
-                                // Without this the system back finds nothing to
-                                // pop and finishes the activity, closing the app
-                                // on someone who opened the list, changed their
-                                // mind, and pressed back. Dismissing keeps the
-                                // language they already had.
-                                BackHandler { showLanguagePicker = false }
-                                LanguageScreen(
-                                    selected = state.language,
-                                    onSelect = { language ->
-                                        container.speechManager.speak(
-                                            language.endonym,
-                                            language
-                                        )
-                                        scope.launch {
-                                            container.languagePreferences.setLanguage(language)
-                                            showLanguagePicker = false
+                                // A sheet rather than a full screen: choosing a
+                                // language is a detour, and the screen behind
+                                // stays visible so it reads as one.
+                                //
+                                // It still renders OVER the nav host, so the
+                                // back stack is intact. ModalBottomSheet also
+                                // handles system back itself - dismissing the
+                                // sheet rather than finishing the activity,
+                                // which is what the old BackHandler was for.
+                                ModalBottomSheet(
+                                    onDismissRequest = { showLanguagePicker = false },
+                                    sheetState = languageSheetState,
+                                    containerColor = MaterialTheme.colorScheme.surface
+                                ) {
+                                    LanguagePickerSheetContent(
+                                        selected = state.language,
+                                        onSelect = { language ->
+                                            container.speechManager.speak(
+                                                language.endonym,
+                                                language
+                                            )
+                                            scope.launch {
+                                                container.languagePreferences
+                                                    .setLanguage(language)
+                                                showLanguagePicker = false
+                                            }
                                         }
-                                    }
-                                )
+                                    )
+                                }
                             }
                         }
                     }

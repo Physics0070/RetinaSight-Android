@@ -94,43 +94,6 @@
     <!-- ============ Development only ============ -->
     <string name="mock_explanation_notice">DEVELOPMENT MODE: the real on-device model is not connected yet, so this text is a placeholder and is not a medical result.</string>
 
-
-    <!-- ============ Field benchmark ============ -->
-    <string name="benchmark_title">Field benchmark</string>
-    <string name="benchmark_subtitle">Measures what this phone actually does over a screening camp: speed, power, patients per charge, and when it starts to throttle.</string>
-    <string name="benchmark_count">Screenings</string>
-    <string name="benchmark_pace">Seconds per patient</string>
-    <string name="benchmark_run">Run camp simulation</string>
-    <string name="benchmark_cancel">Stop</string>
-    <string name="benchmark_baseline">Measuring idle baseline… %1$d s</string>
-    <string name="benchmark_progress">Screening %1$d of %2$d</string>
-    <string name="benchmark_section_latency">Time per screening</string>
-    <string name="benchmark_section_power">Power draw</string>
-    <string name="benchmark_section_energy">Energy and range</string>
-    <string name="benchmark_section_thermal">Thermal</string>
-    <string name="benchmark_mean">Mean</string>
-    <string name="benchmark_p50">Median (p50)</string>
-    <string name="benchmark_p90">p90</string>
-    <string name="benchmark_p99">p99</string>
-    <string name="benchmark_idle">Idle baseline</string>
-    <string name="benchmark_busy">During screening</string>
-    <string name="benchmark_net">Net (inference)</string>
-    <string name="benchmark_per_screening">Per screening</string>
-    <string name="benchmark_per_charge">Screenings per charge</string>
-    <string name="benchmark_crosscheck">Cross-check</string>
-    <string name="benchmark_temp_rise">Battery temperature</string>
-    <string name="benchmark_throttle_none">No throttling across the whole camp</string>
-    <string name="benchmark_throttle_at">Throttling began at screening %1$d</string>
-    <string name="benchmark_export">Export CSV</string>
-    <string name="benchmark_exported">Saved to %1$s</string>
-    <string name="benchmark_warnings">Measurement notes</string>
-
-    <string name="benchmark_patients_per_charge">Patients per charge</string>
-    <string name="benchmark_duty_cycle">at %1$d s of phone time per patient</string>
-    <string name="benchmark_continuous_hours">Continuous screening</string>
-    <string name="benchmark_measured_capacity">Measured battery capacity</string>
-    <string name="benchmark_back_to_back">Inference-bound upper limit</string>
-
     <!-- Explanation: composed from REAL model outputs, never generated text -->
     <string name="explain_low_confidence">The app is not very sure about this photo. Take another photo in better light, with the eye centred, for a more reliable check.</string>
     <string name="explain_refer_soon">Do not wait for symptoms. Eyes can look and feel normal at this stage and still need treatment.</string>
@@ -231,4 +194,11 @@
     <string name="voice_install">Install voice for this language</string>
     <string name="voice_install_hint">Your phone has no voice for this language yet. Installing it lets the result be read aloud.</string>
 
+    <string name="privacy_shutter_active">PATIENT PRIVACY SHUTTER ACTIVE</string>
+    <string name="privacy_hide_retina">Hide retinal view</string>
+    <string name="privacy_show_retina">Show retinal view</string>
+    <string name="capture_permission_later">Not now</string>
+    <string name="referral_borderline_note">Referral prioritised — borderline risk markers</string>
+    <string name="referral_action_label">Action</string>
+    <string name="heatmap_slider_label">Heat map</string>
 </resources>

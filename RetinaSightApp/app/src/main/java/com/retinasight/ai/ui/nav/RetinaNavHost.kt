@@ -1,5 +1,7 @@
 package com.retinasight.ai.ui.nav
 
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -35,8 +37,6 @@ import com.retinasight.ai.AppContainer
 import com.retinasight.ai.R
 import com.retinasight.ai.core.history.ScanRecord
 import com.retinasight.ai.core.lang.AppLanguage
-import com.retinasight.ai.ui.benchmark.BenchmarkScreen
-import com.retinasight.ai.ui.benchmark.BenchmarkViewModel
 import com.retinasight.ai.ui.scan.ScanUiState
 import com.retinasight.ai.ui.scan.ScanViewModel
 import com.retinasight.ai.ui.screens.AnalyzingScreen
@@ -65,8 +65,6 @@ fun RetinaNavHost(
 ) {
     val navController = rememberNavController()
     val scanViewModel: ScanViewModel = viewModel(factory = ScanViewModel.factory(container))
-    val benchmarkViewModel: BenchmarkViewModel =
-        viewModel(factory = BenchmarkViewModel.factory(container))
 
     val scanState by scanViewModel.state.collectAsState()
     val isSaved by scanViewModel.isSaved.collectAsState()
@@ -90,7 +88,38 @@ fun RetinaNavHost(
 
     NavHost(
         navController = navController,
-        startDestination = Routes.HOME
+        startDestination = Routes.HOME,
+        // Screens slide horizontally so the sequence reads as one continuous
+        // path: forward moves left, back moves right. Presentation only - the
+        // graph, the routes and every destination are untouched.
+        //
+        // 260 ms is deliberately short. This flow is walked dozens of times in
+        // a camp session, and an animation that is pleasant once becomes an
+        // obstruction by the fortieth patient.
+        enterTransition = {
+            slideIntoContainer(
+                AnimatedContentTransitionScope.SlideDirection.Left,
+                animationSpec = tween(260)
+            )
+        },
+        exitTransition = {
+            slideOutOfContainer(
+                AnimatedContentTransitionScope.SlideDirection.Left,
+                animationSpec = tween(260)
+            )
+        },
+        popEnterTransition = {
+            slideIntoContainer(
+                AnimatedContentTransitionScope.SlideDirection.Right,
+                animationSpec = tween(260)
+            )
+        },
+        popExitTransition = {
+            slideOutOfContainer(
+                AnimatedContentTransitionScope.SlideDirection.Right,
+                animationSpec = tween(260)
+            )
+        }
     ) {
 
         composable(Routes.HOME) {
@@ -242,7 +271,6 @@ fun RetinaNavHost(
                 isVoiceAvailable = isTtsReady &&
                     container.speechManager.isLanguageSupported(language),
                 onChangeLanguage = onChangeLanguage,
-                onOpenBenchmark = { navController.navigate(Routes.BENCHMARK) },
                 onTestVoice = {
                     container.speechManager.speak(language.endonym, language)
                 },
@@ -289,13 +317,6 @@ fun RetinaNavHost(
             )
         }
 
-        composable(Routes.BENCHMARK) {
-            BenchmarkScreen(
-                viewModel = benchmarkViewModel,
-                lastCapturedImage = scanViewModel.capturedImage,
-                languageTag = language.tag
-            )
-        }
     }
 
     if (showHome) {
